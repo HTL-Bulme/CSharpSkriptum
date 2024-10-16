@@ -59,7 +59,17 @@ Führe folgende Schritte der Reihe nach aus, um Roslynpad zu installieren:
     - Minimalprogramm testen
 
 ```cs
-Turtle.fd(39);
+#r "nuget: BulmeSharp, 0.9.0"
+using BulmeSharp;
+
+Turtle.fd(50);
+Turtle.rt(120);
+Turtle.fd(50);
+Turtle.rt(120);
+Turtle.fd(50);
+Turtle.rt(120);
+
+Turtle.showTurtle();
 ```
 
 **Tipp:**
@@ -75,15 +85,20 @@ Die gesamte Installation wird in diesem [Video](https://bulme-my.sharepoint.com/
 Die Oberfläche ist einfach gestaltet und speziell für Einsteiger entwickelt worden.
 Sie besteht aus folgenden sechs Bereichen.
 
-1. Codeeingabe: Hier gibst du den Python-Code ein
-1. Ausgabefenster: Hier siehst du das Ergebnis deines Programms
-1. Ausführen: Bei einem Klick auf diesen Knopf wird das Programm ausgeführt
-1. Ausführen im Vollbild: Führt das Programm im Vollbild-Modus aus
-1. Stop: Beendet das Programm sofort. Das ist notwendig, wenn du siehst,
-dass du einen Fehler gemacht hast
-1. Einstellungen: Hier kannst du Einstellungen ändern und die Hilfe anzeigen lassen
+1. Neue Datei: Hier kannst du eine neue Dateien anlegen
+1. Dateiübersicht: Hier siehst du alle Dateien, die du angelegt hast.
+Mit Doppelklick auf eine Datei öffnest du die entsprechende Datei
+1. Codeeingabe: Hier gibst du den C#-Code ein
+1. Ausführen ▶: Mit diesem Button Startest du dein Programm
+1. Beenden ■: Mit diesem Button beendest du dein Programm vorzeitig
+1. Framework: Hier muss das .Net Framework ausgewählt werden.
+Wir nehmen stets x64 und setzen es mit dem Button daneben gleich als Standard (Default).
+1. Nuget Bibliotheken: Hier binden wir zusätzliche Bibliotheken ein.
+Bibliotheken enthalten vorgefertigte Programmteile,
+normalerweise nicht im Standardumfang einer Programmiersprache enthalten sind.
+Meistens verwenden wir die BulmeSharp Bibliothek, da diese die Turtle enthält.
 
-![Roslynpad Übersicht](./images/webtigerjython.png)
+![Roslynpad Übersicht](./images/roslynPad.png)
 
 
 
@@ -98,12 +113,16 @@ Es sollte die gleiche Ausgabe erscheinen wie in der Grafik.
 * Achte darauf, daß Anweisungen mit einem Strichpunkt (Semikolon) ageschlossen werden müssen
 * Achte auf die richtigen Klammern! Es werden in dem Beispiel runde Klammern "(" und ")" benutzt. Eckige "[", "]" oder geschwungene "{", "}" Klammern
 bedeuten etwas anderes und funktionieren nicht!
-* Wenn du einen Tippfehler gemacht hast, also beispielsweise statt `Turtle.showTurtle()` 
-den Text `Turtle.showTrutel()` geschrieben hast, erscheint eine Fehlermeldung im
+* Wenn du einen Tippfehler gemacht hast, also beispielsweise statt `Turtle.showTurtle();` 
+den Text `Turtle.showTrutel();` geschrieben hast, erscheint eine Fehlermeldung im
 unteren Teil des Ausgabefensters. Versuche diese zu verstehen und den Fehler zu beheben.
 * Beachte folgende Regel beim Programmieren: **Probiere
 alles selber aus!** Je mehr Programme du selber schreibst, umso mehr
 wirst du verstehen und beherrschen.
+* Verwende Shortcuts (Tastenkombinationen) um Zeit zu sparen:
+    * STRG + S: Speichern
+    * STRG + C: Kopieren
+    * STRG + V: Einfügen
 
 ## 🧭 Zusammenfassung
 Wir haben unsere  erste Umgebung zum Programmieren kennengelernt und

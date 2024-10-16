@@ -271,7 +271,17 @@ Befolge folgende Schritte um die Anwendung zu installieren:</p>
 </ul>
 </li>
 </ol>
-<pre><code class="lang-cs">Turtle.fd(<span class="hljs-number">39</span>);
+<pre><code class="lang-cs"><span class="hljs-meta">#r &quot;nuget: BulmeSharp, 0.9.0&quot;</span>
+<span class="hljs-keyword">using</span> BulmeSharp;
+
+Turtle.fd(<span class="hljs-number">50</span>);
+Turtle.rt(<span class="hljs-number">120</span>);
+Turtle.fd(<span class="hljs-number">50</span>);
+Turtle.rt(<span class="hljs-number">120</span>);
+Turtle.fd(<span class="hljs-number">50</span>);
+Turtle.rt(<span class="hljs-number">120</span>);
+
+Turtle.showTurtle();
 </code></pre>
 <p><strong>Tipp:</strong>
 Die gesamte Installation wird in diesem <a href="https://bulme-my.sharepoint.com/personal/gl_ms_bulme_at/_layouts/15/stream.aspx?id=%2Fpersonal%2Fgl%5Fms%5Fbulme%5Fat%2FDocuments%2FInstallation%2Emp4&amp;nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0" target="_blank">Video</a> vorgezeigt.</p>
@@ -279,15 +289,20 @@ Die gesamte Installation wird in diesem <a href="https://bulme-my.sharepoint.com
 <p>Die Oberfläche ist einfach gestaltet und speziell für Einsteiger entwickelt worden.
 Sie besteht aus folgenden sechs Bereichen.</p>
 <ol>
-<li>Codeeingabe: Hier gibst du den Python-Code ein</li>
-<li>Ausgabefenster: Hier siehst du das Ergebnis deines Programms</li>
-<li>Ausführen: Bei einem Klick auf diesen Knopf wird das Programm ausgeführt</li>
-<li>Ausführen im Vollbild: Führt das Programm im Vollbild-Modus aus</li>
-<li>Stop: Beendet das Programm sofort. Das ist notwendig, wenn du siehst,
-dass du einen Fehler gemacht hast</li>
-<li>Einstellungen: Hier kannst du Einstellungen ändern und die Hilfe anzeigen lassen</li>
+<li>Neue Datei: Hier kannst du eine neue Dateien anlegen</li>
+<li>Dateiübersicht: Hier siehst du alle Dateien, die du angelegt hast.
+Mit Doppelklick auf eine Datei öffnest du die entsprechende Datei</li>
+<li>Codeeingabe: Hier gibst du den C#-Code ein</li>
+<li>Ausführen ▶: Mit diesem Button Startest du dein Programm</li>
+<li>Beenden ■: Mit diesem Button beendest du dein Programm vorzeitig</li>
+<li>Framework: Hier muss das .Net Framework ausgewählt werden.
+Wir nehmen stets x64 und setzen es mit dem Button daneben gleich als Standard (Default).</li>
+<li>Nuget Bibliotheken: Hier binden wir zusätzliche Bibliotheken ein.
+Bibliotheken enthalten vorgefertigte Programmteile,
+normalerweise nicht im Standardumfang einer Programmiersprache enthalten sind.
+Meistens verwenden wir die BulmeSharp Bibliothek, da diese die Turtle enthält.</li>
 </ol>
-<p><img src="images/webtigerjython.png" alt="Roslynpad Übersicht"></p>
+<p><img src="images/roslynPad.png" alt="Roslynpad Übersicht"></p>
 <h3 id="📝-übung-1">📝 Übung 1</h3>
 <p>Gib den Programmcode aus der oberen Grafik in RoslyPad ein
 und klicke auf den &quot;Ausführen&quot;-Knopf.
@@ -298,12 +313,18 @@ Es sollte die gleiche Ausgabe erscheinen wie in der Grafik.</p>
 <li>Achte darauf, daß Anweisungen mit einem Strichpunkt (Semikolon) ageschlossen werden müssen</li>
 <li>Achte auf die richtigen Klammern! Es werden in dem Beispiel runde Klammern &quot;(&quot; und &quot;)&quot; benutzt. Eckige &quot;[&quot;, &quot;]&quot; oder geschwungene &quot;{&quot;, &quot;}&quot; Klammern
 bedeuten etwas anderes und funktionieren nicht!</li>
-<li>Wenn du einen Tippfehler gemacht hast, also beispielsweise statt <code>Turtle.showTurtle()</code> 
-den Text <code>Turtle.showTrutel()</code> geschrieben hast, erscheint eine Fehlermeldung im
+<li>Wenn du einen Tippfehler gemacht hast, also beispielsweise statt <code>Turtle.showTurtle();</code> 
+den Text <code>Turtle.showTrutel();</code> geschrieben hast, erscheint eine Fehlermeldung im
 unteren Teil des Ausgabefensters. Versuche diese zu verstehen und den Fehler zu beheben.</li>
 <li>Beachte folgende Regel beim Programmieren: <strong>Probiere
 alles selber aus!</strong> Je mehr Programme du selber schreibst, umso mehr
 wirst du verstehen und beherrschen.</li>
+<li>Verwende Shortcuts (Tastenkombinationen) um Zeit zu sparen:<ul>
+<li>STRG + S: Speichern</li>
+<li>STRG + C: Kopieren</li>
+<li>STRG + V: Einfügen</li>
+</ul>
+</li>
 </ul>
 <h2 id="🧭-zusammenfassung">🧭 Zusammenfassung</h2>
 <p>Wir haben unsere  erste Umgebung zum Programmieren kennengelernt und
@@ -355,7 +376,7 @@ und wie du interessante Grafiken mit der Turtle zeichnen kannst.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"book":true,"keywords":["Bulme","C#"],"author":["HTL BULME"],"subject":"C#","classoption":["openany"],"lang":"de","date":"2024-10-16","geometry":"left=1.5cm,right=1.5cm,top=2cm,bottom=2.5cm","title":"Einführung ✨","level":"1.1","depth":1,"next":{"title":"Grafik mit der Turtle 🐢","level":"1.2","depth":1,"path":"010_turtle.md","ref":"010_turtle.md","articles":[{"title":"Übungen mit der Turtle","level":"1.2.1","depth":2,"path":"015_turtle_lines.md","ref":"015_turtle_lines.md","articles":[]},{"title":"Farben verwenden","level":"1.2.2","depth":2,"path":"017_turtle_colors.md","ref":"017_turtle_colors.md","articles":[]},{"title":"Variablen","level":"1.2.3","depth":2,"path":"020_variablen.md","ref":"020_variablen.md","articles":[]},{"title":"Eingabe von Werten","level":"1.2.4","depth":2,"path":"030_input.md","ref":"030_input.md","articles":[]},{"title":"Rechnen mit Variablen","level":"1.2.5","depth":2,"path":"035_variablen_rechnen.md","ref":"035_variablen_rechnen.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"README.md","mtime":"2024-10-16T08:27:45.251Z","type":"markdown"},"gitbook":{"version":"5.1.1","time":"2024-10-16T08:28:32.670Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"book":true,"keywords":["Bulme","C#"],"author":["HTL BULME"],"subject":"C#","classoption":["openany"],"lang":"de","date":"2024-10-16","geometry":"left=1.5cm,right=1.5cm,top=2cm,bottom=2.5cm","title":"Einführung ✨","level":"1.1","depth":1,"next":{"title":"Grafik mit der Turtle 🐢","level":"1.2","depth":1,"path":"010_turtle.md","ref":"010_turtle.md","articles":[{"title":"Übungen mit der Turtle","level":"1.2.1","depth":2,"path":"015_turtle_lines.md","ref":"015_turtle_lines.md","articles":[]},{"title":"Farben verwenden","level":"1.2.2","depth":2,"path":"017_turtle_colors.md","ref":"017_turtle_colors.md","articles":[]},{"title":"Variablen","level":"1.2.3","depth":2,"path":"020_variablen.md","ref":"020_variablen.md","articles":[]},{"title":"Eingabe von Werten","level":"1.2.4","depth":2,"path":"030_input.md","ref":"030_input.md","articles":[]},{"title":"Rechnen mit Variablen","level":"1.2.5","depth":2,"path":"035_variablen_rechnen.md","ref":"035_variablen_rechnen.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"README.md","mtime":"2024-10-16T11:10:10.076Z","type":"markdown"},"gitbook":{"version":"5.1.1","time":"2024-10-16T11:10:13.978Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
