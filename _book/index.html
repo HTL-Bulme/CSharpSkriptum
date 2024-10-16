@@ -239,14 +239,43 @@ Die erste solche Maschine, die du steuerst, ist eine kleine Schildkröte auf dem
 zu zeichnen oder sich zu verstecken.
 Welche Anweisungen existieren und wie diese Anweisungen geschrieben werden müssen,
 ist in einer <strong>Programmiersprache</strong> definiert.</p>
-<p>Die Programmiersprache, die wir in diesem Kurs lernen werden, ist <strong>Python</strong>.
-Python ist zurzeit die beliebteste Programmiersprache für Einsteiger und
-wird in der Industrie in vielen Bereichen eingesetzt.
-Beispielsweise wird Python in der Entwicklung von Websites oder im Bereich der künstlichen 
-Intelligenz eingesetzt.</p>
-<h2 id="python-mit-webtigerjython">Python mit WebTigerJython</h2>
-<p>Wir werden mit einer Onlineumgebung starten, um Python zu programmieren.
-Diese Umgebung findest du im Web unter: <a href="https://webtigerjython.ethz.ch" target="_blank">https://webtigerjython.ethz.ch</a></p>
+<p>Die Programmiersprache, die wir in diesem Kurs lernen werden, ist <strong>C#</strong>.
+C# ist eine moderne, objektorientierte Programmiersprache,
+die besonders für die Entwicklung von Windows-Anwendungen und Spielen beliebt ist.
+Sie wird häufig in der Webentwicklung und für Unternehmenssoftware eingesetzt
+und zeichnet sich durch ihre hohe Leistungsfähigkeit aus.
+Des Weiteren gibt es eine große Schnittmenge zu anderen Programmiersprachen,
+wie Java, C, C++ oder JavaScript, was das Erlernen dieser Sprachen später einfach möglich macht.</p>
+<h2 id="c-mit-roslynpad">C# mit Roslynpad</h2>
+<p>Wir werden mit einer einfachen Umgebung starten, um C# zu programmieren.
+Diese Umgebung benötigt aber einige Schritt um sie zu installieren.
+Befolge folgende Schritte um die Anwendung zu installieren:</p>
+<h3 id="installation">Installation</h3>
+<p>Zur Installation benötigst du einen aktuellen Computer mit dem Betriebssystem Windows.</p>
+<p>Führe folgende Schritte der Reihe nach aus, um Roslynpad zu installieren:</p>
+<ol>
+<li>Download und Installation der .Net SDK <a href="https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/sdk-8.0.401-windows-x64-installer" target="_blank">Download</a></li>
+<li>Download und Installation des .Net Frameworks <a href="https://dotnet.microsoft.com/en-us/download/dotnet-framework/thank-you/net481-developer-pack-offline-installer" target="_blank">Download</a></li>
+<li>Download von Roslynpad <a href="https://github.com/roslynpad/roslynpad/releases/download/19.1/RoslynPad-windows-x64.zip" target="_blank">Download</a></li>
+<li>Entpacken von RoslynPad<ul>
+<li>Rechtsklick auf die Datei: RoslynPad-windows-x64.zip</li>
+<li>“Alle Extrahieren” wählen oder “Weitere Optionen” und dann “Alle Extrahieren” wählen</li>
+<li>Ordner öffnen und Verknüpfung zu RoslynPad.exe auf dem Desktop erstellen</li>
+</ul>
+</li>
+<li>RoslynPad starten und konfigurieren<ul>
+<li>Documents fixieren</li>
+<li>x64 wählen und als Standard setzen</li>
+<li>BulmeSharp laden</li>
+<li>Minimalprogramm testen</li>
+</ul>
+</li>
+</ol>
+<pre><code class="lang-cs">Turtle.fd(<span class="hljs-number">39</span>);
+</code></pre>
+<p><strong>Tipp:</strong>
+Die gesamte Installation wird in diesem <a href="https://bulme-my.sharepoint.com/personal/gl_ms_bulme_at/_layouts/15/stream.aspx?id=%2Fpersonal%2Fgl%5Fms%5Fbulme%5Fat%2FDocuments%2FInstallation%2Emp4&amp;nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0" target="_blank">Video</a> vorgezeigt.</p>
+<h3 id="einführung-in-die-oberfläche">Einführung in die Oberfläche</h3>
 <p>Die Oberfläche ist einfach gestaltet und speziell für Einsteiger entwickelt worden.
 Sie besteht aus folgenden sechs Bereichen.</p>
 <ol>
@@ -258,18 +287,19 @@ Sie besteht aus folgenden sechs Bereichen.</p>
 dass du einen Fehler gemacht hast</li>
 <li>Einstellungen: Hier kannst du Einstellungen ändern und die Hilfe anzeigen lassen</li>
 </ol>
-<p><img src="images/webtigerjython.png" alt="WebTigerJython Überblick"></p>
+<p><img src="images/webtigerjython.png" alt="Roslynpad Übersicht"></p>
 <h3 id="📝-übung-1">📝 Übung 1</h3>
-<p>Gib den Programmcode aus der oberen Grafik im WebTigerJython ein
-und klicke auf den Ausführen Knopf.
+<p>Gib den Programmcode aus der oberen Grafik in RoslyPad ein
+und klicke auf den &quot;Ausführen&quot;-Knopf.
 Es sollte die gleiche Ausgabe erscheinen wie in der Grafik.</p>
 <p><strong>Tipps:</strong> </p>
 <ul>
 <li>Achte auf Groß- und Kleinschreibung</li>
+<li>Achte darauf, daß Anweisungen mit einem Strichpunkt (Semikolon) ageschlossen werden müssen</li>
 <li>Achte auf die richtigen Klammern! Es werden in dem Beispiel runde Klammern &quot;(&quot; und &quot;)&quot; benutzt. Eckige &quot;[&quot;, &quot;]&quot; oder geschwungene &quot;{&quot;, &quot;}&quot; Klammern
 bedeuten etwas anderes und funktionieren nicht!</li>
-<li>Wenn du einen Tippfehler gemacht hast, also beispielsweise statt <code>makeTurtle()</code> 
-den Text <code>maketurtle()</code> geschrieben hast, erscheint eine Fehlermeldung im
+<li>Wenn du einen Tippfehler gemacht hast, also beispielsweise statt <code>Turtle.showTurtle()</code> 
+den Text <code>Turtle.showTrutel()</code> geschrieben hast, erscheint eine Fehlermeldung im
 unteren Teil des Ausgabefensters. Versuche diese zu verstehen und den Fehler zu beheben.</li>
 <li>Beachte folgende Regel beim Programmieren: <strong>Probiere
 alles selber aus!</strong> Je mehr Programme du selber schreibst, umso mehr
@@ -280,12 +310,12 @@ wirst du verstehen und beherrschen.</li>
 ein erstes Programm eingetippt.
 Im nächsten Kapitel erfährst du, welche Anweisungen die Turtle versteht
 und wie du interessante Grafiken mit der Turtle zeichnen kannst.</p>
-<h2 id="quellen">Quellen</h2>
-<ul>
-<li><a href="https://python-online.ch" target="_blank">https://python-online.ch</a></li>
-<li><a href="https://programmierkonzepte.ch" target="_blank">https://programmierkonzepte.ch</a></li>
-<li><a href="https://tobiaskohn.ch/" target="_blank">https://tobiaskohn.ch/</a></li>
-</ul>
+<!---
+## Quellen
+* https://python-online.ch
+* https://programmierkonzepte.ch
+* https://tobiaskohn.ch/
+-->
 
                                 
                                 </section>
@@ -325,7 +355,7 @@ und wie du interessante Grafiken mit der Turtle zeichnen kannst.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"book":true,"keywords":["Bulme","Python"],"author":["HTL BULME"],"subject":"Python","classoption":["openany"],"lang":"de","date":"2023-08-20","geometry":"left=1.5cm,right=1.5cm,top=2cm,bottom=2.5cm","title":"Einführung ✨","level":"1.1","depth":1,"next":{"title":"Grafik mit der Turtle 🐢","level":"1.2","depth":1,"path":"010_turtle.md","ref":"010_turtle.md","articles":[{"title":"Übungen mit der Turtle","level":"1.2.1","depth":2,"path":"015_turtle_lines.md","ref":"015_turtle_lines.md","articles":[]},{"title":"Farben verwenden","level":"1.2.2","depth":2,"path":"017_turtle_colors.md","ref":"017_turtle_colors.md","articles":[]},{"title":"Variablen","level":"1.2.3","depth":2,"path":"020_variablen.md","ref":"020_variablen.md","articles":[]},{"title":"Eingabe von Werten","level":"1.2.4","depth":2,"path":"030_input.md","ref":"030_input.md","articles":[]},{"title":"Rechnen mit Variablen","level":"1.2.5","depth":2,"path":"035_variablen_rechnen.md","ref":"035_variablen_rechnen.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"README.md","mtime":"2024-10-02T21:27:10.338Z","type":"markdown"},"gitbook":{"version":"5.1.1","time":"2024-10-02T21:33:02.497Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"book":true,"keywords":["Bulme","C#"],"author":["HTL BULME"],"subject":"C#","classoption":["openany"],"lang":"de","date":"2024-10-16","geometry":"left=1.5cm,right=1.5cm,top=2cm,bottom=2.5cm","title":"Einführung ✨","level":"1.1","depth":1,"next":{"title":"Grafik mit der Turtle 🐢","level":"1.2","depth":1,"path":"010_turtle.md","ref":"010_turtle.md","articles":[{"title":"Übungen mit der Turtle","level":"1.2.1","depth":2,"path":"015_turtle_lines.md","ref":"015_turtle_lines.md","articles":[]},{"title":"Farben verwenden","level":"1.2.2","depth":2,"path":"017_turtle_colors.md","ref":"017_turtle_colors.md","articles":[]},{"title":"Variablen","level":"1.2.3","depth":2,"path":"020_variablen.md","ref":"020_variablen.md","articles":[]},{"title":"Eingabe von Werten","level":"1.2.4","depth":2,"path":"030_input.md","ref":"030_input.md","articles":[]},{"title":"Rechnen mit Variablen","level":"1.2.5","depth":2,"path":"035_variablen_rechnen.md","ref":"035_variablen_rechnen.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"README.md","mtime":"2024-10-16T08:27:45.251Z","type":"markdown"},"gitbook":{"version":"5.1.1","time":"2024-10-16T08:28:32.670Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
