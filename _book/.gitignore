@@ -128,3 +128,9 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# Markdown im _book
+_book/*.md
+
+# Keine Pdfs
+*.pdf

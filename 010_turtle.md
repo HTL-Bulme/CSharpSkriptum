@@ -54,6 +54,7 @@ In der folgenden Grafik siehst du die wichtigsten Funktionen:
 | bk  | Abkürzung für **b**ac**k**, Anzahl Pixel nach hinten gehen  | `Turtle.bk(18);`  |
 | rt  | Abkürzung für **r**igh**t**, Angegebenen Winkel (in Grad) nach **rechts** drehen  | `Turtle.rt(39.5);`  |
 | lt  | Abkürzung für **l**ef**t**, Angegebenen Winkel (in Grad) nach **links** drehen  | `Turtle.lt(45);`  |
+| showTurtle  | Die Turtle wird am Bildschirm sichtbar gemacht und öffnet das Ausgabefenster.  | `Turtle.showTurtle();`  |
 
 **Zusatz:** Die Einheit für Distanzen ist hier Pixel.
 Ein Pixel entspricht einem einzelnen Bildpunkt auf deinem Bildschirm.
@@ -114,20 +115,19 @@ und geht dann wieder 30 Pixel nach vorne.
 
 In Zeile 21 wird `Turtle.showTurtle()` aufgerufen, damit das Fenster sichtbar wird.
 
+
 ## 🧭 Zusammenfassung
-Wir haben uns die wichtigsten Funktionen der Turtle angesehen.
-Funktionen haben am Ende zwei runde Klammern.
-Zwischen den runden Klammern können Argumente stehen,
-das sind weitere Angaben zum Funktionsaufruf,
-beispielsweise die Anzahl der Pixel bei der Funktion `fd`.
+Wir haben uns die wichtigsten Funktionen der Turtle in C# angesehen. 
 
-Damit klar ist, dass die Funktion `fd` des Objekts `Turtle` gemeint ist,
-schreibt man zuerst den Namen des Objekts, gefolgt von einem Punkt
-und anschließend den Funktionsaufruf.
+Funktionen haben am Ende zwei runde Klammern. Zwischen den runden Klammern können Argumente stehen, das sind weitere Angaben zum Funktionsaufruf, beispielsweise die Anzahl der Pixel bei der Funktion `fd(100)`.
 
-Funktionsaufrufe sind Anweisungen, diese müssen mit einem Strichpunkt (Semikolon) abgeschlossen werden.
+Damit klar ist, dass die Funktion `fd` des Objekts `Turtle` gemeint ist,  
+schreibt man zuerst den Namen des Objekts, gefolgt von einem Punkt und anschließend den Funktionsaufruf.
+
+In C# müssen Funktionsaufrufe mit einem Semikolon `;` abgeschlossen werden, um das Ende der Anweisung zu markieren.
 
 Im nächsten Abschnitt sollst du selbst Programme schreiben, um vorgegebene Grafiken zu erzeugen.
+
 
 
 
