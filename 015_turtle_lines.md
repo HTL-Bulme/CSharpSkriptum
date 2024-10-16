@@ -19,8 +19,8 @@ der Figur sitzt und nach Norden schaut.
 ## 📝 Übung 4
 <img style="float: right; width:33%" src="./images/bsp04.png">
 Zeichne die Figur auf der rechten Seite.
-Die ausgefüllten Kreise haben einen Durchmesser von 20,
-die Verbindungslinien eine Länge von 50.
+Die ausgefüllten Kreise haben einen Durchmesser von 10,
+die Verbindungslinien eine Länge von 25.
 
 **Tipps:** 
 

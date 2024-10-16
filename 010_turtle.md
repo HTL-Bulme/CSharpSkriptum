@@ -8,7 +8,7 @@ kombinierst, entstehen Zeichnungen und Bilder.
 ## Minimalprogramm
 
 Bevor du mit der Turtle arbeiten kannst, musst du zuerst eine Bibliothek einbinden.
-Eine Bibliothe ist eine Sammlung von vorgefertigten Codebausteinen,
+Eine Bibliothek ist eine Sammlung von vorgefertigten Codebausteinen,
 welche normalerweise nicht im Standardumfang einer Programmiersprache enthalten sind,
 die du wiederverwenden kannst, um bestimmte Aufgaben schneller und einfacher zu lösen.
 Um die Turtle zu verwenden, benötigen wir die Bibliothek *BulmeSharp*.
@@ -54,7 +54,7 @@ In der folgenden Grafik siehst du die wichtigsten Funktionen:
 | bk  | Abkürzung für **b**ac**k**, Anzahl Pixel nach hinten gehen  | `Turtle.bk(18);`  |
 | rt  | Abkürzung für **r**igh**t**, Angegebenen Winkel (in Grad) nach **rechts** drehen  | `Turtle.rt(39.5);`  |
 | lt  | Abkürzung für **l**ef**t**, Angegebenen Winkel (in Grad) nach **links** drehen  | `Turtle.lt(45);`  |
-| showTurtle  | Die Turtle wird am Bildschirm sichtbar gemacht und öffnet das Ausgabefenster.  | `Turtle.showTurtle();`  |
+| showTurtle  | Die Turtle wird am Bildschirm sichtbar gemacht und das Ausgabefenster geöffnet  | `Turtle.showTurtle();`  |
 
 **Zusatz:** Die Einheit für Distanzen ist hier Pixel.
 Ein Pixel entspricht einem einzelnen Bildpunkt auf deinem Bildschirm.
@@ -124,7 +124,7 @@ Funktionen haben am Ende zwei runde Klammern. Zwischen den runden Klammern könn
 Damit klar ist, dass die Funktion `fd` des Objekts `Turtle` gemeint ist,  
 schreibt man zuerst den Namen des Objekts, gefolgt von einem Punkt und anschließend den Funktionsaufruf.
 
-In C# müssen Funktionsaufrufe mit einem Semikolon `;` abgeschlossen werden, um das Ende der Anweisung zu markieren.
+In C# müssen Funktionsaufrufe mit einem Semikolon (`;`) abgeschlossen werden, um das Ende der Anweisung zu markieren.
 
 Im nächsten Abschnitt sollst du selbst Programme schreiben, um vorgegebene Grafiken zu erzeugen.
 
