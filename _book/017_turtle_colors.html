@@ -238,27 +238,27 @@
 <p>In diesem Abschnitt lernst du wie man mit der Turtle bunte Bilder zeichnen kann.
 Die Turtle kann sowohl farbige Linien als auch farbige Flächen zeichnen.</p>
 <h2 id="farbe-des-stifts-ändern">Farbe des Stifts ändern</h2>
-<p>Über die Funktion <code>setPenColor("farbname")</code> kannst du die Farbe des Stifts auswählen.
+<p>Über die Funktion <code>Turtle.setPenColor("farbname");</code> kannst du die Farbe des Stifts auswählen.
 Wichtig ist, dass du den Farbnamen doppelte Hochkomma (Umschalttaste + 2) setzt.
 Wie immer beim Programmieren kennt die Turtle nur englische Farbnamen.
 Die folgende Liste ist zwar nicht vollständig, aber doch ein erster Anhaltspunkt: yellow, gold, orange, red, maroon, violet, magenta, purple, navy, blue, skyblue, cyan, turquoise, lightgreen, green, darkgreen, chocolate, brown, black, gray, white.</p>
 <p>Zusätzlich kannst du noch die Dicke der des Stifts ändern.
-Mit der Funktion <code>setPenWidth(dicke)</code> setzt du die Dicke auf den gewünschten Wert.</p>
+Mit der Funktion <code>Turtle.setPenWidth(dicke);</code> setzt du die Dicke auf den gewünschten Wert.</p>
 <p>Das folgende Beispiel zeigt wie du die Funktionen aufrufen kannst.
-Wichtig ist bei <code>setPenColor("farbname")</code>, dass du den Namen der Farbe in doppelte Hochkomma schreibst,
+Wichtig ist bei <code>Turtle.setPenColor("farbname")</code>, dass du den Namen der Farbe in doppelte Hochkomma schreibst,
 da es sich um einen Text handelt.</p>
-<pre><code class="lang-python"><span class="hljs-keyword">from</span> gturtle <span class="hljs-keyword">import</span> *
-makeTurtle()
+<pre><code class="lang-cs"><span class="hljs-meta">#r "nuget: BulmeSharp, 0.10.1"</span>
+<span class="hljs-keyword">using</span> BulmeSharp;
 
-setPenColor(<span class="hljs-string">"blue"</span>)
-dot(<span class="hljs-number">50</span>)
-pu()
-fd(<span class="hljs-number">70</span>)
-setPenColor(<span class="hljs-string">"red"</span>)
-setPenWidth(<span class="hljs-number">50</span>)
-pd()
-fd(<span class="hljs-number">100</span>)
-ht()
+Turtle.setColor(<span class="hljs-string">"blue"</span>);
+Turtle.dot(<span class="hljs-number">25</span>);
+Turtle.penUp();
+Turtle.fd(<span class="hljs-number">35</span>);
+Turtle.setPenColor(<span class="hljs-string">"red"</span>);
+Turtle.setPenWidth(<span class="hljs-number">25</span>);
+Turtle.pd();
+Turtle.fd(<span class="hljs-number">50</span>);
+Turtle.showTurtle();
 </code></pre>
 <p>Das Programm erzeugt folgende Grafik:</p>
 <p><img src="images/rufzeichen.png" alt="Ergebnis des Programms"></img></p>
@@ -268,18 +268,19 @@ dass sie sich ausgehend vom aktuellen Ort die nachfolgend gezeichnete Figur merk
 Mit der Funktion <code>fillPath()</code> wird der jetzige Ort mit dem Startort verbunden 
 und die eingeschlossene Fläche eingefärbt. Mit <code>setFillColor("farbname")</code>
 kannst du die Füllfarbe angeben (sagst du nichts, so ist sie standardmässig schwarz).</p>
-<pre><code class="lang-python"><span class="hljs-keyword">from</span> gturtle <span class="hljs-keyword">import</span> *
-makeTurtle()
+<pre><code class="lang-cs"><span class="hljs-meta">#r "nuget: BulmeSharp, 0.10.1"</span>
+<span class="hljs-keyword">using</span> BulmeSharp;
 
-setFillColor(<span class="hljs-string">"magenta"</span>)
-startPath()
-fd(<span class="hljs-number">100</span>)
-rt(<span class="hljs-number">120</span>)
-fd(<span class="hljs-number">100</span>)
-rt(<span class="hljs-number">120</span>)
-fd(<span class="hljs-number">100</span>)
-rt(<span class="hljs-number">120</span>)
-fillPath()
+Turtle.setColor(<span class="hljs-string">"magenta"</span>);
+Turtle.beginFill();
+Turtle.fd(<span class="hljs-number">50</span>);
+Turtle.rt(<span class="hljs-number">120</span>);
+Turtle.fd(<span class="hljs-number">50</span>);
+Turtle.rt(<span class="hljs-number">120</span>);
+Turtle.fd(<span class="hljs-number">50</span>);
+Turtle.rt(<span class="hljs-number">120</span>);
+Turtle.endFill();
+Turtle.showTurtle();
 </code></pre>
 <p>Das Programm erzeugt folgende Grafik:</p>
 <p><img src="images/triangle.png" alt="Ergebnis des Programms"></img></p>
@@ -326,7 +327,7 @@ fillPath()
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Farben verwenden","level":"1.2.2","depth":2,"next":{"title":"Variablen","level":"1.2.3","depth":2,"path":"020_variablen.md","ref":"020_variablen.md","articles":[]},"previous":{"title":"Übungen mit der Turtle","level":"1.2.1","depth":2,"path":"015_turtle_lines.md","ref":"015_turtle_lines.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["add-js-css"],"pluginsConfig":{"add-js-css":{"css":["./customStyle/style.css"]},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"017_turtle_colors.md","mtime":"2024-10-02T21:27:10.338Z","type":"markdown"},"gitbook":{"version":"6.0.2","time":"2024-10-16T17:50:03.712Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Farben verwenden","level":"1.2.2","depth":2,"next":{"title":"Variablen","level":"1.2.3","depth":2,"path":"020_variablen.md","ref":"020_variablen.md","articles":[]},"previous":{"title":"Übungen mit der Turtle","level":"1.2.1","depth":2,"path":"015_turtle_lines.md","ref":"015_turtle_lines.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["add-js-css"],"pluginsConfig":{"add-js-css":{"css":["./customStyle/style.css"]},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"017_turtle_colors.md","mtime":"2024-10-16T20:56:23.785Z","type":"markdown"},"gitbook":{"version":"6.0.2","time":"2024-10-16T21:28:51.918Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

@@ -250,17 +250,19 @@ Dadurch werden die Programme <strong>interaktiv</strong> und viel <strong>flexib
 Immer wenn man sich im Programm etwas "merken" möchte,
 um es später wieder zu verwenden, benötigt man Variablen.</p>
 <p>Nehmen wir an, wir möchten ein Quadrat zeichnen und schreiben dazu folgenden Code:</p>
-<pre><code class="lang-python"><span class="hljs-keyword">from</span> gturtle <span class="hljs-keyword">import</span> *
-makeTurtle()
+<pre><code class="lang-cs"><span class="hljs-meta">#r "nuget: BulmeSharp, 0.10.1"</span>
+<span class="hljs-keyword">using</span> BulmeSharp;
 
-fd(<span class="hljs-number">50</span>)
-rt(<span class="hljs-number">90</span>)
-fd(<span class="hljs-number">50</span>)
-rt(<span class="hljs-number">90</span>)
-fd(<span class="hljs-number">50</span>)
-rt(<span class="hljs-number">90</span>)
-fd(<span class="hljs-number">50</span>)
-rt(<span class="hljs-number">90</span>)
+Turtle.fd(<span class="hljs-number">50</span>);
+Turtle.rt(<span class="hljs-number">90</span>);
+Turtle.fd(<span class="hljs-number">50</span>);
+Turtle.rt(<span class="hljs-number">90</span>);
+Turtle.fd(<span class="hljs-number">50</span>);
+Turtle.rt(<span class="hljs-number">90</span>);
+Turtle.fd(<span class="hljs-number">50</span>);
+Turtle.rt(<span class="hljs-number">90</span>);
+
+Turtle.showTurtle();
 </code></pre>
 <p>Dieses Quadrat ist aber immer gleich groß, denn es hat die Seitenlänge <code>50</code>.
 Möchten wir das Quadrat vergrößern, also beispielsweise von <code>50</code> auf <code>75</code>,
@@ -270,41 +272,53 @@ und jedes mal den Wert des Speicherplatzes benutzen.
 So müssen wir die Zahl <code>50</code> nur einmal schreiben.</p>
 <h2 id="definition-von-variablen">Definition von Variablen</h2>
 <p>Bevor wir eine Variable benutzen müssen wir sie anlegen.
-Wir geben ihr dabei einen Namen und einen Startwert.
+Wir geben ihr dabei einen Namen, einen Datentyp und einen Startwert.
 Den Vorgang des Anlegens einer Variable nennt man <strong>Definition</strong> der Variable.
-Die Namen für Variablen sollten kurz und verständlich sein.
-Für die Seite eines Quadrats könnte man <code>a</code> verwenden.</p>
-<p>Um eine Variable mit dem Namen <code>a</code> und dem Wert <code>50</code> zu definieren,
+Die Namen für Variablen sollten kurz und verständlich sein.</p>
+<p>Der Datentyp bestimmt welche Werte eine Variable annehmen kann.
+Beispielsweise existieren Datentypen für Texte, Ganzzahlen oder Gleitkommazahlen.
+Eine Auflistung der in C# üblichen Datentypen findest du am Ende des Kapitels.
+Wir werden an dieser Stelle nur auf zwei Datentypen verweisen:</p>
+<ul>
+<li><code>int</code> - Datentyp für <strong>Ganzzahlen</strong>. Der Wert könnte beispielsweise 10 oder -23 oder auch 0 sein</li>
+<li><code>double</code>- Datentyp für <strong>Gleitkommazahlen</strong>. Der Wert könnte 1.23 oder 17.0 oder auch 3.141592 sein</li>
+</ul>
+<p>Für die Seite eines Quadrats könnte man als Variablenname beispielsweise <code>a</code> verwenden.
+Als Datentyp für die Seitenlänge verwenden wir <code>double</code>, damit kann die Seite auch
+einen Gleitkommwert wie <code>20.5</code> haben.</p>
+<p>Um eine Variable mit dem Namen <code>a</code>, dem Typ <code>double</code> und dem Startwert <code>50</code> zu definieren,
 schreibt man:</p>
-<pre><code class="lang-python">a = <span class="hljs-number">50</span>
+<pre><code class="lang-cs"><span class="hljs-built_in">double</span> a = <span class="hljs-number">50</span>;
 </code></pre>
 <p>Die Variable mit dem Namen <code>a</code> kann nun überall dort verwendet werden,
 wo normalerweise der Wert <code>50</code> steht.</p>
 <p>Wir könnten also ein neues Programm schreiben,
 bei dem die Seitenlänge deutlich einfacher geändert werden kann,
 da die Zahl <code>50</code> nur an einer Stelle vorkommt.</p>
-<pre><code class="lang-python"><span class="hljs-keyword">from</span> gturtle <span class="hljs-keyword">import</span> *
-makeTurtle()
+<pre><code class="lang-cs"><span class="hljs-meta">#r "nuget: BulmeSharp, 0.10.1"</span>
+<span class="hljs-keyword">using</span> BulmeSharp;
 
-a = <span class="hljs-number">50</span>
+<span class="hljs-built_in">double</span> a = <span class="hljs-number">50</span>;
 
-fd(a)
-rt(<span class="hljs-number">90</span>)
-fd(a)
-rt(<span class="hljs-number">90</span>)
-fd(a)
-rt(<span class="hljs-number">90</span>)
-fd(a)
-rt(<span class="hljs-number">90</span>)
+Turtle.fd(a);
+Turtle.rt(<span class="hljs-number">90</span>);
+Turtle.fd(a);
+Turtle.rt(<span class="hljs-number">90</span>);
+Turtle.fd(a);
+Turtle.rt(<span class="hljs-number">90</span>);
+Turtle.fd(a);
+Turtle.rt(<span class="hljs-number">90</span>);
+
+Turtle.showTurtle();
 </code></pre>
 <p><strong>⚠️ Vorsicht:</strong> Der Name der Variable muss auf der linken Seite des <code>=</code> Zeichens stehen
 und auf der rechten Seite der Wert, welcher der Variable zugewiesen werden soll.
-Die Zeile <code>50 = a</code> führt zu einem Fehler.</p>
+Die Zeile <code>double 50 = a;</code> führt zu einem Fehler.</p>
 <h2 id="eigenschaften-von-variablen">Eigenschaften von Variablen</h2>
-<p>Variablen haben in Python drei Eigenschaften</p>
+<p>Variablen haben in C# drei Eigenschaften</p>
 <ul>
 <li>Name</li>
-<li>Typ</li>
+<li>Datentyp</li>
 <li>Wert</li>
 </ul>
 <p><strong>Name</strong>: Mit dem Namen wird die Variable angesprochen.
@@ -317,11 +331,11 @@ wie "ß" oder "ö", sollten vermieden werden.</p>
 <li><strong>Gültige</strong> Variablennamen sind bspw.: <code>seite_a</code>, <code>hoehe</code> oder <code>radius2</code></li>
 <li><strong>Ungültige</strong> Variablennamen sind bspw.: <code>2radius</code>, <code>höhe</code> oder <code>seite a</code></li>
 </ul>
-<p><strong>Typ</strong>: Eine Variable kann verschiedene Arten von Werten beinhalten.
+<p><strong>Datentyp</strong>: Eine Variable kann verschiedene Arten von Werten beinhalten.
 Wir unterscheiden hier drei grundlegende Typen:</p>
 <ul>
-<li>Integer: Ganzzahlige Werte, wie beispielsweise: 1, 2, 3 aber auch 0 und -1, -2 etc.</li>
-<li>Float: Zahlen in Gleitkommadarstellung: 1.001, 3.2, 8.9293 oder -1130.23</li>
+<li>Ganzzahlige Datentypen: Zahlen des Zählens, wie beispielsweise: 1, 2, 3 aber auch 0 und -1, -2 etc.</li>
+<li>Zahlen in Gleitkommadarstellung: 1.001, 3.2, 8.9293 oder -1130.23</li>
 <li>String: Texte wie beispielsweise "Hallo" oder "Guten Morgen"</li>
 </ul>
 <p><strong>Wert</strong>: Jede Variable hat einen Wert. Der Wert der Variable kann
@@ -330,13 +344,13 @@ im Programm laufend geändert werden. </p>
 <h3 id="📝-übung-9">📝 Übung 9</h3>
 <p>Prüfe welche der folgenden Variablendefinitionen gültig sind,
 indem du sie Zeile für Zeile in den Codeeingabe-Bereich kopierst und Start klickst</p>
-<pre><code class="lang-python">meine_Variable = <span class="hljs-number">123.4</span>
-beste Variable Ever = <span class="hljs-number">123</span>
-x_y_z = <span class="hljs-number">2000</span>
-t = -<span class="hljs-number">7</span>
-<span class="hljs-number">15.4</span> = y
-x-y-z = <span class="hljs-number">2000</span>
-<span class="hljs-keyword">import</span> = <span class="hljs-number">4</span>
+<pre><code class="lang-c#"><span class="hljs-built_in">double</span> meine_Variable = <span class="hljs-number">123.4</span>;
+<span class="hljs-built_in">int</span> beste Variable Ever = <span class="hljs-number">123</span>;
+<span class="hljs-built_in">int</span> x_y_z = <span class="hljs-number">2000</span>;
+<span class="hljs-built_in">int</span> t = <span class="hljs-number">-7</span>;
+<span class="hljs-built_in">double</span> <span class="hljs-number">15.4</span> = y;
+<span class="hljs-built_in">int</span> x-y-z = <span class="hljs-number">2000</span>;
+<span class="hljs-built_in">int</span> <span class="hljs-keyword">using</span> = <span class="hljs-number">4</span>;
 </code></pre>
 <h3 id="📝-übung-10">📝 Übung 10</h3>
 <p>Schreibe ein Programm, bei dem am Anfang zwei Variablen definiert werden.
@@ -351,7 +365,7 @@ soll den Wert 80 bekommen.</p>
 <li>Variablen müssen vor der Verwendung angelegt (definiert) werden</li>
 <li>Dabei steht der Name der Variablen immer links vom Gleichheitszeichen = und der Wert rechts davon. Beispiel <code>seite_a = 23</code></li>
 <li>Variablen haben drei Eigenschaften: Name, Typ und Wert</li>
-<li>Typen sind bspw. Integer (Ganzzahl), Float (Gleitkommazahl) und String (Text)</li>
+<li>Typen sind bspw. int (Ganzzahl), double (Gleitkommazahl) oder String (Text)</li>
 </ul>
 
                                 
@@ -396,7 +410,7 @@ soll den Wert 80 bekommen.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Variablen","level":"1.2.3","depth":2,"next":{"title":"Eingabe von Werten","level":"1.2.4","depth":2,"path":"030_input.md","ref":"030_input.md","articles":[]},"previous":{"title":"Farben verwenden","level":"1.2.2","depth":2,"path":"017_turtle_colors.md","ref":"017_turtle_colors.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["add-js-css"],"pluginsConfig":{"add-js-css":{"css":["./customStyle/style.css"]},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"020_variablen.md","mtime":"2024-10-02T21:27:10.338Z","type":"markdown"},"gitbook":{"version":"6.0.2","time":"2024-10-16T17:50:03.712Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Variablen","level":"1.2.3","depth":2,"next":{"title":"Eingabe von Werten","level":"1.2.4","depth":2,"path":"030_input.md","ref":"030_input.md","articles":[]},"previous":{"title":"Farben verwenden","level":"1.2.2","depth":2,"path":"017_turtle_colors.md","ref":"017_turtle_colors.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["add-js-css"],"pluginsConfig":{"add-js-css":{"css":["./customStyle/style.css"]},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"020_variablen.md","mtime":"2024-10-16T21:27:01.798Z","type":"markdown"},"gitbook":{"version":"6.0.2","time":"2024-10-16T21:28:51.918Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

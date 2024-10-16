@@ -67,11 +67,11 @@ Weitere Funktionen, welche die Turtle ausführen kann sind:
 
 | Funktion  | Beschreibung | Beispiel |
 | ------------- | ------------- | ------------- |
-| pu  | Abkürzung für **p**en **u**p, Turtle zeichnet nicht mehr  | `Turtle.pu();`  |
-| pd  | Abkürzung für **p**en **d**own, Turtle zeichnet wieder  | `Turtle.pd();`  |
+| penUp  | Stift wird aufgehoben, Turtle zeichnet nicht mehr  | `Turtle.penUp();`  |
+| penDown  | Stift wird wieder abgesenkt, Turtle zeichnet wieder  | `Turtle.penDown();`  |
 | dot  | Turtle zeichnet einen gefüllten Punkt (*engl.* dot) mit angegebenen Durchmesser  | `Turtle.dot(10);`  |
-| ht  | Abkürzung für **h**ide **t**urtle, Turtle wird unsichtbar  | `Turtle.ht();`  |
-| st  | Abkürzung für **s**how **t**urtle, Turtle wird sichtbar  | `Turtle.st();`  |
+| setColor  | Bestimmt die Farbe mit der die Turtle zeichnet  | `Turtle.setColor("red");`  |
+| setPenWidth  | Bestimmt die Liniendicke der Zeichnung  | `Turtle.setPenWidth(3);`  |
 
 
 ## Ein größeres Programm
@@ -79,41 +79,40 @@ Weitere Funktionen, welche die Turtle ausführen kann sind:
 In der folgenden Abbildung siehst du bereits ein größeres Programm
 und daneben die Ausgabe des Programms.
 
-![Code und Ausgabe](./images/codeausgabe.png)
+![Code und Ausgabe](./images/erstesExample.png)
 
 Lass uns das Programm Zeile für Zeile analysieren.
 Programme werden immer von oben nach unten abgearbeitet.
 
 In Zeile 1 und 2 siehst du die bereits bekannten Anweisungen des Minimalprogramms.
-In Zeile 1 wird eine spezielle Datei namens `gturtle` eingebunden.
-Diese Datei enthält die Funktionen um mit der Turtle zu arbeiten.
+In Zeile 1 wird die BulmeSharp-Bibliothek eingebunden.
+Diese Datei enthält Funktionen um mit der Turtle zu arbeiten.
 Dateien, die wir zusätzlich einbinden können, und die den Funktionsumfang erweitern,
 nennen wir **Module** oder auch **Bibliotheken**.
-In Zeile 2 wird mit `makeTurtle()` die Turtle erstellt und angezeigt. 
+Zeile 2 ist notwendig um auf die Turtle zugreifen zu können.
 
-In Zeile 3 machen wir der Turtle Beine und sagen sie soll sich mit der
-Geschwindigkeit 10 fortbewegen, wodurch das Bild viel schneller gezeichnet wird.
-Es macht aber auch die Fehlersuche schwieriger, da wir mit dem Schauen
-ab einer gewissen Geschwindigkeit nicht mehr mitkommen.
-
-Zeile 4 ist eine Leerzeile. Wir dürfen beliebig viele Leerzeilen
+Zeile 3 ist eine Leerzeile. Wir dürfen beliebig viele Leerzeilen
 an beliebigen Stellen einfügen. Das wird häufig gemacht um das
 Programm in Form zu bringen und leichter lesbar zu machen.
 
-In Zeile 5 bis inkl. 7 fährt die Turtle 100 Pixel nach vorne,
-dreht sich 90° nach links und macht dann einen 10 Pixel großen Punkt.
+In Zeile 4 wird die Linienfarbe auf blau gesetzt
+und in Zeile 5 die Liniendicke auf 3 Pixel.
 
-In Zeile 8 bis inkl. 11 hebt die Turtle den Stift auf und zeichnet ab hier nichts mehr.
-Dann fährt sie 50 Pixel nach vorne und setzt den Stift wieder ab, damit sie wieder
-etwas zeichnet und macht dann wieder einen 10 Pixel großen Punkt.
+In Zeile 7 bis inkl. 9 fährt die Turtle 60 Pixel nach vorne,
+macht dann einen 8 Pixel großen Punkt und dreht sich dann 90° nach links.
+
+In Zeile 11 bis inkl. 13 hebt die Turtle den Stift auf und zeichnet ab hier nichts mehr.
+Dann fährt sie 30 Pixel nach vorne und setzt den Stift wieder ab, damit sie wieder
+etwas zeichnet.
 Man sieht, dass zwischen den zwei Punkten der Stift aufgehoben wurde,
 da keine durchgezogene Linie zwischen den beiden Punkten zu sehen ist.
 
-In Zeile 12 dreht sich die Turtle 90° nach links und sieht damit nach unten.
-In Zeile 13 bis inkl. 15 geht sie 50 Pixel nach vorne, dreht sich 90° nach rechts
-und geht dann wieder 50 Pixel nach vorne.
+In Zeile 15 macht die Turtle wieder einen 8 Pixel großen Punkt,
+dreht sich in der folgenden Zeile 90° nach links und sieht damit nach unten.
+In Zeile 17 bis inkl. 19 geht sie 30 Pixel nach vorne, dreht sich 90° nach rechts
+und geht dann wieder 30 Pixel nach vorne.
 
-In Zeile 16 versteckt sie die Turtle, damit ist sie im finalen Bild nicht mehr sichtbar.
+In Zeile 21 wird `Turtle.showTurtle()` aufgerufen, damit das Fenster sichtbar wird.
 
 ## 🧭 Zusammenfassung
 Wir haben uns die wichtigsten Funktionen der Turtle angesehen.

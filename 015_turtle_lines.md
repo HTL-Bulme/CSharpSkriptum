@@ -24,7 +24,7 @@ die Verbindungslinien eine Länge von 50.
 
 **Tipps:** 
 
-+ Du wirst die Funktion `dot(groesse)` benötigen.
++ Du wirst die Anweisung `Turtle.dot(groesse);` benötigen.
 + Die Turtle ist am Ende nicht mehr sichtbar.
 
 <div style="clear:both;"></div>

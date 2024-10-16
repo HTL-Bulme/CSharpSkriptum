@@ -19,18 +19,20 @@ um es später wieder zu verwenden, benötigt man Variablen.
 
 Nehmen wir an, wir möchten ein Quadrat zeichnen und schreiben dazu folgenden Code:
 
-```python
-from gturtle import *
-makeTurtle()
+```cs
+#r "nuget: BulmeSharp, 0.10.1"
+using BulmeSharp;
 
-fd(50)
-rt(90)
-fd(50)
-rt(90)
-fd(50)
-rt(90)
-fd(50)
-rt(90)
+Turtle.fd(50);
+Turtle.rt(90);
+Turtle.fd(50);
+Turtle.rt(90);
+Turtle.fd(50);
+Turtle.rt(90);
+Turtle.fd(50);
+Turtle.rt(90);
+
+Turtle.showTurtle();
 ```
 
 Dieses Quadrat ist aber immer gleich groß, denn es hat die Seitenlänge `50`.
@@ -44,16 +46,26 @@ So müssen wir die Zahl `50` nur einmal schreiben.
 ## Definition von Variablen
 
 Bevor wir eine Variable benutzen müssen wir sie anlegen.
-Wir geben ihr dabei einen Namen und einen Startwert.
+Wir geben ihr dabei einen Namen, einen Datentyp und einen Startwert.
 Den Vorgang des Anlegens einer Variable nennt man **Definition** der Variable.
 Die Namen für Variablen sollten kurz und verständlich sein.
-Für die Seite eines Quadrats könnte man `a` verwenden.
 
-Um eine Variable mit dem Namen `a` und dem Wert `50` zu definieren,
+Der Datentyp bestimmt welche Werte eine Variable annehmen kann.
+Beispielsweise existieren Datentypen für Texte, Ganzzahlen oder Gleitkommazahlen.
+Eine Auflistung der in C# üblichen Datentypen findest du am Ende des Kapitels.
+Wir werden an dieser Stelle nur auf zwei Datentypen verweisen:
+* `int` - Datentyp für **Ganzzahlen**. Der Wert könnte beispielsweise 10 oder -23 oder auch 0 sein
+* `double`- Datentyp für **Gleitkommazahlen**. Der Wert könnte 1.23 oder 17.0 oder auch 3.141592 sein
+
+Für die Seite eines Quadrats könnte man als Variablenname beispielsweise `a` verwenden.
+Als Datentyp für die Seitenlänge verwenden wir `double`, damit kann die Seite auch
+einen Gleitkommwert wie `20.5` haben.
+
+Um eine Variable mit dem Namen `a`, dem Typ `double` und dem Startwert `50` zu definieren,
 schreibt man:
 
-```python
-a = 50
+```cs
+double a = 50;
 ```
 
 
@@ -64,33 +76,36 @@ Wir könnten also ein neues Programm schreiben,
 bei dem die Seitenlänge deutlich einfacher geändert werden kann,
 da die Zahl `50` nur an einer Stelle vorkommt.
 
-```python
-from gturtle import *
-makeTurtle()
 
-a = 50
+```cs
+#r "nuget: BulmeSharp, 0.10.1"
+using BulmeSharp;
 
-fd(a)
-rt(90)
-fd(a)
-rt(90)
-fd(a)
-rt(90)
-fd(a)
-rt(90)
+double a = 50;
+
+Turtle.fd(a);
+Turtle.rt(90);
+Turtle.fd(a);
+Turtle.rt(90);
+Turtle.fd(a);
+Turtle.rt(90);
+Turtle.fd(a);
+Turtle.rt(90);
+
+Turtle.showTurtle();
 ```
 
 **⚠️ Vorsicht:** Der Name der Variable muss auf der linken Seite des `=` Zeichens stehen
 und auf der rechten Seite der Wert, welcher der Variable zugewiesen werden soll.
-Die Zeile `50 = a` führt zu einem Fehler.
+Die Zeile `double 50 = a;` führt zu einem Fehler.
 
 
 ## Eigenschaften von Variablen
 
-Variablen haben in Python drei Eigenschaften
+Variablen haben in C# drei Eigenschaften
 
 + Name
-+ Typ
++ Datentyp
 + Wert
 
 **Name**: Mit dem Namen wird die Variable angesprochen.
@@ -104,11 +119,11 @@ wie "ß" oder "ö", sollten vermieden werden.
 + **Ungültige** Variablennamen sind bspw.: `2radius`, `höhe` oder `seite a`
 
 
-**Typ**: Eine Variable kann verschiedene Arten von Werten beinhalten.
+**Datentyp**: Eine Variable kann verschiedene Arten von Werten beinhalten.
 Wir unterscheiden hier drei grundlegende Typen:
 
-+ Integer: Ganzzahlige Werte, wie beispielsweise: 1, 2, 3 aber auch 0 und -1, -2 etc.
-+ Float: Zahlen in Gleitkommadarstellung: 1.001, 3.2, 8.9293 oder -1130.23
++ Ganzzahlige Datentypen: Zahlen des Zählens, wie beispielsweise: 1, 2, 3 aber auch 0 und -1, -2 etc.
++ Zahlen in Gleitkommadarstellung: 1.001, 3.2, 8.9293 oder -1130.23
 + String: Texte wie beispielsweise "Hallo" oder "Guten Morgen"
 
 **Wert**: Jede Variable hat einen Wert. Der Wert der Variable kann
@@ -122,14 +137,14 @@ im Programm laufend geändert werden.
 Prüfe welche der folgenden Variablendefinitionen gültig sind,
 indem du sie Zeile für Zeile in den Codeeingabe-Bereich kopierst und Start klickst
 
-```python
-meine_Variable = 123.4
-beste Variable Ever = 123
-x_y_z = 2000
-t = -7
-15.4 = y
-x-y-z = 2000
-import = 4
+```c#
+double meine_Variable = 123.4;
+int beste Variable Ever = 123;
+int x_y_z = 2000;
+int t = -7;
+double 15.4 = y;
+int x-y-z = 2000;
+int using = 4;
 ```
 
 ### 📝 Übung 10
@@ -150,7 +165,7 @@ Nach der Variablendefinition soll ein Rechteck mit den Seitenlängen
 + Variablen müssen vor der Verwendung angelegt (definiert) werden
 + Dabei steht der Name der Variablen immer links vom Gleichheitszeichen = und der Wert rechts davon. Beispiel `seite_a = 23`
 + Variablen haben drei Eigenschaften: Name, Typ und Wert
-+ Typen sind bspw. Integer (Ganzzahl), Float (Gleitkommazahl) und String (Text)
++ Typen sind bspw. int (Ganzzahl), double (Gleitkommazahl) oder String (Text)
 
 
 
