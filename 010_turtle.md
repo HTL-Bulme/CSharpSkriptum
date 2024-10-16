@@ -7,26 +7,42 @@ kombinierst, entstehen Zeichnungen und Bilder.
 
 ## Minimalprogramm
 
-Bevor du die Turtle bewegen kannst musst du sie zuerst erstellen.
-Um Python mitzuteilen, dass du mit der Turtle arbeiten möchtest
-und um eine Turtle zu erstellen sind folgende zwei Zeilen notwendig:
+Bevor du mit der Turtle arbeiten kannst, musst du zuerst eine Bibliothek einbinden.
+Eine Bibliothe ist eine Sammlung von vorgefertigten Codebausteinen,
+welche normalerweise nicht im Standardumfang einer Programmiersprache enthalten sind,
+die du wiederverwenden kannst, um bestimmte Aufgaben schneller und einfacher zu lösen.
+Um die Turtle zu verwenden, benötigen wir die Bibliothek *BulmeSharp*.
 
-```python
-from gturtle import *
-makeTurtle()
+Das machst du in RoslynPad indem du in der Eingabezeile der "NuGet Bibliotheken"
+den Text *BulmeSharp* eingibst und die entsprechende Bibliothek anklickst.
+Daraufhin wird folgende Zeile automatisch im Code eingefügt.
+
+```cs
+#r "nuget: BulmeSharp, 0.9.0"
 ```
+
+Um die Bibliothek tatsächlich zu benutzen müssen wir unterhalb noch eine Zeile hinzufügen.
+
+```cs
+#r "nuget: BulmeSharp, 0.9.0"
+using BulmeSharp;
+```
+
 
 ## Bewegen der Turtle
 
+Die Turtle selbst wird in der Programmierung als ein **Objekt** bezeichnet.
 Die Fähigkeiten der Turtle, bezeichnen wir in der Programmierung als **Funktionen**.
-Um der Turtle zu sagen, dass sie etwas tun soll,
-müssen wir diese Funktionen **aufrufen**.
+Um der Turtle zu sagen, dass sie etwas tun soll, müssen wir diese Funktionen **aufrufen**.
  
 Funktionsaufrufe der Turtle sind Abkürzungen für englische Begriffe und enden immer mit 
 einer öffnenden und einer schließenden **runden** Klammer.
 Zwischen den Klammern können weitere Angaben zum Funktionsaufruf stehen.
 Diese Angaben nennt man auch **Argumente**.
 Selbst wenn keine Argumente nötig sind, muss ein leeres Klammerpaar vorhanden sein.
+Damit klar ist, dass eine Funktion des Objekts Turtle gemeint ist,
+schreibt man zuerst den Namen des Objekts, gefolgt von einem Punkt
+und anschließend den Funktionsaufruf.
 
 In der folgenden Grafik siehst du die wichtigsten Funktionen:
 
@@ -34,16 +50,16 @@ In der folgenden Grafik siehst du die wichtigsten Funktionen:
 
 | Funktion  | Beschreibung | Beispiel |
 | ------------- | ------------- | ------------- |
-| fd  | Abkürzung für **f**orwar**d**, Anzahl Pixel nach vorne gehen  | `fd(50)`  |
-| bk  | Abkürzung für **b**ac**k**, Anzahl Pixel nach hinten gehen  | `bk(18)`  |
-| rt  | Abkürzung für **r**igh**t**, Angegebenen Winkel (in Grad) nach **rechts** drehen  | `rt(39.5)`  |
-| lt  | Abkürzung für **l**ef**t**, Angegebenen Winkel (in Grad) nach **links** drehen  | `lt(45)`  |
+| fd  | Abkürzung für **f**orwar**d**, Anzahl Pixel nach vorne gehen  | `Turtle.fd(50);`  |
+| bk  | Abkürzung für **b**ac**k**, Anzahl Pixel nach hinten gehen  | `Turtle.bk(18);`  |
+| rt  | Abkürzung für **r**igh**t**, Angegebenen Winkel (in Grad) nach **rechts** drehen  | `Turtle.rt(39.5);`  |
+| lt  | Abkürzung für **l**ef**t**, Angegebenen Winkel (in Grad) nach **links** drehen  | `Turtle.lt(45);`  |
 
 **Zusatz:** Die Einheit für Distanzen ist hier Pixel.
 Ein Pixel entspricht einem einzelnen Bildpunkt auf deinem Bildschirm.
 
 **Tipp:** Du kannst auch Zahlen mit Nachkommastellen verwenden.
-Jedoch ist das Dezimaltrennzeichen in Python der Punkt "." und nicht das Komma ",".
+Jedoch ist das Dezimaltrennzeichen in C# der Punkt "." und nicht das Komma ",".
 Das ist deshalb der Fall, da viele der wichtigen Entwicklungen der Informatik 
 aus Nordamerika stammen, und dort der Punkt das gängige Dezimaltrennzeichen ist.
 
@@ -51,12 +67,11 @@ Weitere Funktionen, welche die Turtle ausführen kann sind:
 
 | Funktion  | Beschreibung | Beispiel |
 | ------------- | ------------- | ------------- |
-| pu  | Abkürzung für **p**en **u**p, Turtle zeichnet nicht mehr  | `pu()`  |
-| pd  | Abkürzung für **p**en **d**own, Turtle zeichnet wieder  | `pd()`  |
-| dot  | Turtle zeichnet einen gefüllten Punkt (*engl.* dot) mit angegebenen Durchmesser  | `dot(10)`  |
-| speed  | Bestimmt die Geschwindigkeit der Turtle  | `speed(100)`  |
-| ht  | Abkürzung für **h**ide **t**urtle, Turtle wird unsichtbar  | `ht()`  |
-| st  | Abkürzung für **s**how **t**urtle, Turtle wird sichtbar  | `st()`  |
+| pu  | Abkürzung für **p**en **u**p, Turtle zeichnet nicht mehr  | `Turtle.pu();`  |
+| pd  | Abkürzung für **p**en **d**own, Turtle zeichnet wieder  | `Turtle.pd();`  |
+| dot  | Turtle zeichnet einen gefüllten Punkt (*engl.* dot) mit angegebenen Durchmesser  | `Turtle.dot(10);`  |
+| ht  | Abkürzung für **h**ide **t**urtle, Turtle wird unsichtbar  | `Turtle.ht();`  |
+| st  | Abkürzung für **s**how **t**urtle, Turtle wird sichtbar  | `Turtle.st();`  |
 
 
 ## Ein größeres Programm

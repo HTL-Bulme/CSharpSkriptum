@@ -89,11 +89,11 @@ Sie besteht aus folgenden sechs Bereichen.
 1. Dateiübersicht: Hier siehst du alle Dateien, die du angelegt hast.
 Mit Doppelklick auf eine Datei öffnest du die entsprechende Datei
 1. Codeeingabe: Hier gibst du den C#-Code ein
-1. Ausführen ▶: Mit diesem Button Startest du dein Programm
+1. Ausführen ▶: Mit diesem Button startest du dein Programm
 1. Beenden ■: Mit diesem Button beendest du dein Programm vorzeitig
 1. Framework: Hier muss das .Net Framework ausgewählt werden.
 Wir nehmen stets x64 und setzen es mit dem Button daneben gleich als Standard (Default).
-1. Nuget Bibliotheken: Hier binden wir zusätzliche Bibliotheken ein.
+1. NuGet Bibliotheken: Hier binden wir zusätzliche Bibliotheken ein.
 Bibliotheken enthalten vorgefertigte Programmteile,
 normalerweise nicht im Standardumfang einer Programmiersprache enthalten sind.
 Meistens verwenden wir die BulmeSharp Bibliothek, da diese die Turtle enthält.

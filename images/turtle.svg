@@ -7,9 +7,9 @@
    viewBox="0 0 272.18747 106.75577"
    version="1.1"
    id="svg5"
-   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
    sodipodi:docname="turtle.svg"
-   inkscape:export-filename="/media/estymate/Data/HTL/1BHWII_SWP/gitbook/images/extension.png"
+   inkscape:export-filename="turtle.png"
    inkscape:export-xdpi="351.48001"
    inkscape:export-ydpi="351.48001"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -27,12 +27,12 @@
      inkscape:document-units="mm"
      showgrid="false"
      inkscape:zoom="0.51139856"
-     inkscape:cx="395.97296"
-     inkscape:cy="218.02955"
-     inkscape:window-width="1846"
-     inkscape:window-height="1016"
-     inkscape:window-x="74"
-     inkscape:window-y="27"
+     inkscape:cx="259.09342"
+     inkscape:cy="219.98498"
+     inkscape:window-width="1920"
+     inkscape:window-height="1026"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
      inkscape:window-maximized="1"
      inkscape:current-layer="layer1"
      inkscape:snap-others="false"
@@ -42,7 +42,9 @@
      fit-margin-top="1"
      fit-margin-left="40"
      fit-margin-right="40"
-     fit-margin-bottom="1" />
+     fit-margin-bottom="1"
+     inkscape:showpageshadow="2"
+     inkscape:deskcolor="#d1d1d1" />
   <defs
      id="defs2">
     <marker
@@ -417,7 +419,7 @@
          id="tspan22187"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.75536px;font-family:'Roboto Mono';-inkscape-font-specification:'Roboto Mono';stroke-width:0.581651"
          x="55.424957"
-         y="85.15313">fd(20)</tspan></text>
+         y="85.15313">Turtle.fd(20);</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:7.75536px;line-height:1.25;font-family:sans-serif;stroke-width:0.581651"
@@ -428,18 +430,18 @@
          id="tspan22187-3"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.75536px;font-family:'Roboto Mono';-inkscape-font-specification:'Roboto Mono';stroke-width:0.581651"
          x="196.56384"
-         y="96.291832">rt(90)</tspan></text>
+         y="96.291832">Turtle.rt(90);</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:7.75536px;line-height:1.25;font-family:sans-serif;stroke-width:0.581651"
-       x="102.92016"
+       x="88.342415"
        y="123.22404"
        id="text22189-7-9"><tspan
          sodipodi:role="line"
          id="tspan22187-3-3"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.75536px;font-family:'Roboto Mono';-inkscape-font-specification:'Roboto Mono';stroke-width:0.581651"
-         x="102.92016"
-         y="123.22404">lt(180)</tspan></text>
+         x="88.342415"
+         y="123.22404">Turtle.lt(180);</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:7.75536px;line-height:1.25;font-family:sans-serif;stroke-width:0.581651"
@@ -450,7 +452,7 @@
          id="tspan22187-2"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.75536px;font-family:'Roboto Mono';-inkscape-font-specification:'Roboto Mono';stroke-width:0.581651"
          x="55.424957"
-         y="163.09453">bk(40)</tspan></text>
+         y="163.09453">Turtle.bk(40);</tspan></text>
     <path
        style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:7.55906;marker-end:url(#Arrow2Mend);stop-color:#000000"
        id="path34744"

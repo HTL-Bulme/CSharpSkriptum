@@ -236,21 +236,32 @@ sich bewegt. Du kannst ihr sagen, sie soll vorwärts gehen oder sich nach
 links oder rechts drehen. Indem du diese Anweisungen geschickt
 kombinierst, entstehen Zeichnungen und Bilder.</p>
 <h2 id="minimalprogramm">Minimalprogramm</h2>
-<p>Bevor du die Turtle bewegen kannst musst du sie zuerst erstellen.
-Um Python mitzuteilen, dass du mit der Turtle arbeiten möchtest
-und um eine Turtle zu erstellen sind folgende zwei Zeilen notwendig:</p>
-<pre><code class="lang-python"><span class="hljs-keyword">from</span> gturtle <span class="hljs-keyword">import</span> *
-makeTurtle()
+<p>Bevor du mit der Turtle arbeiten kannst, musst du zuerst eine Bibliothek einbinden.
+Eine Bibliothe ist eine Sammlung von vorgefertigten Codebausteinen,
+welche normalerweise nicht im Standardumfang einer Programmiersprache enthalten sind,
+die du wiederverwenden kannst, um bestimmte Aufgaben schneller und einfacher zu lösen.
+Um die Turtle zu verwenden, benötigen wir die Bibliothek <em>BulmeSharp</em>.</p>
+<p>Das machst du in RoslynPad indem du in der Eingabezeile der &quot;NuGet Bibliotheken&quot;
+den Text <em>BulmeSharp</em> eingibst und die entsprechende Bibliothek anklickst.
+Daraufhin wird folgende Zeile automatisch im Code eingefügt.</p>
+<pre><code class="lang-cs"><span class="hljs-meta">#r &quot;nuget: BulmeSharp, 0.9.0&quot;</span>
+</code></pre>
+<p>Um die Bibliothek tatsächlich zu benutzen müssen wir unterhalb noch eine Zeile hinzufügen.</p>
+<pre><code class="lang-cs"><span class="hljs-meta">#r &quot;nuget: BulmeSharp, 0.9.0&quot;</span>
+<span class="hljs-keyword">using</span> BulmeSharp;
 </code></pre>
 <h2 id="bewegen-der-turtle">Bewegen der Turtle</h2>
-<p>Die Fähigkeiten der Turtle, bezeichnen wir in der Programmierung als <strong>Funktionen</strong>.
-Um der Turtle zu sagen, dass sie etwas tun soll,
-müssen wir diese Funktionen <strong>aufrufen</strong>.</p>
+<p>Die Turtle selbst wird in der Programmierung als ein <strong>Objekt</strong> bezeichnet.
+Die Fähigkeiten der Turtle, bezeichnen wir in der Programmierung als <strong>Funktionen</strong>.
+Um der Turtle zu sagen, dass sie etwas tun soll, müssen wir diese Funktionen <strong>aufrufen</strong>.</p>
 <p>Funktionsaufrufe der Turtle sind Abkürzungen für englische Begriffe und enden immer mit 
 einer öffnenden und einer schließenden <strong>runden</strong> Klammer.
 Zwischen den Klammern können weitere Angaben zum Funktionsaufruf stehen.
 Diese Angaben nennt man auch <strong>Argumente</strong>.
-Selbst wenn keine Argumente nötig sind, muss ein leeres Klammerpaar vorhanden sein.</p>
+Selbst wenn keine Argumente nötig sind, muss ein leeres Klammerpaar vorhanden sein.
+Damit klar ist, dass eine Funktion des Objekts Turtle gemeint ist,
+schreibt man zuerst den Namen des Objekts, gefolgt von einem Punkt
+und anschließend den Funktionsaufruf.</p>
 <p>In der folgenden Grafik siehst du die wichtigsten Funktionen:</p>
 <p><img src="images/turtle.png" alt="Bewegen und drehen der Turtle"></p>
 <table>
@@ -265,29 +276,29 @@ Selbst wenn keine Argumente nötig sind, muss ein leeres Klammerpaar vorhanden s
 <tr>
 <td>fd</td>
 <td>Abkürzung für <strong>f</strong>orwar<strong>d</strong>, Anzahl Pixel nach vorne gehen</td>
-<td><code>fd(50)</code></td>
+<td><code>Turtle.fd(50);</code></td>
 </tr>
 <tr>
 <td>bk</td>
 <td>Abkürzung für <strong>b</strong>ac<strong>k</strong>, Anzahl Pixel nach hinten gehen</td>
-<td><code>bk(18)</code></td>
+<td><code>Turtle.bk(18);</code></td>
 </tr>
 <tr>
 <td>rt</td>
 <td>Abkürzung für <strong>r</strong>igh<strong>t</strong>, Angegebenen Winkel (in Grad) nach <strong>rechts</strong> drehen</td>
-<td><code>rt(39.5)</code></td>
+<td><code>Turtle.rt(39.5);</code></td>
 </tr>
 <tr>
 <td>lt</td>
 <td>Abkürzung für <strong>l</strong>ef<strong>t</strong>, Angegebenen Winkel (in Grad) nach <strong>links</strong> drehen</td>
-<td><code>lt(45)</code></td>
+<td><code>Turtle.lt(45);</code></td>
 </tr>
 </tbody>
 </table>
 <p><strong>Zusatz:</strong> Die Einheit für Distanzen ist hier Pixel.
 Ein Pixel entspricht einem einzelnen Bildpunkt auf deinem Bildschirm.</p>
 <p><strong>Tipp:</strong> Du kannst auch Zahlen mit Nachkommastellen verwenden.
-Jedoch ist das Dezimaltrennzeichen in Python der Punkt &quot;.&quot; und nicht das Komma &quot;,&quot;.
+Jedoch ist das Dezimaltrennzeichen in C# der Punkt &quot;.&quot; und nicht das Komma &quot;,&quot;.
 Das ist deshalb der Fall, da viele der wichtigen Entwicklungen der Informatik 
 aus Nordamerika stammen, und dort der Punkt das gängige Dezimaltrennzeichen ist.</p>
 <p>Weitere Funktionen, welche die Turtle ausführen kann sind:</p>
@@ -303,32 +314,27 @@ aus Nordamerika stammen, und dort der Punkt das gängige Dezimaltrennzeichen ist
 <tr>
 <td>pu</td>
 <td>Abkürzung für <strong>p</strong>en <strong>u</strong>p, Turtle zeichnet nicht mehr</td>
-<td><code>pu()</code></td>
+<td><code>Turtle.pu();</code></td>
 </tr>
 <tr>
 <td>pd</td>
 <td>Abkürzung für <strong>p</strong>en <strong>d</strong>own, Turtle zeichnet wieder</td>
-<td><code>pd()</code></td>
+<td><code>Turtle.pd();</code></td>
 </tr>
 <tr>
 <td>dot</td>
 <td>Turtle zeichnet einen gefüllten Punkt (<em>engl.</em> dot) mit angegebenen Durchmesser</td>
-<td><code>dot(10)</code></td>
-</tr>
-<tr>
-<td>speed</td>
-<td>Bestimmt die Geschwindigkeit der Turtle</td>
-<td><code>speed(100)</code></td>
+<td><code>Turtle.dot(10);</code></td>
 </tr>
 <tr>
 <td>ht</td>
 <td>Abkürzung für <strong>h</strong>ide <strong>t</strong>urtle, Turtle wird unsichtbar</td>
-<td><code>ht()</code></td>
+<td><code>Turtle.ht();</code></td>
 </tr>
 <tr>
 <td>st</td>
 <td>Abkürzung für <strong>s</strong>how <strong>t</strong>urtle, Turtle wird sichtbar</td>
-<td><code>st()</code></td>
+<td><code>Turtle.st();</code></td>
 </tr>
 </tbody>
 </table>
@@ -413,7 +419,7 @@ um vorgegebene Grafiken zu erzeugen.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Grafik mit der Turtle 🐢","level":"1.2","depth":1,"next":{"title":"Übungen mit der Turtle","level":"1.2.1","depth":2,"path":"015_turtle_lines.md","ref":"015_turtle_lines.md","articles":[]},"previous":{"title":"Einführung ✨","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"articles":[{"title":"Übungen mit der Turtle","level":"1.2.1","depth":2,"path":"015_turtle_lines.md","ref":"015_turtle_lines.md","articles":[]},{"title":"Farben verwenden","level":"1.2.2","depth":2,"path":"017_turtle_colors.md","ref":"017_turtle_colors.md","articles":[]},{"title":"Variablen","level":"1.2.3","depth":2,"path":"020_variablen.md","ref":"020_variablen.md","articles":[]},{"title":"Eingabe von Werten","level":"1.2.4","depth":2,"path":"030_input.md","ref":"030_input.md","articles":[]},{"title":"Rechnen mit Variablen","level":"1.2.5","depth":2,"path":"035_variablen_rechnen.md","ref":"035_variablen_rechnen.md","articles":[]}],"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"010_turtle.md","mtime":"2024-10-02T21:27:10.338Z","type":"markdown"},"gitbook":{"version":"5.1.1","time":"2024-10-16T11:21:26.389Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Grafik mit der Turtle 🐢","level":"1.2","depth":1,"next":{"title":"Übungen mit der Turtle","level":"1.2.1","depth":2,"path":"015_turtle_lines.md","ref":"015_turtle_lines.md","articles":[]},"previous":{"title":"Einführung ✨","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"articles":[{"title":"Übungen mit der Turtle","level":"1.2.1","depth":2,"path":"015_turtle_lines.md","ref":"015_turtle_lines.md","articles":[]},{"title":"Farben verwenden","level":"1.2.2","depth":2,"path":"017_turtle_colors.md","ref":"017_turtle_colors.md","articles":[]},{"title":"Variablen","level":"1.2.3","depth":2,"path":"020_variablen.md","ref":"020_variablen.md","articles":[]},{"title":"Eingabe von Werten","level":"1.2.4","depth":2,"path":"030_input.md","ref":"030_input.md","articles":[]},{"title":"Rechnen mit Variablen","level":"1.2.5","depth":2,"path":"035_variablen_rechnen.md","ref":"035_variablen_rechnen.md","articles":[]}],"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"010_turtle.md","mtime":"2024-10-16T11:48:59.261Z","type":"markdown"},"gitbook":{"version":"5.1.1","time":"2024-10-16T11:50:18.797Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
