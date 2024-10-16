@@ -103,7 +103,7 @@ Meistens verwenden wir die BulmeSharp Bibliothek, da diese die Turtle enthält.
 
 
 ### 📝 Übung 1
-Gib den Programmcode aus der oberen Grafik in RoslyPad ein
+Gib den Programmcode aus der oberen Grafik in RoslynPad ein
 und klicke auf den "Ausführen"-Knopf.
 Es sollte die gleiche Ausgabe erscheinen wie in der Grafik.
 
@@ -114,7 +114,7 @@ Es sollte die gleiche Ausgabe erscheinen wie in der Grafik.
 * Achte auf die richtigen Klammern! Es werden in dem Beispiel runde Klammern "(" und ")" benutzt. Eckige "[", "]" oder geschwungene "{", "}" Klammern
 bedeuten etwas anderes und funktionieren nicht!
 * Wenn du einen Tippfehler gemacht hast, also beispielsweise statt `Turtle.showTurtle();` 
-den Text `Turtle.showTrutel();` geschrieben hast, erscheint eine Fehlermeldung im
+den Text `Törtle.showTrutel();` geschrieben hast, erscheint eine Fehlermeldung im
 unteren Teil des Ausgabefensters. Versuche diese zu verstehen und den Fehler zu beheben.
 * Beachte folgende Regel beim Programmieren: **Probiere
 alles selber aus!** Je mehr Programme du selber schreibst, umso mehr

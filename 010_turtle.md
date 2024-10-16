@@ -120,10 +120,10 @@ Wir haben uns die wichtigsten Funktionen der Turtle angesehen.
 Funktionen haben am Ende zwei runde Klammern.
 Zwischen den runden Klammern können Argumente stehen,
 das sind weitere Angaben zum Funktionsaufruf,
-beispielsweise die Anzahl der Pixel bei der Funktion `fd`
+beispielsweise die Anzahl der Pixel bei der Funktion `fd`.
+Funktionsaufrufe sind Anweisungen, diese müssen mit einem Strichpunkt (Semikolon) abgeschlossen werden.
 
-Im nächsten Abschnitt sollst du selbst Programme schreiben,
-um vorgegebene Grafiken zu erzeugen.
+Im nächsten Abschnitt sollst du selbst Programme schreiben, um vorgegebene Grafiken zu erzeugen.
 
 
 
