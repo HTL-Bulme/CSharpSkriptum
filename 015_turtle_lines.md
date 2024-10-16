@@ -19,13 +19,7 @@ der Figur sitzt und nach Norden schaut.
 ## 📝 Übung 4
 <img style="float: right; width:33%" src="./images/bsp04.png">
 Zeichne die Figur auf der rechten Seite.
-Die ausgefüllten Kreise haben einen Durchmesser von 20,
-die Verbindungslinien eine Länge von 50.
-
-**Tipps:** 
-
-+ Du wirst die Funktion `dot(groesse)` benötigen.
-+ Die Turtle ist am Ende nicht mehr sichtbar.
+Die Verbindungslinien haben eine Länge von 50.
 
 <div style="clear:both;"></div>
 

@@ -54,6 +54,7 @@ In der folgenden Grafik siehst du die wichtigsten Funktionen:
 | bk  | Abkürzung für **b**ac**k**, Anzahl Pixel nach hinten gehen  | `Turtle.bk(18);`  |
 | rt  | Abkürzung für **r**igh**t**, Angegebenen Winkel (in Grad) nach **rechts** drehen  | `Turtle.rt(39.5);`  |
 | lt  | Abkürzung für **l**ef**t**, Angegebenen Winkel (in Grad) nach **links** drehen  | `Turtle.lt(45);`  |
+| showTurtle  | Die Turtle wird am Bildschirm sichtbar gemacht und öffnet das Ausgabefenster.  | `Turtle.showTurtle();`  |
 
 **Zusatz:** Die Einheit für Distanzen ist hier Pixel.
 Ein Pixel entspricht einem einzelnen Bildpunkt auf deinem Bildschirm.
@@ -63,15 +64,6 @@ Jedoch ist das Dezimaltrennzeichen in C# der Punkt "." und nicht das Komma ",".
 Das ist deshalb der Fall, da viele der wichtigen Entwicklungen der Informatik 
 aus Nordamerika stammen, und dort der Punkt das gängige Dezimaltrennzeichen ist.
 
-Weitere Funktionen, welche die Turtle ausführen kann sind:
-
-| Funktion  | Beschreibung | Beispiel |
-| ------------- | ------------- | ------------- |
-| pu  | Abkürzung für **p**en **u**p, Turtle zeichnet nicht mehr  | `Turtle.pu();`  |
-| pd  | Abkürzung für **p**en **d**own, Turtle zeichnet wieder  | `Turtle.pd();`  |
-| dot  | Turtle zeichnet einen gefüllten Punkt (*engl.* dot) mit angegebenen Durchmesser  | `Turtle.dot(10);`  |
-| ht  | Abkürzung für **h**ide **t**urtle, Turtle wird unsichtbar  | `Turtle.ht();`  |
-| st  | Abkürzung für **s**how **t**urtle, Turtle wird sichtbar  | `Turtle.st();`  |
 
 
 ## Ein größeres Programm
@@ -84,51 +76,44 @@ und daneben die Ausgabe des Programms.
 Lass uns das Programm Zeile für Zeile analysieren.
 Programme werden immer von oben nach unten abgearbeitet.
 
-In Zeile 1 und 2 siehst du die bereits bekannten Anweisungen des Minimalprogramms.
-In Zeile 1 wird eine spezielle Datei namens `gturtle` eingebunden.
-Diese Datei enthält die Funktionen um mit der Turtle zu arbeiten.
-Dateien, die wir zusätzlich einbinden können, und die den Funktionsumfang erweitern,
-nennen wir **Module** oder auch **Bibliotheken**.
-In Zeile 2 wird mit `makeTurtle()` die Turtle erstellt und angezeigt. 
+In der ersten Zeile wird das NuGet-Paket BulmeSharp in Version 0.9.0 eingebunden.
+Dies geschieht mit dem Befehl
+```cs
+ #r "nuget: BulmeSharp, 0.9.0". 
+```
+NuGet-Pakete sind Sammlungen von **Bibliotheken**, die wir verwenden können, um den Funktionsumfang unserer Programme zu erweitern.
 
-In Zeile 3 machen wir der Turtle Beine und sagen sie soll sich mit der
-Geschwindigkeit 10 fortbewegen, wodurch das Bild viel schneller gezeichnet wird.
-Es macht aber auch die Fehlersuche schwieriger, da wir mit dem Schauen
-ab einer gewissen Geschwindigkeit nicht mehr mitkommen.
+In der zweiten Zeile 
+```cs
+using BulmeSharp; 
+```
+wird der Namensraum *BulmeSharp* importiert, sodass wir die darin enthaltenen **Funktionen** nutzen können. Ähnlich wie bei Modulen in anderen Sprachen erweitern solche Bibliotheken die Fähigkeiten unseres Programms.
 
-Zeile 4 ist eine Leerzeile. Wir dürfen beliebig viele Leerzeilen
-an beliebigen Stellen einfügen. Das wird häufig gemacht um das
-Programm in Form zu bringen und leichter lesbar zu machen.
+Ab Zeile **4** beginnen die Turtle-Befehle:
+In `Turtle.fd(100);` fährt die Turtle 100 Pixel nach vorne.
 
-In Zeile 5 bis inkl. 7 fährt die Turtle 100 Pixel nach vorne,
-dreht sich 90° nach links und macht dann einen 10 Pixel großen Punkt.
+In Zeile **5** dreht sich die Turtle mit `Turtle.rt(90);` um 90 Grad nach rechts.
 
-In Zeile 8 bis inkl. 11 hebt die Turtle den Stift auf und zeichnet ab hier nichts mehr.
-Dann fährt sie 50 Pixel nach vorne und setzt den Stift wieder ab, damit sie wieder
-etwas zeichnet und macht dann wieder einen 10 Pixel großen Punkt.
-Man sieht, dass zwischen den zwei Punkten der Stift aufgehoben wurde,
-da keine durchgezogene Linie zwischen den beiden Punkten zu sehen ist.
+In Zeile **6 und 7** fährt die Turtle wieder 100 Pixel nach vorne und dreht sich erneut um 90 Grad nach rechts.
 
-In Zeile 12 dreht sich die Turtle 90° nach links und sieht damit nach unten.
-In Zeile 13 bis inkl. 15 geht sie 50 Pixel nach vorne, dreht sich 90° nach rechts
-und geht dann wieder 50 Pixel nach vorne.
+Die Schritte in den Zeilen **8,9,10 und 11** wiederholen sich, sodass die Turtle weiter 100 Pixel fährt, sich dreht und schlussendlich wieder an ihrem Ausgangspunkt ankommt, nachdem sie ein Quadrat gezeichnet hat.
 
-In Zeile 16 versteckt sie die Turtle, damit ist sie im finalen Bild nicht mehr sichtbar.
+In der letzten Zeile `Turtle.showTurtle();` wird die Turtle am Bildschirm sichtbar gemacht, damit wird auch das Anzeigefenster geöffnet.
+
+Das Programm zeichnet also ein Quadrat mit einer Seitenlänge von 100 Pixeln und zeigt die Turtle am Ende an.
 
 ## 🧭 Zusammenfassung
-Wir haben uns die wichtigsten Funktionen der Turtle angesehen.
-Funktionen haben am Ende zwei runde Klammern.
-Zwischen den runden Klammern können Argumente stehen,
-das sind weitere Angaben zum Funktionsaufruf,
-beispielsweise die Anzahl der Pixel bei der Funktion `fd`.
+Wir haben uns die wichtigsten Funktionen der Turtle in C# angesehen. 
 
-Damit klar ist, dass die Funktion `fd` des Objekts `Turtle` gemeint ist,
-schreibt man zuerst den Namen des Objekts, gefolgt von einem Punkt
-und anschließend den Funktionsaufruf.
+Funktionen haben am Ende zwei runde Klammern. Zwischen den runden Klammern können Argumente stehen, das sind weitere Angaben zum Funktionsaufruf, beispielsweise die Anzahl der Pixel bei der Funktion `fd(100)`.
 
-Funktionsaufrufe sind Anweisungen, diese müssen mit einem Strichpunkt (Semikolon) abgeschlossen werden.
+Damit klar ist, dass die Funktion `fd` des Objekts `Turtle` gemeint ist,  
+schreibt man zuerst den Namen des Objekts, gefolgt von einem Punkt und anschließend den Funktionsaufruf.
+
+In C# müssen Funktionsaufrufe mit einem Semikolon `;` abgeschlossen werden, um das Ende der Anweisung zu markieren.
 
 Im nächsten Abschnitt sollst du selbst Programme schreiben, um vorgegebene Grafiken zu erzeugen.
+
 
 
 
