@@ -10,6 +10,9 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "honkit": "^4.0.8"
+    "honkit": "^6"
+  },
+  "dependencies": {
+    "gitbook-plugin-add-js-css": "0.0.1"
   }
 }

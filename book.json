@@ -1,0 +1,12 @@
+{
+  "plugins": [
+    "add-js-css"
+  ],
+  "pluginsConfig": {
+    "add-js-css": {
+      "css": [
+        "./customStyle/style.css"
+      ]
+    }
+  }
+}

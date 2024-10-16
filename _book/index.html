@@ -6,7 +6,7 @@
         <title>Einführung ✨ · HonKit</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="HonKit 5.1.1">
+        <meta name="generator" content="HonKit 6.0.2">
         
         
         
@@ -14,6 +14,10 @@
     <link rel="stylesheet" href="gitbook/style.css">
 
     
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-add-js-css/30cc6d111405dc30134d85982c40bd85-style.css">
+                
             
                 
                 <link rel="stylesheet" href="gitbook/@honkit/honkit-plugin-highlight/website.css">
@@ -24,7 +28,7 @@
                 
             
                 
-                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                <link rel="stylesheet" href="gitbook/@honkit/honkit-plugin-fontsettings/website.css">
                 
             
         
@@ -233,7 +237,7 @@
 Dabei gehen wir davon aus, dass du noch kein
 Vorwissen mitbringst, und werden dir schrittweise alles erklären, was
 du dazu brauchst.</p>
-<h2 id="was-heißt-programmieren-überhaupt">Was heißt &quot;Programmieren&quot; überhaupt?</h2>
+<h2 id="was-heißt-programmieren-überhaupt">Was heißt "Programmieren" überhaupt?</h2>
 <p>Programmieren heißt, einer Maschine <strong>Anweisungen</strong> zu erteilen und sie damit zu steuern.
 Die erste solche Maschine, die du steuerst, ist eine kleine Schildkröte auf dem Bildschirm: Die Turtle. Die Schildkröte versteht verschiedene Anweisungen um sich zu bewegen,
 zu zeichnen oder sich zu verstecken.
@@ -271,7 +275,7 @@ Befolge folgende Schritte um die Anwendung zu installieren:</p>
 </ul>
 </li>
 </ol>
-<pre><code class="lang-cs"><span class="hljs-meta">#r &quot;nuget: BulmeSharp, 0.9.0&quot;</span>
+<pre><code class="lang-cs"><span class="hljs-meta">#r "nuget: BulmeSharp, 0.9.0"</span>
 <span class="hljs-keyword">using</span> BulmeSharp;
 
 Turtle.fd(<span class="hljs-number">50</span>);
@@ -302,16 +306,16 @@ Bibliotheken enthalten vorgefertigte Programmteile,
 normalerweise nicht im Standardumfang einer Programmiersprache enthalten sind.
 Meistens verwenden wir die BulmeSharp Bibliothek, da diese die Turtle enthält.</li>
 </ol>
-<p><img src="images/roslynPad.png" alt="Roslynpad Übersicht"></p>
+<p><img src="images/roslynPad.png" alt="Roslynpad Übersicht"></img></p>
 <h3 id="📝-übung-1">📝 Übung 1</h3>
 <p>Gib den Programmcode aus der oberen Grafik in RoslynPad ein
-und klicke auf den &quot;Ausführen&quot;-Knopf.
+und klicke auf den "Ausführen"-Knopf.
 Es sollte die gleiche Ausgabe erscheinen wie in der Grafik.</p>
 <p><strong>Tipps:</strong> </p>
 <ul>
 <li>Achte auf Groß- und Kleinschreibung</li>
 <li>Achte darauf, daß Anweisungen mit einem Strichpunkt (Semikolon) ageschlossen werden müssen</li>
-<li>Achte auf die richtigen Klammern! Es werden in dem Beispiel runde Klammern &quot;(&quot; und &quot;)&quot; benutzt. Eckige &quot;[&quot;, &quot;]&quot; oder geschwungene &quot;{&quot;, &quot;}&quot; Klammern
+<li>Achte auf die richtigen Klammern! Es werden in dem Beispiel runde Klammern "(" und ")" benutzt. Eckige "[", "]" oder geschwungene "{", "}" Klammern
 bedeuten etwas anderes und funktionieren nicht!</li>
 <li>Wenn du einen Tippfehler gemacht hast, also beispielsweise statt <code>Turtle.showTurtle();</code> 
 den Text <code>Törtle.showTrutel();</code> geschrieben hast, erscheint eine Fehlermeldung im
@@ -320,9 +324,9 @@ unteren Teil des Ausgabefensters. Versuche diese zu verstehen und den Fehler zu 
 alles selber aus!</strong> Je mehr Programme du selber schreibst, umso mehr
 wirst du verstehen und beherrschen.</li>
 <li>Verwende Shortcuts (Tastenkombinationen) um Zeit zu sparen:<ul>
-<li>STRG + S: Speichern</li>
-<li>STRG + C: Kopieren</li>
-<li>STRG + V: Einfügen</li>
+<li><kbd>STRG</kbd> + <kbd>S</kbd>: Speichern</li>
+<li><kbd>STRG</kbd> + <kbd>C</kbd>: Kopieren</li>
+<li><kbd>STRG</kbd> + <kbd>V</kbd>: Einfügen</li>
 </ul>
 </li>
 </ul>
@@ -376,7 +380,7 @@ und wie du interessante Grafiken mit der Turtle zeichnen kannst.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"book":true,"keywords":["Bulme","C#"],"author":["HTL BULME"],"subject":"C#","classoption":["openany"],"lang":"de","date":"2024-10-16","geometry":"left=1.5cm,right=1.5cm,top=2cm,bottom=2.5cm","title":"Einführung ✨","level":"1.1","depth":1,"next":{"title":"Grafik mit der Turtle 🐢","level":"1.2","depth":1,"path":"010_turtle.md","ref":"010_turtle.md","articles":[{"title":"Übungen mit der Turtle","level":"1.2.1","depth":2,"path":"015_turtle_lines.md","ref":"015_turtle_lines.md","articles":[]},{"title":"Farben verwenden","level":"1.2.2","depth":2,"path":"017_turtle_colors.md","ref":"017_turtle_colors.md","articles":[]},{"title":"Variablen","level":"1.2.3","depth":2,"path":"020_variablen.md","ref":"020_variablen.md","articles":[]},{"title":"Eingabe von Werten","level":"1.2.4","depth":2,"path":"030_input.md","ref":"030_input.md","articles":[]},{"title":"Rechnen mit Variablen","level":"1.2.5","depth":2,"path":"035_variablen_rechnen.md","ref":"035_variablen_rechnen.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"README.md","mtime":"2024-10-16T11:57:01.066Z","type":"markdown"},"gitbook":{"version":"5.1.1","time":"2024-10-16T12:05:53.595Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"book":true,"keywords":["Bulme","C#"],"author":["HTL BULME"],"subject":"C#","classoption":["openany"],"lang":"de","date":"2024-10-16","geometry":"left=1.5cm,right=1.5cm,top=2cm,bottom=2.5cm","title":"Einführung ✨","level":"1.1","depth":1,"next":{"title":"Grafik mit der Turtle 🐢","level":"1.2","depth":1,"path":"010_turtle.md","ref":"010_turtle.md","articles":[{"title":"Übungen mit der Turtle","level":"1.2.1","depth":2,"path":"015_turtle_lines.md","ref":"015_turtle_lines.md","articles":[]},{"title":"Farben verwenden","level":"1.2.2","depth":2,"path":"017_turtle_colors.md","ref":"017_turtle_colors.md","articles":[]},{"title":"Variablen","level":"1.2.3","depth":2,"path":"020_variablen.md","ref":"020_variablen.md","articles":[]},{"title":"Eingabe von Werten","level":"1.2.4","depth":2,"path":"030_input.md","ref":"030_input.md","articles":[]},{"title":"Rechnen mit Variablen","level":"1.2.5","depth":2,"path":"035_variablen_rechnen.md","ref":"035_variablen_rechnen.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["add-js-css"],"pluginsConfig":{"add-js-css":{"css":["./customStyle/style.css"]},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"README.md","mtime":"2024-10-16T12:50:10.672Z","type":"markdown"},"gitbook":{"version":"6.0.2","time":"2024-10-16T12:56:04.146Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
@@ -446,7 +450,7 @@ und wie du interessante Grafiken mit der Turtle zeichnen kannst.</p>
         
     
         
-        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        <script src="gitbook/@honkit/honkit-plugin-fontsettings/fontsettings.js"></script>
         
     
 

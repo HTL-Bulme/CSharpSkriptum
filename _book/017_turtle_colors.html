@@ -6,7 +6,7 @@
         <title>Farben verwenden · HonKit</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="HonKit 5.1.1">
+        <meta name="generator" content="HonKit 6.0.2">
         
         
         
@@ -14,6 +14,10 @@
     <link rel="stylesheet" href="gitbook/style.css">
 
     
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-add-js-css/30cc6d111405dc30134d85982c40bd85-style.css">
+                
             
                 
                 <link rel="stylesheet" href="gitbook/@honkit/honkit-plugin-highlight/website.css">
@@ -24,7 +28,7 @@
                 
             
                 
-                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                <link rel="stylesheet" href="gitbook/@honkit/honkit-plugin-fontsettings/website.css">
                 
             
         
@@ -234,40 +238,40 @@
 <p>In diesem Abschnitt lernst du wie man mit der Turtle bunte Bilder zeichnen kann.
 Die Turtle kann sowohl farbige Linien als auch farbige Flächen zeichnen.</p>
 <h2 id="farbe-des-stifts-ändern">Farbe des Stifts ändern</h2>
-<p>Über die Funktion <code>setPenColor(&quot;farbname&quot;)</code> kannst du die Farbe des Stifts auswählen.
+<p>Über die Funktion <code>setPenColor("farbname")</code> kannst du die Farbe des Stifts auswählen.
 Wichtig ist, dass du den Farbnamen doppelte Hochkomma (Umschalttaste + 2) setzt.
 Wie immer beim Programmieren kennt die Turtle nur englische Farbnamen.
 Die folgende Liste ist zwar nicht vollständig, aber doch ein erster Anhaltspunkt: yellow, gold, orange, red, maroon, violet, magenta, purple, navy, blue, skyblue, cyan, turquoise, lightgreen, green, darkgreen, chocolate, brown, black, gray, white.</p>
 <p>Zusätzlich kannst du noch die Dicke der des Stifts ändern.
 Mit der Funktion <code>setPenWidth(dicke)</code> setzt du die Dicke auf den gewünschten Wert.</p>
 <p>Das folgende Beispiel zeigt wie du die Funktionen aufrufen kannst.
-Wichtig ist bei <code>setPenColor(&quot;farbname&quot;)</code>, dass du den Namen der Farbe in doppelte Hochkomma schreibst,
+Wichtig ist bei <code>setPenColor("farbname")</code>, dass du den Namen der Farbe in doppelte Hochkomma schreibst,
 da es sich um einen Text handelt.</p>
 <pre><code class="lang-python"><span class="hljs-keyword">from</span> gturtle <span class="hljs-keyword">import</span> *
 makeTurtle()
 
-setPenColor(<span class="hljs-string">&quot;blue&quot;</span>)
+setPenColor(<span class="hljs-string">"blue"</span>)
 dot(<span class="hljs-number">50</span>)
 pu()
 fd(<span class="hljs-number">70</span>)
-setPenColor(<span class="hljs-string">&quot;red&quot;</span>)
+setPenColor(<span class="hljs-string">"red"</span>)
 setPenWidth(<span class="hljs-number">50</span>)
 pd()
 fd(<span class="hljs-number">100</span>)
 ht()
 </code></pre>
 <p>Das Programm erzeugt folgende Grafik:</p>
-<p><img src="images/rufzeichen.png" alt="Ergebnis des Programms"></p>
+<p><img src="images/rufzeichen.png" alt="Ergebnis des Programms"></img></p>
 <h2 id="flächen-mit-einer-farbe-füllen">Flächen mit einer Farbe füllen</h2>
 <p>Um eine Fläche auszufüllen, sagst du zuerst der Turtle mit <code>startPath()</code>,
 dass sie sich ausgehend vom aktuellen Ort die nachfolgend gezeichnete Figur merken soll.
 Mit der Funktion <code>fillPath()</code> wird der jetzige Ort mit dem Startort verbunden 
-und die eingeschlossene Fläche eingefärbt. Mit <code>setFillColor(&quot;farbname&quot;)</code>
+und die eingeschlossene Fläche eingefärbt. Mit <code>setFillColor("farbname")</code>
 kannst du die Füllfarbe angeben (sagst du nichts, so ist sie standardmässig schwarz).</p>
 <pre><code class="lang-python"><span class="hljs-keyword">from</span> gturtle <span class="hljs-keyword">import</span> *
 makeTurtle()
 
-setFillColor(<span class="hljs-string">&quot;magenta&quot;</span>)
+setFillColor(<span class="hljs-string">"magenta"</span>)
 startPath()
 fd(<span class="hljs-number">100</span>)
 rt(<span class="hljs-number">120</span>)
@@ -278,7 +282,7 @@ rt(<span class="hljs-number">120</span>)
 fillPath()
 </code></pre>
 <p>Das Programm erzeugt folgende Grafik:</p>
-<p><img src="images/triangle.png" alt="Ergebnis des Programms"></p>
+<p><img src="images/triangle.png" alt="Ergebnis des Programms"></img></p>
 
                                 
                                 </section>
@@ -322,7 +326,7 @@ fillPath()
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Farben verwenden","level":"1.2.2","depth":2,"next":{"title":"Variablen","level":"1.2.3","depth":2,"path":"020_variablen.md","ref":"020_variablen.md","articles":[]},"previous":{"title":"Übungen mit der Turtle","level":"1.2.1","depth":2,"path":"015_turtle_lines.md","ref":"015_turtle_lines.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"017_turtle_colors.md","mtime":"2024-10-02T21:27:10.338Z","type":"markdown"},"gitbook":{"version":"5.1.1","time":"2024-10-16T12:05:53.595Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Farben verwenden","level":"1.2.2","depth":2,"next":{"title":"Variablen","level":"1.2.3","depth":2,"path":"020_variablen.md","ref":"020_variablen.md","articles":[]},"previous":{"title":"Übungen mit der Turtle","level":"1.2.1","depth":2,"path":"015_turtle_lines.md","ref":"015_turtle_lines.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["add-js-css"],"pluginsConfig":{"add-js-css":{"css":["./customStyle/style.css"]},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"017_turtle_colors.md","mtime":"2024-10-02T21:27:10.338Z","type":"markdown"},"gitbook":{"version":"6.0.2","time":"2024-10-16T12:56:04.146Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
@@ -392,7 +396,7 @@ fillPath()
         
     
         
-        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        <script src="gitbook/@honkit/honkit-plugin-fontsettings/fontsettings.js"></script>
         
     
 

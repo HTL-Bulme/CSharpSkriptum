@@ -6,7 +6,7 @@
         <title>Eingabe von Werten · HonKit</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="HonKit 5.1.1">
+        <meta name="generator" content="HonKit 6.0.2">
         
         
         
@@ -14,6 +14,10 @@
     <link rel="stylesheet" href="gitbook/style.css">
 
     
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-add-js-css/30cc6d111405dc30134d85982c40bd85-style.css">
+                
             
                 
                 <link rel="stylesheet" href="gitbook/@honkit/honkit-plugin-highlight/website.css">
@@ -24,7 +28,7 @@
                 
             
                 
-                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                <link rel="stylesheet" href="gitbook/@honkit/honkit-plugin-fontsettings/website.css">
                 
             
         
@@ -245,9 +249,9 @@ oder einen <strong>Float</strong> (Gleitkommazahl), so müssen wir den Wert in d
 Hierfür gibt es die beiden Funktionen <code>int()</code> und <code>float()</code>.</p>
 <p>Es gibt also drei Möglichkeiten um eine Eingabe vom Benutzer zu erhalten:</p>
 <ul>
-<li><code>x = input(&quot;Etwas eingeben!&quot;)</code> - um <strong>String</strong> (Text) Werte einzulesen</li>
-<li><code>x = int(input(&quot;Etwas eingeben!&quot;))</code> - um <strong>Integer</strong> (Ganzzahl) Werte einzulesen</li>
-<li><code>x = float(input(&quot;Etwas eingeben!&quot;))</code> - um <strong>Float</strong> (Gleitkommazahl) Werte einzulesen</li>
+<li><code>x = input("Etwas eingeben!")</code> - um <strong>String</strong> (Text) Werte einzulesen</li>
+<li><code>x = int(input("Etwas eingeben!"))</code> - um <strong>Integer</strong> (Ganzzahl) Werte einzulesen</li>
+<li><code>x = float(input("Etwas eingeben!"))</code> - um <strong>Float</strong> (Gleitkommazahl) Werte einzulesen</li>
 </ul>
 <p>Auf der linken Seite des Zeichens <code>=</code> steht der Name der Variablen,
 der ein neuer Wert zugewiesen werden soll.
@@ -261,7 +265,7 @@ Funktionsaufruf von <code>input</code> herum, die Funktion <code>int</code> bzw.
 <p>In den ersten Kapiteln beschäftigen wir uns ausschließlich mit den beiden
 Typen Integer und Float. Für Strings gibt es später ein eigenes Kapitel.</p>
 <p>In der folgenden Abbildung ist das Eingabefenster zu sehen:</p>
-<p><img src="images/input.png" alt="Eingabe eines Werts"></p>
+<p><img src="images/input.png" alt="Eingabe eines Werts"></img></p>
 <p><strong>Wichtig:</strong> Falls der Benutzer keine Zahl eingibt und
 wir versuchen dennoch den String mit <code>int</code> oder <code>float</code>
 umzuwandeln, stürzt das Programm mit einer Fehlermeldung ab.
@@ -278,7 +282,7 @@ eingeben kann.</p>
 Die Höhe des Hauses soll vom Benutzer eingegeben werden können.
 Im folgenden Bild siehst du drei mögliche Ergebnisse.
 Je nachdem welchen Wert der Benutzer eingibt, kommt ein anderes Haus dabei raus.</p>
-<p><img src="images/house.png" alt="Haus mit verschiedenen Höhen"></p>
+<p><img src="images/house.png" alt="Haus mit verschiedenen Höhen"></img></p>
 <h3 id="📝-übung-13">📝 Übung 13</h3>
 <p>Erweitere das Programm von Übung 12 um eine weitere Eingabe.
 Der Benutzer soll zusätzlich die Größe der Fenster eingeben können.</p>
@@ -329,7 +333,7 @@ Dadurch sind die Programme flexibler einsetzbar.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Eingabe von Werten","level":"1.2.4","depth":2,"next":{"title":"Rechnen mit Variablen","level":"1.2.5","depth":2,"path":"035_variablen_rechnen.md","ref":"035_variablen_rechnen.md","articles":[]},"previous":{"title":"Variablen","level":"1.2.3","depth":2,"path":"020_variablen.md","ref":"020_variablen.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"030_input.md","mtime":"2024-10-02T21:27:10.338Z","type":"markdown"},"gitbook":{"version":"5.1.1","time":"2024-10-16T12:05:53.595Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Eingabe von Werten","level":"1.2.4","depth":2,"next":{"title":"Rechnen mit Variablen","level":"1.2.5","depth":2,"path":"035_variablen_rechnen.md","ref":"035_variablen_rechnen.md","articles":[]},"previous":{"title":"Variablen","level":"1.2.3","depth":2,"path":"020_variablen.md","ref":"020_variablen.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["add-js-css"],"pluginsConfig":{"add-js-css":{"css":["./customStyle/style.css"]},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"030_input.md","mtime":"2024-10-02T21:27:10.338Z","type":"markdown"},"gitbook":{"version":"6.0.2","time":"2024-10-16T12:56:04.146Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
@@ -399,7 +403,7 @@ Dadurch sind die Programme flexibler einsetzbar.</p>
         
     
         
-        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        <script src="gitbook/@honkit/honkit-plugin-fontsettings/fontsettings.js"></script>
         
     
 
