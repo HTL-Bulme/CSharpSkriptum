@@ -121,6 +121,11 @@ Funktionen haben am Ende zwei runde Klammern.
 Zwischen den runden Klammern können Argumente stehen,
 das sind weitere Angaben zum Funktionsaufruf,
 beispielsweise die Anzahl der Pixel bei der Funktion `fd`.
+
+Damit klar ist, dass die Funktion `fd` des Objekts `Turtle` gemeint ist,
+schreibt man zuerst den Namen des Objekts, gefolgt von einem Punkt
+und anschließend den Funktionsaufruf.
+
 Funktionsaufrufe sind Anweisungen, diese müssen mit einem Strichpunkt (Semikolon) abgeschlossen werden.
 
 Im nächsten Abschnitt sollst du selbst Programme schreiben, um vorgegebene Grafiken zu erzeugen.
