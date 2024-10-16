@@ -120,9 +120,9 @@ unteren Teil des Ausgabefensters. Versuche diese zu verstehen und den Fehler zu 
 alles selber aus!** Je mehr Programme du selber schreibst, umso mehr
 wirst du verstehen und beherrschen.
 * Verwende Shortcuts (Tastenkombinationen) um Zeit zu sparen:
-    * <kbd>STRG</kbd> + <kbd>S</kbd>: Speichern
-    * <kbd>STRG</kbd> + <kbd>C</kbd>: Kopieren
-    * <kbd>STRG</kbd> + <kbd>V</kbd>: Einfügen
+    * <kbd>STRG</kbd> + <kbd>S</kbd> ➡ Speichern
+    * <kbd>STRG</kbd> + <kbd>C</kbd> ➡ Kopieren
+    * <kbd>STRG</kbd> + <kbd>V</kbd> ➡ Einfügen
 
 ## 🧭 Zusammenfassung
 Wir haben unsere  erste Umgebung zum Programmieren kennengelernt und

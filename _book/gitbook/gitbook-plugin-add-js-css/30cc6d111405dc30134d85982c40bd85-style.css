@@ -1,11 +1,9 @@
 kbd {
-    border: 2px solid black;
-    box-shadow: 2px 2px black;
-    font-size: .85em;
-    line-height: .85em;
-    display: inline-block;
-    font-weight: 600;
-    letter-spacing: .05em;
-    padding: 3px 5px;
-    white-space: nowrap;
-  }
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 0 0.5em;
+  margin: 0.1 0.2em;
+  box-shadow: 0 1px 0px rgba(0, 0, 0, 0.2), 0 0 0 2px #fff inset;
+  background-color: #f7f7f7;
+}
