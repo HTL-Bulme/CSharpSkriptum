@@ -239,43 +239,38 @@
 Jedoch möchten wir noch, dass der Benutzer des Programms,
 jedes Mal andere Variablenwerte verwenden kann.</p>
 <p>In diesem Kapitel sehen wir uns an, wie Benutzer Werte für Variablen eingeben können.</p>
-<h2 id="eingabe-mit-der-input-funktion">Eingabe mit der <code>input</code> Funktion</h2>
+<h2 id="eingabe-mit-den-input-funktionen">Eingabe mit den <code>Input</code> Funktionen</h2>
 <p>Bevor wir den Benutzer nach einem Wert für eine Variable fragen, müssen wir uns
 Gedanken machen, welchen <strong>Typ</strong> die Variable haben soll.
-Der Benutzer kann über die Tastatur beliebige Texte eingeben,
-also ist die Benutzereingabe zunächst immer vom Typ <strong>String</strong>.</p>
-<p>Möchten wir etwas anderes als einen String, also einen <strong>Integer</strong> (Ganzzahl)
-oder einen <strong>Float</strong> (Gleitkommazahl), so müssen wir den Wert in den richtigen Typ umwandeln.
-Hierfür gibt es die beiden Funktionen <code>int()</code> und <code>float()</code>.</p>
-<p>Es gibt also drei Möglichkeiten um eine Eingabe vom Benutzer zu erhalten:</p>
+Die Turtle stellt zur Eingabe von Daten vier Funktionen zur Verfügung:</p>
 <ul>
-<li><code>x = input("Etwas eingeben!")</code> - um <strong>String</strong> (Text) Werte einzulesen</li>
-<li><code>x = int(input("Etwas eingeben!"))</code> - um <strong>Integer</strong> (Ganzzahl) Werte einzulesen</li>
-<li><code>x = float(input("Etwas eingeben!"))</code> - um <strong>Float</strong> (Gleitkommazahl) Werte einzulesen</li>
+<li><code>InputInt</code> zur Eingabe von Ganzzahlen</li>
+<li><code>InputDouble</code> zur Eingabe von Gleitkommzahlen mit doppelter Genauigkeit</li>
+<li><code>InputFloat</code> zur Eingabe von Gleitkommzahlen mit einfacher Genauigkeit</li>
+<li><code>InputString</code> zur Eingabe von Strings (Texten)</li>
+</ul>
+<p>Um Werte vom Benutzer abzufragen, können wir die Funktionen wie folgt aufrufen:</p>
+<ul>
+<li><code>int a = Turtle.InputInt("Bitte Zahl eingeben!");</code> - um <strong>Integer</strong> Werte einzulesen</li>
+<li><code>double c = Turtle.InputDouble("Bitte Zahl eingeben!");</code> - um <strong>Double</strong> Werte einzulesen</li>
+<li><code>float b = Turtle.InputFloat("Bitte Zahl eingeben!");</code> - um <strong>Float</strong> Werte einzulesen</li>
+<li><code>string d = Turtle.InputString("Etwas eingeben!");</code> - um <strong>String</strong> Werte einzulesen</li>
 </ul>
 <p>Auf der linken Seite des Zeichens <code>=</code> steht der Name der Variablen,
 der ein neuer Wert zugewiesen werden soll.
 Auf der rechten Seite hatten wir bis jetzt immer einen fixen Wert.
-Statt dem fixen Wert steht jetzt der Funktionsaufruf von <code>input</code> mit einem Argument.
+Statt dem fixen Wert steht jetzt der Funktionsaufruf der jeweiligen <code>Input</code>-Funktion mit einem Argument.
 Das Argument ist der Text der dem Benutzer angezeigt wird,
 wenn er einen Wert eingeben soll.</p>
-<p>Bei der Eingabe von Integer oder Float Werten, wird um den
-Funktionsaufruf von <code>input</code> herum, die Funktion <code>int</code> bzw. die Funktion
-<code>float</code> geschrieben um den String in Integer bzw. Float umzuwandeln.</p>
 <p>In den ersten Kapiteln beschäftigen wir uns ausschließlich mit den beiden
-Typen Integer und Float. Für Strings gibt es später ein eigenes Kapitel.</p>
+Typen Integer und Double. Für Strings gibt es später ein eigenes Kapitel.</p>
 <p>In der folgenden Abbildung ist das Eingabefenster zu sehen:</p>
 <p><img src="images/input.png" alt="Eingabe eines Werts"></img></p>
-<p><strong>Wichtig:</strong> Falls der Benutzer keine Zahl eingibt und
-wir versuchen dennoch den String mit <code>int</code> oder <code>float</code>
-umzuwandeln, stürzt das Programm mit einer Fehlermeldung ab.
-Im Kapitel über Strings werden wir dieses Problem beheben.
-Bis dahin müssen wir davon ausgehen, dass der Benutzer nur gültige Werte eingibt.</p>
 <h2 id="übungen">Übungen</h2>
 <h3 id="📝-übung-11">📝 Übung 11</h3>
 <p>Schreibe ein Programm, welches ein gleichseitiges Dreieck zeichnet.
 Die Länge a des Dreiecks soll der Benutzer selbst eingeben.
-Der Typ der Eingabe soll Float sein, damit der Benutzer beispielsweise 20.5 
+Der Typ der Eingabe soll Double sein, damit der Benutzer beispielsweise 20.5 
 eingeben kann.</p>
 <h3 id="📝-übung-12">📝 Übung 12</h3>
 <p>Schreibe ein Programm, welches ein Haus zeichnet.
@@ -288,7 +283,7 @@ Je nachdem welchen Wert der Benutzer eingibt, kommt ein anderes Haus dabei raus.
 Der Benutzer soll zusätzlich die Größe der Fenster eingeben können.</p>
 <h2 id="🧭-zusammenfassung">🧭 Zusammenfassung</h2>
 <p>Unsere Programme können nun Zahlenwerte als Eingabe vom Benutzer entgegennehmen.
-Hierzu nutzen sie die Funktionen <code>inputInt</code> und <code>inputFloat</code>.
+Hierzu nutzen sie die Funktionen <code>InputInt</code> und <code>InputDouble</code>.
 Dadurch sind die Programme flexibler einsetzbar.</p>
 
                                 
@@ -333,7 +328,7 @@ Dadurch sind die Programme flexibler einsetzbar.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Eingabe von Werten","level":"1.2.4","depth":2,"next":{"title":"Rechnen mit Variablen","level":"1.2.5","depth":2,"path":"035_variablen_rechnen.md","ref":"035_variablen_rechnen.md","articles":[]},"previous":{"title":"Variablen","level":"1.2.3","depth":2,"path":"020_variablen.md","ref":"020_variablen.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["add-js-css"],"pluginsConfig":{"add-js-css":{"css":["./customStyle/style.css"]},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"030_input.md","mtime":"2024-10-16T21:28:36.103Z","type":"markdown"},"gitbook":{"version":"6.0.2","time":"2024-10-17T09:49:37.377Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Eingabe von Werten","level":"1.2.4","depth":2,"next":{"title":"Rechnen mit Variablen","level":"1.2.5","depth":2,"path":"035_variablen_rechnen.md","ref":"035_variablen_rechnen.md","articles":[]},"previous":{"title":"Variablen","level":"1.2.3","depth":2,"path":"020_variablen.md","ref":"020_variablen.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["add-js-css"],"pluginsConfig":{"add-js-css":{"css":["./customStyle/style.css"]},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"030_input.md","mtime":"2024-10-17T10:31:29.802Z","type":"markdown"},"gitbook":{"version":"6.0.2","time":"2024-10-17T10:37:40.958Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

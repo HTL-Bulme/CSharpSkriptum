@@ -176,9 +176,9 @@ Nach der Variablendefinition soll ein Rechteck mit den Seitenlängen
 
 + Variablen sind benannte Speicherplätze für Werte
 + Variablen müssen vor der Verwendung angelegt (definiert) werden
-+ Dabei steht der Name der Variablen immer links vom Gleichheitszeichen = und der Wert rechts davon. Beispiel `double seite_a = 23;`
++ Dabei steht der Name der Variablen immer links vom Gleichheitszeichen (=) und der Wert rechts davon. Beispiel `double seite_a = 23;`
 + Variablen haben drei Eigenschaften: Name, Datentyp und Wert
-+ Datentyp sind bspw. int (Ganzzahl), double (Gleitkommazahl) oder string (Text)
++ Datentyp sind bspw. `int` (Ganzzahl), `double` (Gleitkommazahl) oder `string` (Text)
 
 
 

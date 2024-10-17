@@ -6,46 +6,38 @@ jedes Mal andere Variablenwerte verwenden kann.
 
 In diesem Kapitel sehen wir uns an, wie Benutzer Werte für Variablen eingeben können.
 
-## Eingabe mit der `input` Funktion
+## Eingabe mit den `Input` Funktionen
 
 Bevor wir den Benutzer nach einem Wert für eine Variable fragen, müssen wir uns
 Gedanken machen, welchen **Typ** die Variable haben soll.
-Der Benutzer kann über die Tastatur beliebige Texte eingeben,
-also ist die Benutzereingabe zunächst immer vom Typ **String**.
+Die Turtle stellt zur Eingabe von Daten vier Funktionen zur Verfügung:
 
-Möchten wir etwas anderes als einen String, also einen **Integer** (Ganzzahl)
-oder einen **Float** (Gleitkommazahl), so müssen wir den Wert in den richtigen Typ umwandeln.
-Hierfür gibt es die beiden Funktionen `int()` und `float()`.
+* `InputInt` zur Eingabe von Ganzzahlen
+* `InputDouble` zur Eingabe von Gleitkommzahlen mit doppelter Genauigkeit
+* `InputFloat` zur Eingabe von Gleitkommzahlen mit einfacher Genauigkeit
+* `InputString` zur Eingabe von Strings (Texten)
 
-Es gibt also drei Möglichkeiten um eine Eingabe vom Benutzer zu erhalten:
+Um Werte vom Benutzer abzufragen, können wir die Funktionen wie folgt aufrufen:
 
-+ `x = input("Etwas eingeben!")` - um **String** (Text) Werte einzulesen
-+ `x = int(input("Etwas eingeben!"))` - um **Integer** (Ganzzahl) Werte einzulesen
-+ `x = float(input("Etwas eingeben!"))` - um **Float** (Gleitkommazahl) Werte einzulesen
++ `int a = Turtle.InputInt("Bitte Zahl eingeben!");` - um **Integer** Werte einzulesen
++ `double c = Turtle.InputDouble("Bitte Zahl eingeben!");` - um **Double** Werte einzulesen
++ `float b = Turtle.InputFloat("Bitte Zahl eingeben!");` - um **Float** Werte einzulesen
++ `string d = Turtle.InputString("Etwas eingeben!");` - um **String** Werte einzulesen
 
 Auf der linken Seite des Zeichens `=` steht der Name der Variablen,
 der ein neuer Wert zugewiesen werden soll.
 Auf der rechten Seite hatten wir bis jetzt immer einen fixen Wert.
-Statt dem fixen Wert steht jetzt der Funktionsaufruf von `input` mit einem Argument.
+Statt dem fixen Wert steht jetzt der Funktionsaufruf der jeweiligen `Input`-Funktion mit einem Argument.
 Das Argument ist der Text der dem Benutzer angezeigt wird,
 wenn er einen Wert eingeben soll.
 
-Bei der Eingabe von Integer oder Float Werten, wird um den
-Funktionsaufruf von `input` herum, die Funktion `int` bzw. die Funktion
-`float` geschrieben um den String in Integer bzw. Float umzuwandeln.
 
 In den ersten Kapiteln beschäftigen wir uns ausschließlich mit den beiden
-Typen Integer und Float. Für Strings gibt es später ein eigenes Kapitel.
+Typen Integer und Double. Für Strings gibt es später ein eigenes Kapitel.
 
 In der folgenden Abbildung ist das Eingabefenster zu sehen:
 
 ![Eingabe eines Werts](./images/input.png)
-
-**Wichtig:** Falls der Benutzer keine Zahl eingibt und
-wir versuchen dennoch den String mit `int` oder `float`
-umzuwandeln, stürzt das Programm mit einer Fehlermeldung ab.
-Im Kapitel über Strings werden wir dieses Problem beheben.
-Bis dahin müssen wir davon ausgehen, dass der Benutzer nur gültige Werte eingibt.
 
 
 
@@ -56,7 +48,7 @@ Bis dahin müssen wir davon ausgehen, dass der Benutzer nur gültige Werte eingi
 
 Schreibe ein Programm, welches ein gleichseitiges Dreieck zeichnet.
 Die Länge a des Dreiecks soll der Benutzer selbst eingeben.
-Der Typ der Eingabe soll Float sein, damit der Benutzer beispielsweise 20.5 
+Der Typ der Eingabe soll Double sein, damit der Benutzer beispielsweise 20.5 
 eingeben kann.
 
 ### 📝 Übung 12
@@ -76,7 +68,7 @@ Der Benutzer soll zusätzlich die Größe der Fenster eingeben können.
 ## 🧭 Zusammenfassung
 
 Unsere Programme können nun Zahlenwerte als Eingabe vom Benutzer entgegennehmen.
-Hierzu nutzen sie die Funktionen `inputInt` und `inputFloat`.
+Hierzu nutzen sie die Funktionen `InputInt` und `InputDouble`.
 Dadurch sind die Programme flexibler einsetzbar.
 
 
