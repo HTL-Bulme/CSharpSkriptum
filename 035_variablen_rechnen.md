@@ -98,10 +98,12 @@ Turtle.Print(Turtle.InputInt("Geben Sie eine Zahl ein"));
 | + | Addition | x + y |
 | - | Subtraktion | x - y |
 | * | Multiplikation | x * y |
-| / | Division, Ergebnis ist Gleitkommazahl, 10 / 3 ergibt 3.3333 | x / y |
+| / | Division | x / y |
 | % | Modulo, **Rest** der Integer Division, 7 % 3 ergibt 1 | x % y |
 
-
+<!--
+Hier noch zusatz zur Division
+ -->
 
 ### 📝 Übung 14
 Schreibe ein Programm, bei dem der Benutzer das Geburtsjahr als Integer eingeben kann.
