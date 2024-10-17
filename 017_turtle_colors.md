@@ -25,10 +25,11 @@ Turtle.setColor("blue");
 Turtle.dot(25);
 Turtle.penUp();
 Turtle.fd(35);
-Turtle.setPenColor("red");
+Turtle.setColor("red");
 Turtle.setPenWidth(25);
-Turtle.pd();
+Turtle.penDown();
 Turtle.fd(50);
+
 Turtle.showTurtle();
 ```
 
@@ -49,6 +50,7 @@ kannst du die Füllfarbe angeben (sagst du nichts, so ist sie standardmässig sc
 using BulmeSharp;
 
 Turtle.setColor("magenta");
+
 Turtle.beginFill();
 Turtle.fd(50);
 Turtle.rt(120);
@@ -57,6 +59,7 @@ Turtle.rt(120);
 Turtle.fd(50);
 Turtle.rt(120);
 Turtle.endFill();
+
 Turtle.showTurtle();
 ```
 Das Programm erzeugt folgende Grafik:

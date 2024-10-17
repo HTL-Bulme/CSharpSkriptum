@@ -85,35 +85,35 @@ und daneben die Ausgabe des Programms.
 Lass uns das Programm Zeile für Zeile analysieren.
 Programme werden immer von oben nach unten abgearbeitet.
 
-In Zeile 1 und 2 siehst du die bereits bekannten Anweisungen des Minimalprogramms.
-In Zeile 1 wird die BulmeSharp-Bibliothek eingebunden.
+In Zeile **1** und **2** siehst du die bereits bekannten Anweisungen des Minimalprogramms.
+In Zeile **1** wird die BulmeSharp-Bibliothek eingebunden.
 Diese Datei enthält Funktionen um mit der Turtle zu arbeiten.
 Dateien, die wir zusätzlich einbinden können, und die den Funktionsumfang erweitern,
 nennen wir **Module** oder auch **Bibliotheken**.
-Zeile 2 ist notwendig um auf die Turtle zugreifen zu können.
+Zeile **2** ist notwendig um auf die Turtle zugreifen zu können.
 
-Zeile 3 ist eine Leerzeile. Wir dürfen beliebig viele Leerzeilen
+Zeile **3** ist eine Leerzeile. Wir dürfen beliebig viele Leerzeilen
 an beliebigen Stellen einfügen. Das wird häufig gemacht um das
 Programm in Form zu bringen und leichter lesbar zu machen.
 
-In Zeile 4 wird die Linienfarbe auf blau gesetzt
-und in Zeile 5 die Liniendicke auf 3 Pixel.
+In Zeile **4** wird die Linienfarbe auf blau gesetzt
+und in Zeile **5** die Liniendicke auf 3 Pixel.
 
-In Zeile 7 bis inkl. 9 fährt die Turtle 60 Pixel nach vorne,
+In Zeile **7** bis inkl. **9** fährt die Turtle 60 Pixel nach vorne,
 macht dann einen 8 Pixel großen Punkt und dreht sich dann 90° nach links.
 
-In Zeile 11 bis inkl. 13 hebt die Turtle den Stift auf und zeichnet ab hier nichts mehr.
+In Zeile **11** bis inkl. **13** hebt die Turtle den Stift auf und zeichnet ab hier nichts mehr.
 Dann fährt sie 30 Pixel nach vorne und setzt den Stift wieder ab, damit sie wieder
 etwas zeichnet.
 Man sieht, dass zwischen den zwei Punkten der Stift aufgehoben wurde,
 da keine durchgezogene Linie zwischen den beiden Punkten zu sehen ist.
 
-In Zeile 15 macht die Turtle wieder einen 8 Pixel großen Punkt,
+In Zeile **15** macht die Turtle wieder einen 8 Pixel großen Punkt,
 dreht sich in der folgenden Zeile 90° nach links und sieht damit nach unten.
-In Zeile 17 bis inkl. 19 geht sie 30 Pixel nach vorne, dreht sich 90° nach rechts
+In Zeile **17** bis inkl. **19** geht sie 30 Pixel nach vorne, dreht sich 90° nach rechts
 und geht dann wieder 30 Pixel nach vorne.
 
-In Zeile 21 wird `Turtle.showTurtle()` aufgerufen, damit das Fenster sichtbar wird.
+In Zeile **21** wird `Turtle.showTurtle()` aufgerufen, damit das Fenster sichtbar wird.
 
 
 ## 🧭 Zusammenfassung
