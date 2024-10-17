@@ -68,7 +68,6 @@ schreibt man:
 double a = 50;
 ```
 
-
 Die Variable mit dem Namen `a` kann nun überall dort verwendet werden,
 wo normalerweise der Wert `50` steht.
 
@@ -129,7 +128,20 @@ Wir unterscheiden hier drei grundlegende Typen:
 **Wert**: Jede Variable hat einen Wert. Der Wert der Variable kann
 im Programm laufend geändert werden. 
 
+## Weitere Datentypen
 
+Datentypen bestimmen, welche Art von Daten eine Variable enthalten kann.
+Die am häufigsten verwendeten C# Datentypen sind in der folgenden Tabelle aufgeführt:
+
+| Datentyp  | Beschreibung |  Speicherverbrauch | 
+| ------------- | ------------- | ------------- |
+| `int`  | eine Ganzzahl, ungefähr im Bereich ± 2 Milliarden, wie bspw. `129`  | 4 Byte |
+| `long`  | eine lange Ganzzahl, wie bspw. `487693613292387`  | 8 Byte |
+| `char`  | Ein einzelner Buchstabe, wie bspw. der Buchstabe `'A'`  | 2 Byte (in anderen Sprachen häufig nur 1 Byte)|
+| `float`  | Eine Gleitkommazahl mit einer Präzision von maximal **7** Stellen, wie bspw. `12.832`  | 8 Byte |
+| `double`  | Eine Gleitkommazahl mit einer Präzision von maximal **15** Stellen, wie bspw. `3.14159265358`  | 16 Byte |
+| `bool`  | Ein Wahrheitswert, also entweder `true` oder `false`  | 1 Byte (theoretisch nur 1 Bit, aber aufgrund Rechnerarchitektur nicht möglich) |
+| `string`  | Ein Zeichenkette (also ein Text), wie bspw. `"Hallo Welt :)"`  | ~2 Byte pro Zeichen |
 
 ## Übungen
 
@@ -159,13 +171,14 @@ Nach der Variablendefinition soll ein Rechteck mit den Seitenlängen
 **Wichtig:** Beachte, dass du die Zahlen `60` und `80` nur einmal im Programm benötigst. 
 
 
+
 ## 🧭 Zusammenfassung
 
 + Variablen sind benannte Speicherplätze für Werte
 + Variablen müssen vor der Verwendung angelegt (definiert) werden
-+ Dabei steht der Name der Variablen immer links vom Gleichheitszeichen = und der Wert rechts davon. Beispiel `seite_a = 23`
-+ Variablen haben drei Eigenschaften: Name, Typ und Wert
-+ Typen sind bspw. int (Ganzzahl), double (Gleitkommazahl) oder String (Text)
++ Dabei steht der Name der Variablen immer links vom Gleichheitszeichen = und der Wert rechts davon. Beispiel `double seite_a = 23;`
++ Variablen haben drei Eigenschaften: Name, Datentyp und Wert
++ Datentyp sind bspw. int (Ganzzahl), double (Gleitkommazahl) oder string (Text)
 
 
 

@@ -121,7 +121,7 @@ Wir haben uns die wichtigsten Funktionen der Turtle in C# angesehen.
 
 Funktionen haben am Ende zwei runde Klammern. Zwischen den runden Klammern können Argumente stehen, das sind weitere Angaben zum Funktionsaufruf, beispielsweise die Anzahl der Pixel bei der Funktion `fd(100)`.
 
-Damit klar ist, dass die Funktion `fd` des Objekts `Turtle` gemeint ist, schreibt man zuerst den Namen des Objekts, gefolgt von einem Punkt und anschließend den Funktionsaufruf.
+Damit klar ist, dass die Funktion `fd` des Objekts `Turtle` gemeint ist, schreibt man zuerst den Namen des Objekts, gefolgt von einem Punkt und anschließend den Funktionsaufruf: `Turtle.fd(100);`.
 
 In C# müssen Funktionsaufrufe mit einem Semikolon (`;`) abgeschlossen werden, um das Ende der Anweisung zu markieren.
 
