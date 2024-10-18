@@ -6,6 +6,9 @@
     "add-js-css": {
       "css": [
         "./customStyle/style.css"
+      ],
+      "js" : [
+        "./customScript/app.js"
       ]
     }
   }
