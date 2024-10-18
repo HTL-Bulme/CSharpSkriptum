@@ -3,7 +3,7 @@
 <html lang="" >
     <head>
         <meta charset="UTF-8">
-        <title>Einführung ✨ · HonKit</title>
+        <title>Suchen von Elementen · HonKit</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="HonKit 6.0.2">
@@ -60,8 +60,10 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="010_turtle.html" />
+    <link rel="next" href="340_listcalc.html" />
     
+    
+    <link rel="prev" href="330_listappenddeletecopy.html" />
     
 
     </head>
@@ -90,7 +92,7 @@
         
         
     
-        <li class="chapter active" data-level="1.1" data-path="./">
+        <li class="chapter " data-level="1.1" data-path="./">
             
                 <a href="./">
             
@@ -486,7 +488,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.3" data-path="335_listsearch.html">
+        <li class="chapter active" data-level="1.5.3" data-path="335_listsearch.html">
             
                 <a href="335_listsearch.html">
             
@@ -754,7 +756,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >Einführung ✨</a>
+        <a href="." >Suchen von Elementen</a>
     </h1>
 </div>
 
@@ -769,115 +771,151 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="einführung">Einführung</h1>
-<p>In diesem Kurs lernst du, wie du einen Computer programmieren kannst.
-Dabei gehen wir davon aus, dass du noch kein
-Vorwissen mitbringst, und werden dir schrittweise alles erklären, was
-du dazu brauchst.</p>
-<h2 id="was-heißt-programmieren-überhaupt">Was heißt "Programmieren" überhaupt?</h2>
-<p>Programmieren heißt, einer Maschine <strong>Anweisungen</strong> zu erteilen und sie damit zu steuern.
-Die erste solche Maschine, die du steuerst, ist eine kleine Schildkröte auf dem Bildschirm: Die Turtle. Die Schildkröte versteht verschiedene Anweisungen um sich zu bewegen,
-zu zeichnen oder sich zu verstecken.
-Welche Anweisungen existieren und wie diese Anweisungen geschrieben werden müssen,
-ist in einer <strong>Programmiersprache</strong> definiert.</p>
-<p>Die Programmiersprache, die wir in diesem Kurs lernen werden, ist <strong>C#</strong>.
-C# ist eine moderne, objektorientierte Programmiersprache,
-die besonders für die Entwicklung von Windows-Anwendungen und Spielen beliebt ist.
-Sie wird häufig in der Webentwicklung und für Unternehmenssoftware eingesetzt
-und zeichnet sich durch ihre hohe Leistungsfähigkeit aus.
-Des Weiteren gibt es eine große Schnittmenge zu anderen Programmiersprachen,
-wie Java, C, C++ oder JavaScript, was das Erlernen dieser Sprachen später einfach möglich macht.</p>
-<h2 id="c-mit-roslynpad">C# mit Roslynpad</h2>
-<p>Wir werden mit einer einfachen Umgebung starten, um C# zu programmieren.
-Diese Umgebung benötigt aber einige Schritt um sie zu installieren.
-Befolge folgende Schritte um die Anwendung zu installieren:</p>
-<h3 id="installation">Installation</h3>
-<p>Zur Installation benötigst du einen aktuellen Computer mit dem Betriebssystem Windows.</p>
-<p>Führe folgende Schritte der Reihe nach aus, um Roslynpad zu installieren:</p>
-<ol>
-<li>Download und Installation der .Net SDK <a href="https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/sdk-8.0.401-windows-x64-installer" target="_blank">Download</a></li>
-<li>Download und Installation des .Net Frameworks <a href="https://dotnet.microsoft.com/en-us/download/dotnet-framework/thank-you/net481-developer-pack-offline-installer" target="_blank">Download</a></li>
-<li>Download von Roslynpad <a href="https://github.com/roslynpad/roslynpad/releases/download/19.1/RoslynPad-windows-x64.zip" target="_blank">Download</a></li>
-<li>Entpacken von RoslynPad<ul>
-<li>Rechtsklick auf die Datei: RoslynPad-windows-x64.zip</li>
-<li>“Alle Extrahieren” wählen oder “Weitere Optionen” und dann “Alle Extrahieren” wählen</li>
-<li>Ordner öffnen und Verknüpfung zu RoslynPad.exe auf dem Desktop erstellen</li>
-</ul>
-</li>
-<li>RoslynPad starten und konfigurieren<ul>
-<li>Documents fixieren</li>
-<li>x64 wählen und als Standard setzen</li>
-<li>BulmeSharp laden</li>
-<li>Minimalprogramm testen</li>
-</ul>
-</li>
-</ol>
-<pre><code class="lang-cs"><span class="hljs-meta">#r "nuget: BulmeSharp, 0.9.0"</span>
-<span class="hljs-keyword">using</span> BulmeSharp;
+                                <h1 id="suchen-von-elementen">Suchen von Elementen</h1>
+<p>In den vorhergegangenen Kapiteln haben wir Listen angelegt,
+Elemente hinzugefügt und entfernt.
+Jedoch haben wir beim Entfernen gesehen,
+dass das Programm mit einer Fehlermeldung abstürzt,
+wenn das Element, welches wir entfernen möchten, nicht existiert.</p>
+<p>Uns fehlt also noch eine Möglichkeit zu prüfen, ob Elemente existieren.
+Diesen Prozess nennen wir "Suchen" und 
+das werden wir in diesem Kapitel Schritt-für-Schritt erarbeiten.</p>
+<h2 id="liste-mit-schleife-durchlaufen">Liste mit Schleife durchlaufen</h2>
+<p>Um zu überprüfen, ob ein gewisses Element in einer Liste existiert,
+bleibt uns nichts anderes übrig, als jedes Element einzeln zu überprüfen.
+Sehen wir uns nochmals die bereits bekannte Liste an:</p>
+<p><img src="images/lists.png" alt="Darstellung einer Liste mit sechs Elementen"></img></p>
+<p>Nehmen wir an, wir möchten überprüfen, ob die zahl <code>74</code> existiert,
+so könnten wir folgendes schreiben:</p>
+<pre><code class="lang-python">meineListe = [<span class="hljs-number">24</span>, <span class="hljs-number">13</span>, -<span class="hljs-number">5</span>, <span class="hljs-number">102</span>, <span class="hljs-number">74</span>, -<span class="hljs-number">87</span>]
+wert = <span class="hljs-number">74</span>
 
-Turtle.fd(<span class="hljs-number">50</span>);
-Turtle.rt(<span class="hljs-number">120</span>);
-Turtle.fd(<span class="hljs-number">50</span>);
-Turtle.rt(<span class="hljs-number">120</span>);
-Turtle.fd(<span class="hljs-number">50</span>);
-Turtle.rt(<span class="hljs-number">120</span>);
-
-Turtle.showTurtle();
+<span class="hljs-keyword">if</span> (meineListe[<span class="hljs-number">0</span>] == wert):
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">"gefunden"</span>)
+<span class="hljs-keyword">if</span> (meineListe[<span class="hljs-number">1</span>] == wert):
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">"gefunden"</span>)
+<span class="hljs-keyword">if</span> (meineListe[<span class="hljs-number">2</span>] == wert):
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">"gefunden"</span>)
+<span class="hljs-keyword">if</span> (meineListe[<span class="hljs-number">3</span>] == wert):
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">"gefunden"</span>)
+<span class="hljs-keyword">if</span> (meineListe[<span class="hljs-number">4</span>] == wert):
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">"gefunden"</span>)
+<span class="hljs-keyword">if</span> (meineListe[<span class="hljs-number">5</span>] == wert):
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">"gefunden"</span>)
 </code></pre>
-<p><strong>Tipp:</strong>
-Die gesamte Installation wird in diesem <a href="https://bulme-my.sharepoint.com/personal/gl_ms_bulme_at/_layouts/15/stream.aspx?id=%2Fpersonal%2Fgl%5Fms%5Fbulme%5Fat%2FDocuments%2FInstallation%2Emp4&amp;nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0" target="_blank">Video</a> vorgezeigt.</p>
-<h3 id="einführung-in-die-oberfläche">Einführung in die Oberfläche</h3>
-<p>Die Oberfläche ist einfach gestaltet und speziell für Einsteiger entwickelt worden.
-Sie besteht aus folgenden sechs Bereichen.</p>
-<ol>
-<li>Neue Datei: Hier kannst du eine neue Dateien anlegen</li>
-<li>Dateiübersicht: Hier siehst du alle Dateien, die du angelegt hast.
-Mit Doppelklick auf eine Datei öffnest du die entsprechende Datei</li>
-<li>Codeeingabe: Hier gibst du den C#-Code ein</li>
-<li>Ausführen ▶: Mit diesem Button startest du dein Programm</li>
-<li>Beenden ■: Mit diesem Button beendest du dein Programm vorzeitig</li>
-<li>Framework: Hier muss das .Net Framework ausgewählt werden.
-Wir nehmen stets x64 und setzen es mit dem Button daneben gleich als Standard (Default).</li>
-<li>NuGet Bibliotheken: Hier binden wir zusätzliche Bibliotheken ein.
-Bibliotheken enthalten vorgefertigte Programmteile,
-normalerweise nicht im Standardumfang einer Programmiersprache enthalten sind.
-Meistens verwenden wir die BulmeSharp Bibliothek, da diese die Turtle enthält.</li>
-</ol>
-<p><img src="images/roslynPad.png" alt="Roslynpad Übersicht"></img></p>
-<h3 id="📝-übung-1">📝 Übung 1</h3>
-<p>Gib den Programmcode aus der oberen Grafik in RoslynPad ein
-und klicke auf den "Ausführen"-Knopf.
-Es sollte die gleiche Ausgabe erscheinen wie in der Grafik.</p>
-<p><strong>Tipps:</strong> </p>
+<p>Das wäre etwas umständlich, würde aber funktionieren,
+solange die Liste immer 6 Elemente hat.
+Wenn wir aber einmal scharf auf den Code draufschauen,
+dann sehen wir, dass wir 6 mal denselben Code,
+nur mit einem anderen Index ausführen.
+Hier ergibt sich also die Möglichkeit die <strong>for-Schleife</strong> einzusetzen,
+um den Code kürzer zu machen.</p>
+<pre><code class="lang-python">meineListe = [<span class="hljs-number">24</span>, <span class="hljs-number">13</span>, -<span class="hljs-number">5</span>, <span class="hljs-number">102</span>, <span class="hljs-number">74</span>, -<span class="hljs-number">87</span>]
+wert = <span class="hljs-number">74</span>
+
+<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">0</span>,<span class="hljs-number">6</span>):
+    <span class="hljs-keyword">if</span> (meineListe[i] == wert):
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">"gefunden"</span>)
+</code></pre>
+<p>Wir haben also eine <code>for</code>-Schleife erstellt,
+die von 0 bis inklusive 5 läuft.
+Bei jedem Schleifendurchlauf,
+wird die Variable <code>i</code> um <code>1</code> erhöht.
+Beim ersten Mal hat <code>i</code> den Wert <code>0</code>,
+beim zweiten Mal <code>1</code>, und so weiter.
+Die Schleife läuft, solange <code>i</code> kleiner als <code>6</code> ist,
+also von <code>0</code> bis <code>5</code>.</p>
+<p>Dieses Programm ist nun schon viel eleganter,
+da es keine Code Duplikate enthält.
+Jedoch funktioniert es noch immer nur
+für Listen der Länge 6.</p>
+<p>Wir können aber die Länge einer Liste auch
+von Python mit der <code>len</code>-Funktion berechnen lassen.
+Die Funktion <code>len</code> verlangt als Argument eine Liste
+und gibt die Länge der Liste zurück.
+Wenn wir die Zahl <code>5</code> im obigen Programm durch <code>len(meineListe)</code>
+ersetzen, funktioniert das Programm für Listen beliebiger Länge:</p>
+<pre><code class="lang-python">meineListe = [<span class="hljs-number">24</span>, <span class="hljs-number">13</span>, -<span class="hljs-number">5</span>, <span class="hljs-number">102</span>, <span class="hljs-number">74</span>, -<span class="hljs-number">87</span>]
+wert = <span class="hljs-number">74</span>
+
+<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">0</span>,<span class="hljs-built_in">len</span>(meineListe)):
+    <span class="hljs-keyword">if</span> (meineListe[i] == wert):
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">"gefunden"</span>)
+</code></pre>
+<p>Das obige Programm wirst du häufig wiedersehen.
+Es ist ein Muster, welches immer wieder vorkommt.
+Man möchte eine Aussage über die Liste treffen,
+und dafür muss man mit jedem einzelnen Element etwas machen.
+Man sagt auch man <strong>durchläuft</strong> die Liste mit einer <code>for</code>-Schleife.</p>
+<h2 id="resultat-der-suche-in-flag-variable-speichern">Resultat der Suche in Flag-Variable speichern</h2>
+<p>Das folgende Programm macht schon fast was es soll.
+Es überprüft, ob ein Element in einer Liste vorkommt.
+Falls es vorkommt, gibt das Programm den Text "gefunden" aus.</p>
+<pre><code class="lang-python">meineListe = [<span class="hljs-number">24</span>, <span class="hljs-number">13</span>, -<span class="hljs-number">5</span>, <span class="hljs-number">102</span>, <span class="hljs-number">74</span>, -<span class="hljs-number">87</span>]
+wert = <span class="hljs-number">74</span>
+
+<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">0</span>,<span class="hljs-built_in">len</span>(meineListe)):
+    <span class="hljs-keyword">if</span> (meineListe[i] == wert):
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">"gefunden"</span>)
+</code></pre>
+<p>Die Text-Ausgabe ist für uns ungünstig, da wir auf diesen später nicht
+mehr im Programm zugreifen können.
+Besser wäre eine Variable, die speichert, ob das Element vorhanden war oder nicht. 
+Soche Variablen, die angeben ob eine Bedingung zutrifft oder eben nicht zutrifft, 
+nennen wir <strong>Flag</strong>-Variablen oder kurz ein Flag. Der Name rührt von einer Fahne (engl. Flag) her,
+die im bildlichen Sinne gehisst wird, falls eine Bedingung zutrifft,
+bzw. gesenkt wird, falls eine Bedingung nicht zutrifft.
+Flags können nur zwei verschiedene Werte haben <code>True</code> oder <code>False</code>.</p>
+<p>In unserem Beispiel müssen wir zuerst davon ausgehen, dass der Wert nicht vorhanden ist,
+also setzen wir das Flag auf <code>False</code>. Falls wir ein Element finden, setzen wir das Flag auf <code>True</code>.</p>
+<p>Im folgenden Code wird das Flag <code>gefunden</code> genannt und standardmässig auf <code>False</code> gesetzt.</p>
+<pre><code class="lang-python">meineListe = [<span class="hljs-number">24</span>, <span class="hljs-number">13</span>, -<span class="hljs-number">5</span>, <span class="hljs-number">102</span>, <span class="hljs-number">74</span>, -<span class="hljs-number">87</span>]
+wert = <span class="hljs-number">74</span>
+
+gefunden = <span class="hljs-literal">False</span>
+<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">0</span>,<span class="hljs-built_in">len</span>(meineListe)):
+    <span class="hljs-keyword">if</span> (meineListe[i] == wert):
+        gefunden = <span class="hljs-literal">True</span>
+</code></pre>
+<h2 id="suche-als-funktion-definieren">Suche als Funktion definieren</h2>
+<p>Die Suche nach einem Element in einer Liste,
+ist etwas, dass wir sicher häufiger benötigen werden.
+Deshalb macht es Sinn diese Funktionalität in eine eigene Funktion zu packen.</p>
+<p>Die Funktion sollte zwei Parameter haben:</p>
 <ul>
-<li>Achte auf Groß- und Kleinschreibung</li>
-<li>Achte darauf, daß Anweisungen mit einem Strichpunkt (Semikolon) ageschlossen werden müssen</li>
-<li>Achte auf die richtigen Klammern! Es werden in dem Beispiel runde Klammern "(" und ")" benutzt. Eckige "[", "]" oder geschwungene "{", "}" Klammern
-bedeuten etwas anderes und funktionieren nicht!</li>
-<li>Wenn du einen Tippfehler gemacht hast, also beispielsweise statt <code>Turtle.showTurtle();</code> 
-den Text <code>Törtle.showTrutel();</code> geschrieben hast, erscheint eine Fehlermeldung im
-unteren Teil des Ausgabefensters. Versuche diese zu verstehen und den Fehler zu beheben.</li>
-<li>Beachte folgende Regel beim Programmieren: <strong>Probiere
-alles selber aus!</strong> Je mehr Programme du selber schreibst, umso mehr
-wirst du verstehen und beherrschen.</li>
-<li>Verwende Shortcuts (Tastenkombinationen) um Zeit zu sparen:<ul>
-<li><kbd>STRG</kbd> + <kbd>S</kbd> ➡ Speichern</li>
-<li><kbd>STRG</kbd> + <kbd>C</kbd> ➡ Kopieren</li>
-<li><kbd>STRG</kbd> + <kbd>V</kbd> ➡ Einfügen</li>
+<li>die Liste die durchsucht werden soll</li>
+<li>die Zahl nach der gesucht werden soll</li>
 </ul>
-</li>
-</ul>
-<h2 id="🧭-zusammenfassung">🧭 Zusammenfassung</h2>
-<p>Wir haben unsere  erste Umgebung zum Programmieren kennengelernt und
-ein erstes Programm eingetippt.
-Im nächsten Kapitel erfährst du, welche Anweisungen die Turtle versteht
-und wie du interessante Grafiken mit der Turtle zeichnen kannst.</p>
-<!---
-## Quellen
-* https://python-online.ch
-* https://programmierkonzepte.ch
-* https://tobiaskohn.ch/
--->
+<p>Die Funktion sollte einen Rückgabewert haben,
+der angibt, ob das Element gefunden wurde, oder nicht.</p>
+<pre><code class="lang-python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">sucheElement</span>(<span class="hljs-params">liste, wert</span>):
+    gefunden = <span class="hljs-literal">False</span>
+    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">0</span>,<span class="hljs-built_in">len</span>(liste)):
+        <span class="hljs-keyword">if</span> (liste[i] == wert):
+            gefunden = <span class="hljs-literal">True</span>
+    <span class="hljs-keyword">return</span> gefunden
+
+<span class="hljs-keyword">def</span> <span class="hljs-title function_">main</span>():
+    meineListe = [<span class="hljs-number">24</span>, <span class="hljs-number">13</span>, -<span class="hljs-number">5</span>, <span class="hljs-number">102</span>, <span class="hljs-number">74</span>, -<span class="hljs-number">87</span>]
+    <span class="hljs-built_in">print</span>(sucheElement(meineListe,<span class="hljs-number">13</span>))
+    <span class="hljs-built_in">print</span>(sucheElement(meineListe,<span class="hljs-number">555</span>))
+
+main()
+</code></pre>
+<p>Im obigen Programm wurde die Suche nach dem Element in eine eigene Funktion ausgelagert.
+In der Main Funktion wird die sucheElement Funktion zwei Mal aufgerufen.
+Beim ersten Mal wird <code>True</code> ausgegeben, da <code>13</code> ein Element der Liste ist.
+Beim zweiten Mal wird <code>False</code> ausgegeben, da <code>555</code> <strong>kein</strong> Element der Liste ist.</p>
+<h2 id="übungen">Übungen</h2>
+<h3 id="📝-übung-69">📝 Übung 69</h3>
+<p>neue funktione
+auf welchem index vorkommt</p>
+<h3 id="📝-übung-70">📝 Übung 70</h3>
+<p>zählen wie oft vorkommt</p>
+<h3 id="📝-übung-71">📝 Übung 71</h3>
+<p>ersetzen falls gefunden</p>
+<h3 id="📝-übung-72">📝 Übung 72</h3>
+<p>zählen wir viele gerade zahlen</p>
 
                                 
                                 </section>
@@ -905,8 +943,12 @@ und wie du interessante Grafiken mit der Turtle zeichnen kannst.</p>
 
             
                 
+                <a href="330_listappenddeletecopy.html" class="navigation navigation-prev " aria-label="Previous page: Hinzufügen und Löschen von Elementen">
+                    <i class="fa fa-angle-left"></i>
+                </a>
                 
-                <a href="010_turtle.html" class="navigation navigation-next navigation-unique" aria-label="Next page: Grafik mit der Turtle 🐢">
+                
+                <a href="340_listcalc.html" class="navigation navigation-next " aria-label="Next page: Berechnungen auf Listen durchführen">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -917,7 +959,7 @@ und wie du interessante Grafiken mit der Turtle zeichnen kannst.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"book":true,"keywords":["Bulme","C#"],"author":["HTL BULME"],"subject":"C#","classoption":["openany"],"lang":"de","date":"2024-10-16","geometry":"left=1.5cm,right=1.5cm,top=2cm,bottom=2.5cm","title":"Einführung ✨","level":"1.1","depth":1,"next":{"title":"Grafik mit der Turtle 🐢","level":"1.2","depth":1,"path":"010_turtle.md","ref":"010_turtle.md","articles":[{"title":"Übungen mit der Turtle","level":"1.2.1","depth":2,"path":"015_turtle_lines.md","ref":"015_turtle_lines.md","articles":[]},{"title":"Farben verwenden","level":"1.2.2","depth":2,"path":"017_turtle_colors.md","ref":"017_turtle_colors.md","articles":[]},{"title":"Variablen","level":"1.2.3","depth":2,"path":"020_variablen.md","ref":"020_variablen.md","articles":[]},{"title":"Eingabe von Werten","level":"1.2.4","depth":2,"path":"030_input.md","ref":"030_input.md","articles":[]},{"title":"Rechnen mit Variablen","level":"1.2.5","depth":2,"path":"035_variablen_rechnen.md","ref":"035_variablen_rechnen.md","articles":[]},{"title":"Weitere mathematische Funktionen","level":"1.2.6","depth":2,"path":"40_mathematik.md","ref":"40_mathematik.md","articles":[]},{"title":"Kapiteltest 1","level":"1.2.7","depth":2,"path":"070_kapiteltest.md","ref":"070_kapiteltest.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["add-js-css"],"pluginsConfig":{"add-js-css":{"css":["./customStyle/style.css"]},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"README.md","mtime":"2024-10-16T17:49:59.800Z","type":"markdown"},"gitbook":{"version":"6.0.2","time":"2024-10-18T17:04:33.320Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Suchen von Elementen","level":"1.5.3","depth":2,"next":{"title":"Berechnungen auf Listen durchführen","level":"1.5.4","depth":2,"path":"340_listcalc.md","ref":"340_listcalc.md","articles":[]},"previous":{"title":"Hinzufügen und Löschen von Elementen","level":"1.5.2","depth":2,"path":"330_listappenddeletecopy.md","ref":"330_listappenddeletecopy.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["add-js-css"],"pluginsConfig":{"add-js-css":{"css":["./customStyle/style.css"]},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"335_listsearch.md","mtime":"2024-10-02T21:27:10.338Z","type":"markdown"},"gitbook":{"version":"6.0.2","time":"2024-10-18T17:04:33.320Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

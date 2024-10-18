@@ -3,7 +3,7 @@
 <html lang="" >
     <head>
         <meta charset="UTF-8">
-        <title>Einführung ✨ · HonKit</title>
+        <title>Logische Operatoren · HonKit</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="HonKit 6.0.2">
@@ -60,8 +60,10 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="010_turtle.html" />
+    <link rel="next" href="150_flowcharts.html" />
     
+    
+    <link rel="prev" href="130_verzweigungen.html" />
     
 
     </head>
@@ -90,7 +92,7 @@
         
         
     
-        <li class="chapter active" data-level="1.1" data-path="./">
+        <li class="chapter " data-level="1.1" data-path="./">
             
                 <a href="./">
             
@@ -240,7 +242,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.2" data-path="140_logische_operatoren.html">
+        <li class="chapter active" data-level="1.3.2" data-path="140_logische_operatoren.html">
             
                 <a href="140_logische_operatoren.html">
             
@@ -754,7 +756,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >Einführung ✨</a>
+        <a href="." >Logische Operatoren</a>
     </h1>
 </div>
 
@@ -769,115 +771,197 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="einführung">Einführung</h1>
-<p>In diesem Kurs lernst du, wie du einen Computer programmieren kannst.
-Dabei gehen wir davon aus, dass du noch kein
-Vorwissen mitbringst, und werden dir schrittweise alles erklären, was
-du dazu brauchst.</p>
-<h2 id="was-heißt-programmieren-überhaupt">Was heißt "Programmieren" überhaupt?</h2>
-<p>Programmieren heißt, einer Maschine <strong>Anweisungen</strong> zu erteilen und sie damit zu steuern.
-Die erste solche Maschine, die du steuerst, ist eine kleine Schildkröte auf dem Bildschirm: Die Turtle. Die Schildkröte versteht verschiedene Anweisungen um sich zu bewegen,
-zu zeichnen oder sich zu verstecken.
-Welche Anweisungen existieren und wie diese Anweisungen geschrieben werden müssen,
-ist in einer <strong>Programmiersprache</strong> definiert.</p>
-<p>Die Programmiersprache, die wir in diesem Kurs lernen werden, ist <strong>C#</strong>.
-C# ist eine moderne, objektorientierte Programmiersprache,
-die besonders für die Entwicklung von Windows-Anwendungen und Spielen beliebt ist.
-Sie wird häufig in der Webentwicklung und für Unternehmenssoftware eingesetzt
-und zeichnet sich durch ihre hohe Leistungsfähigkeit aus.
-Des Weiteren gibt es eine große Schnittmenge zu anderen Programmiersprachen,
-wie Java, C, C++ oder JavaScript, was das Erlernen dieser Sprachen später einfach möglich macht.</p>
-<h2 id="c-mit-roslynpad">C# mit Roslynpad</h2>
-<p>Wir werden mit einer einfachen Umgebung starten, um C# zu programmieren.
-Diese Umgebung benötigt aber einige Schritt um sie zu installieren.
-Befolge folgende Schritte um die Anwendung zu installieren:</p>
-<h3 id="installation">Installation</h3>
-<p>Zur Installation benötigst du einen aktuellen Computer mit dem Betriebssystem Windows.</p>
-<p>Führe folgende Schritte der Reihe nach aus, um Roslynpad zu installieren:</p>
-<ol>
-<li>Download und Installation der .Net SDK <a href="https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/sdk-8.0.401-windows-x64-installer" target="_blank">Download</a></li>
-<li>Download und Installation des .Net Frameworks <a href="https://dotnet.microsoft.com/en-us/download/dotnet-framework/thank-you/net481-developer-pack-offline-installer" target="_blank">Download</a></li>
-<li>Download von Roslynpad <a href="https://github.com/roslynpad/roslynpad/releases/download/19.1/RoslynPad-windows-x64.zip" target="_blank">Download</a></li>
-<li>Entpacken von RoslynPad<ul>
-<li>Rechtsklick auf die Datei: RoslynPad-windows-x64.zip</li>
-<li>“Alle Extrahieren” wählen oder “Weitere Optionen” und dann “Alle Extrahieren” wählen</li>
-<li>Ordner öffnen und Verknüpfung zu RoslynPad.exe auf dem Desktop erstellen</li>
-</ul>
-</li>
-<li>RoslynPad starten und konfigurieren<ul>
-<li>Documents fixieren</li>
-<li>x64 wählen und als Standard setzen</li>
-<li>BulmeSharp laden</li>
-<li>Minimalprogramm testen</li>
-</ul>
-</li>
-</ol>
-<pre><code class="lang-cs"><span class="hljs-meta">#r "nuget: BulmeSharp, 0.9.0"</span>
-<span class="hljs-keyword">using</span> BulmeSharp;
+                                <h1 id="logische-operatoren">Logische Operatoren</h1>
+<p>Mit der <code>if</code>-Verzweigung haben wir geprüft, ob eine Bedingung zutrifft.
+Doch was, wenn wir prüfen möchten, ob bei zwei Bedingungen, beide erfüllt sind.
+Nehmen wir an, wir möchten ein Programm schreiben, welches prüft,
+ob einem Bankkunden eine Kredit vergeben werden darf.
+Für einen Kredit muss der Kunde über 18 Jahre alt sein
+und zusätzlich über 50000€ auf seinem Sparkonto haben.</p>
+<p>Für solche Bedingungen benötigen wir <strong>logische Operatoren</strong>.
+Mit diesen lassen sich zwei oder mehrere
+Bedingungen zu einer Bedingung kombinieren.
+In diesem Kapitel lernen wir die Operatoren <code>and</code>, <code>or</code> und <code>not</code> in Python kennen.
+Diese Operatoren werden dir bekannt vorkommen,
+denn du kennst sie bereits aus <em>NWES</em>. 😉</p>
+<h2 id="and-or-not">and, or, not</h2>
+<p>Das Ergebnis einer Bedingung ist ein Wahrheitswert, also entweder <strong>wahr</strong> oder <strong>falsch</strong>.
+In Python werden diese beiden Begriffe mit <code>True</code>, bzw. mit <code>False</code> bezeichnet.
+Intern handelt es sich aber nur um Platzhalter für die Werte <code>0</code> und <code>1</code>.
+Überall, wo wir <code>True</code>, bzw. <code>False</code> schreiben, könnten wir genauso gut <code>1</code>
+bzw. <code>0</code> schreiben, jedoch sind die ausgeschriebenen Platzhalter leichter lesbar.</p>
+<p>Diese Wahrheitswerte können mit logischen Operatoren
+kombiniert werden. In den folgenden Tabellen siehst du das 
+Ergebnis der Operation.</p>
+<h3 id="and">and</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">A</th>
+<th style="text-align:center">B</th>
+<th style="text-align:center">A and B</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">False</td>
+<td style="text-align:center">False</td>
+<td style="text-align:center">False</td>
+</tr>
+<tr>
+<td style="text-align:center">False</td>
+<td style="text-align:center">True</td>
+<td style="text-align:center">False</td>
+</tr>
+<tr>
+<td style="text-align:center">True</td>
+<td style="text-align:center">False</td>
+<td style="text-align:center">False</td>
+</tr>
+<tr>
+<td style="text-align:center">True</td>
+<td style="text-align:center">True</td>
+<td style="text-align:center">True</td>
+</tr>
+</tbody>
+</table>
+<h3 id="or">or</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">A</th>
+<th style="text-align:center">B</th>
+<th style="text-align:center">A or B</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">False</td>
+<td style="text-align:center">False</td>
+<td style="text-align:center">False</td>
+</tr>
+<tr>
+<td style="text-align:center">False</td>
+<td style="text-align:center">True</td>
+<td style="text-align:center">True</td>
+</tr>
+<tr>
+<td style="text-align:center">True</td>
+<td style="text-align:center">False</td>
+<td style="text-align:center">True</td>
+</tr>
+<tr>
+<td style="text-align:center">True</td>
+<td style="text-align:center">True</td>
+<td style="text-align:center">True</td>
+</tr>
+</tbody>
+</table>
+<h3 id="not">not</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">A</th>
+<th style="text-align:center">not A</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">False</td>
+<td style="text-align:center">True</td>
+</tr>
+<tr>
+<td style="text-align:center">True</td>
+<td style="text-align:center">False</td>
+</tr>
+</tbody>
+</table>
+<h2 id="💡-beispiel">💡 Beispiel</h2>
+<p>Im folgenden Beispiel siehst du mehrere <code>if</code>-Verzweigungen.
+Die Bedinungen der <code>if</code>-Verzweigungen bestehen aus mehreren
+Bedingungen, die mit logischen Operatoren kombiniert werden.</p>
+<pre><code class="lang-python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">main</span>():
+    zahl1 = <span class="hljs-built_in">int</span>(<span class="hljs-built_in">input</span>(<span class="hljs-string">"Geben Sie eine Zahl ein"</span>))
+    zahl2 = <span class="hljs-built_in">int</span>(<span class="hljs-built_in">input</span>(<span class="hljs-string">"Geben Sie noch eine Zahl ein"</span>))
 
-Turtle.fd(<span class="hljs-number">50</span>);
-Turtle.rt(<span class="hljs-number">120</span>);
-Turtle.fd(<span class="hljs-number">50</span>);
-Turtle.rt(<span class="hljs-number">120</span>);
-Turtle.fd(<span class="hljs-number">50</span>);
-Turtle.rt(<span class="hljs-number">120</span>);
+    <span class="hljs-keyword">if</span> ((zahl1 &gt; <span class="hljs-number">0</span>) <span class="hljs-keyword">and</span> (zahl2 &gt; <span class="hljs-number">0</span>)):
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">"Beide Zahlen sind größer als 0"</span>)
 
-Turtle.showTurtle();
+    <span class="hljs-keyword">if</span> ((zahl1 == <span class="hljs-number">5</span>) <span class="hljs-keyword">or</span> (zahl2 == <span class="hljs-number">5</span>)):
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">"Zumindest eine der beiden Zahlen ist 5"</span>)
+
+    <span class="hljs-keyword">if</span> ((zahl1 &gt;= <span class="hljs-number">5</span>) <span class="hljs-keyword">and</span> (zahl1 &lt; <span class="hljs-number">10</span>)):
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">"Die erste Zahl ist größer oder gleich als 5 und kleiner als 10"</span>)
+
+    <span class="hljs-keyword">if</span> ((zahl1 == <span class="hljs-number">1</span>) <span class="hljs-keyword">or</span> (zahl1 == <span class="hljs-number">3</span>) <span class="hljs-keyword">or</span> (zahl1 == <span class="hljs-number">5</span>)):
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">"Die erste Zahl ist entweder 1, 3 oder 5"</span>)
+
+    <span class="hljs-keyword">if</span> (<span class="hljs-keyword">not</span> (zahl1 &gt; <span class="hljs-number">1</span>)):
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">"Die erste Zahl ist nicht größer als 1"</span>)
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">"sie ist also kleiner oder gleich 1"</span>)
+
+    <span class="hljs-keyword">if</span> ((<span class="hljs-keyword">not</span> (zahl1 == <span class="hljs-number">5</span>)) <span class="hljs-keyword">and</span> (zahl2 &lt; <span class="hljs-number">3</span>)):
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">"Die erste zahl ist nicht 5 und die zweite ist kleiner als 3"</span>)
+
+main()
 </code></pre>
-<p><strong>Tipp:</strong>
-Die gesamte Installation wird in diesem <a href="https://bulme-my.sharepoint.com/personal/gl_ms_bulme_at/_layouts/15/stream.aspx?id=%2Fpersonal%2Fgl%5Fms%5Fbulme%5Fat%2FDocuments%2FInstallation%2Emp4&amp;nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0" target="_blank">Video</a> vorgezeigt.</p>
-<h3 id="einführung-in-die-oberfläche">Einführung in die Oberfläche</h3>
-<p>Die Oberfläche ist einfach gestaltet und speziell für Einsteiger entwickelt worden.
-Sie besteht aus folgenden sechs Bereichen.</p>
-<ol>
-<li>Neue Datei: Hier kannst du eine neue Dateien anlegen</li>
-<li>Dateiübersicht: Hier siehst du alle Dateien, die du angelegt hast.
-Mit Doppelklick auf eine Datei öffnest du die entsprechende Datei</li>
-<li>Codeeingabe: Hier gibst du den C#-Code ein</li>
-<li>Ausführen ▶: Mit diesem Button startest du dein Programm</li>
-<li>Beenden ■: Mit diesem Button beendest du dein Programm vorzeitig</li>
-<li>Framework: Hier muss das .Net Framework ausgewählt werden.
-Wir nehmen stets x64 und setzen es mit dem Button daneben gleich als Standard (Default).</li>
-<li>NuGet Bibliotheken: Hier binden wir zusätzliche Bibliotheken ein.
-Bibliotheken enthalten vorgefertigte Programmteile,
-normalerweise nicht im Standardumfang einer Programmiersprache enthalten sind.
-Meistens verwenden wir die BulmeSharp Bibliothek, da diese die Turtle enthält.</li>
-</ol>
-<p><img src="images/roslynPad.png" alt="Roslynpad Übersicht"></img></p>
-<h3 id="📝-übung-1">📝 Übung 1</h3>
-<p>Gib den Programmcode aus der oberen Grafik in RoslynPad ein
-und klicke auf den "Ausführen"-Knopf.
-Es sollte die gleiche Ausgabe erscheinen wie in der Grafik.</p>
-<p><strong>Tipps:</strong> </p>
+<p><strong>ℹ️ Anmerkung</strong>:</p>
+<p>In diesem Beispiel wurden die einzelnen Bedingungen in runde
+Klammern geschrieben. Das macht den Code leichter lesbar
+und sagt ausdrücklich, welche Bedingungen mit den logischen Operatoren
+verknüpft werden.</p>
+<p><strong>⚠️ Vorsicht</strong>: Die Klammernsetzung <strong>nicht</strong> ist egal,
+sondern verändert die Bedeutung einer Bedingung.
+Die Bedingung <code>not ((A &gt; 0) and (A &lt; 5))</code> ist beispielsweise <strong>nicht</strong> dasselbe wie 
+<code>(not (A &gt; 0)) and (A &lt; 5)</code>. </p>
 <ul>
-<li>Achte auf Groß- und Kleinschreibung</li>
-<li>Achte darauf, daß Anweisungen mit einem Strichpunkt (Semikolon) ageschlossen werden müssen</li>
-<li>Achte auf die richtigen Klammern! Es werden in dem Beispiel runde Klammern "(" und ")" benutzt. Eckige "[", "]" oder geschwungene "{", "}" Klammern
-bedeuten etwas anderes und funktionieren nicht!</li>
-<li>Wenn du einen Tippfehler gemacht hast, also beispielsweise statt <code>Turtle.showTurtle();</code> 
-den Text <code>Törtle.showTrutel();</code> geschrieben hast, erscheint eine Fehlermeldung im
-unteren Teil des Ausgabefensters. Versuche diese zu verstehen und den Fehler zu beheben.</li>
-<li>Beachte folgende Regel beim Programmieren: <strong>Probiere
-alles selber aus!</strong> Je mehr Programme du selber schreibst, umso mehr
-wirst du verstehen und beherrschen.</li>
-<li>Verwende Shortcuts (Tastenkombinationen) um Zeit zu sparen:<ul>
-<li><kbd>STRG</kbd> + <kbd>S</kbd> ➡ Speichern</li>
-<li><kbd>STRG</kbd> + <kbd>C</kbd> ➡ Kopieren</li>
-<li><kbd>STRG</kbd> + <kbd>V</kbd> ➡ Einfügen</li>
-</ul>
+<li><p>Die erste Bedingung <code>not ((A &gt; 0) and (A &lt; 5))</code> ist erfüllt
+falls A nicht 1, 2, 3 oder 4 ist.
+Die Bedingung ist also zum Beispiel für die Zahlen: 0, -1, -23, 5, 6 oder 334 erfüllt.</p>
 </li>
+<li><p>Die zweite Bedingung <code>(not (A &gt; 0)) and (A &lt; 5)</code> sagt:
+die Bedingung ist erfüllt, falls A entweder 0, -1, -2, -3, -4, -5 und so weiter ist.</p>
+</li>
+</ul>
+<p><strong>Deshalb</strong> gilt bei Bedingungen, und beim Programmieren allgemein:
+"Lieber ein paar Klammern zu viel, als eine zu wenig!".</p>
+<h2 id="übungen">Übungen</h2>
+<h3 id="📝-übung-43">📝 Übung 43</h3>
+<p>Schreibe ein Programm, bei dem der Benutzer die Länge und die Breite
+eines Rechtecks eingeben soll.
+Falls die Länge gleich ist, wie die Breite, so soll "Quadrat" ausgegeben werden.
+Falls die Länge oder die Breite kleiner oder gleich <code>0</code> ist,
+soll "Fehler: Falsche Eingabe" ausgegeben werden.
+Falls die Länge und die Breite größer als <code>0</code> sind, soll
+der Umfang und der Flächeninhalt berechnet und ausgegeben werden.</p>
+<h3 id="📝-übung-44">📝 Übung 44</h3>
+<p>Schreibe ein Programm, bei dem der Benutzer sein Geburtsjahr eingeben kann.
+Falls das Geburtsjahr größer oder gleich <code>2020</code> ist,
+soll "Du solltest noch keinen Computer benutzen 😉" ausgegeben werden.
+Falls das Geburtsjahr kleiner als <code>2020</code> soll das ungefähre Alter in Tagen
+berechnet und ausgegeben werden.</p>
+<h3 id="📝-übung-45">📝 Übung 45</h3>
+<p>Schreibe ein Programm, bei dem der Benutzer drei Zahlen eingeben kann.
+Das Programm soll die größte der drei Zahlen ausgeben.</p>
+<h3 id="📝-übung-46">📝 Übung 46</h3>
+<p>Schreibe ein Programm, bei dem der Benutzer die drei Seiten eines Dreiecks eingeben kann.</p>
+<p>Das Programm soll ausgeben, ob es sich um ein:</p>
+<ul>
+<li>gleichseitiges Dreieck</li>
+<li>gleichschenkeliges</li>
+<li>rechtwinkeliges</li>
+<li>oder allgemeines Dreieck handelt</li>
+</ul>
+<h3 id="📝-übung-47">📝 Übung 47</h3>
+<p>Schreibe ein Programm, bei dem der Benutzer eine Jahreszahl eingeben.
+Das Programm gibt aus, ob es sich um ein Schaltjahr handelt oder nicht.</p>
+<p>Die Regel ist die folgende:</p>
+<ul>
+<li>Die durch 4 ganzzahlig teilbaren Jahre sind, abgesehen von den folgenden Ausnahmen, Schaltjahre.</li>
+<li>Säkularjahre, also die Jahre, die ein Jahrhundert abschließen (z. B. 1800, 1900, 2100 und 2200), sind, abgesehen von der folgenden Ausnahme, keine Schaltjahre.</li>
+<li>Die durch 400 ganzzahlig teilbaren Säkularjahre, zum Beispiel das Jahr 2000, sind jedoch Schaltjahre.</li>
 </ul>
 <h2 id="🧭-zusammenfassung">🧭 Zusammenfassung</h2>
-<p>Wir haben unsere  erste Umgebung zum Programmieren kennengelernt und
-ein erstes Programm eingetippt.
-Im nächsten Kapitel erfährst du, welche Anweisungen die Turtle versteht
-und wie du interessante Grafiken mit der Turtle zeichnen kannst.</p>
-<!---
-## Quellen
-* https://python-online.ch
-* https://programmierkonzepte.ch
-* https://tobiaskohn.ch/
--->
 
                                 
                                 </section>
@@ -905,8 +989,12 @@ und wie du interessante Grafiken mit der Turtle zeichnen kannst.</p>
 
             
                 
+                <a href="130_verzweigungen.html" class="navigation navigation-prev " aria-label="Previous page: Verzweigungen">
+                    <i class="fa fa-angle-left"></i>
+                </a>
                 
-                <a href="010_turtle.html" class="navigation navigation-next navigation-unique" aria-label="Next page: Grafik mit der Turtle 🐢">
+                
+                <a href="150_flowcharts.html" class="navigation navigation-next " aria-label="Next page: Grafische Darstellung von Programmen">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -917,7 +1005,7 @@ und wie du interessante Grafiken mit der Turtle zeichnen kannst.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"book":true,"keywords":["Bulme","C#"],"author":["HTL BULME"],"subject":"C#","classoption":["openany"],"lang":"de","date":"2024-10-16","geometry":"left=1.5cm,right=1.5cm,top=2cm,bottom=2.5cm","title":"Einführung ✨","level":"1.1","depth":1,"next":{"title":"Grafik mit der Turtle 🐢","level":"1.2","depth":1,"path":"010_turtle.md","ref":"010_turtle.md","articles":[{"title":"Übungen mit der Turtle","level":"1.2.1","depth":2,"path":"015_turtle_lines.md","ref":"015_turtle_lines.md","articles":[]},{"title":"Farben verwenden","level":"1.2.2","depth":2,"path":"017_turtle_colors.md","ref":"017_turtle_colors.md","articles":[]},{"title":"Variablen","level":"1.2.3","depth":2,"path":"020_variablen.md","ref":"020_variablen.md","articles":[]},{"title":"Eingabe von Werten","level":"1.2.4","depth":2,"path":"030_input.md","ref":"030_input.md","articles":[]},{"title":"Rechnen mit Variablen","level":"1.2.5","depth":2,"path":"035_variablen_rechnen.md","ref":"035_variablen_rechnen.md","articles":[]},{"title":"Weitere mathematische Funktionen","level":"1.2.6","depth":2,"path":"40_mathematik.md","ref":"40_mathematik.md","articles":[]},{"title":"Kapiteltest 1","level":"1.2.7","depth":2,"path":"070_kapiteltest.md","ref":"070_kapiteltest.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["add-js-css"],"pluginsConfig":{"add-js-css":{"css":["./customStyle/style.css"]},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"README.md","mtime":"2024-10-16T17:49:59.800Z","type":"markdown"},"gitbook":{"version":"6.0.2","time":"2024-10-18T17:04:33.320Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Logische Operatoren","level":"1.3.2","depth":2,"next":{"title":"Grafische Darstellung von Programmen","level":"1.3.3","depth":2,"path":"150_flowcharts.md","ref":"150_flowcharts.md","articles":[]},"previous":{"title":"Verzweigungen","level":"1.3.1","depth":2,"path":"130_verzweigungen.md","ref":"130_verzweigungen.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["add-js-css"],"pluginsConfig":{"add-js-css":{"css":["./customStyle/style.css"]},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"140_logische_operatoren.md","mtime":"2024-10-02T21:27:10.338Z","type":"markdown"},"gitbook":{"version":"6.0.2","time":"2024-10-18T17:04:33.320Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

@@ -3,7 +3,7 @@
 <html lang="" >
     <head>
         <meta charset="UTF-8">
-        <title>Einführung ✨ · HonKit</title>
+        <title>Ein minimales GUI Programm · HonKit</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="HonKit 6.0.2">
@@ -60,8 +60,10 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="010_turtle.html" />
+    <link rel="next" href="530_einfacherTR.html" />
     
+    
+    <link rel="prev" href="510_GUI.html" />
     
 
     </head>
@@ -90,7 +92,7 @@
         
         
     
-        <li class="chapter active" data-level="1.1" data-path="./">
+        <li class="chapter " data-level="1.1" data-path="./">
             
                 <a href="./">
             
@@ -667,7 +669,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.7.1" data-path="520_minimalprogramm.html">
+        <li class="chapter active" data-level="1.7.1" data-path="520_minimalprogramm.html">
             
                 <a href="520_minimalprogramm.html">
             
@@ -754,7 +756,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >Einführung ✨</a>
+        <a href="." >Ein minimales GUI Programm</a>
     </h1>
 </div>
 
@@ -769,115 +771,196 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="einführung">Einführung</h1>
-<p>In diesem Kurs lernst du, wie du einen Computer programmieren kannst.
-Dabei gehen wir davon aus, dass du noch kein
-Vorwissen mitbringst, und werden dir schrittweise alles erklären, was
-du dazu brauchst.</p>
-<h2 id="was-heißt-programmieren-überhaupt">Was heißt "Programmieren" überhaupt?</h2>
-<p>Programmieren heißt, einer Maschine <strong>Anweisungen</strong> zu erteilen und sie damit zu steuern.
-Die erste solche Maschine, die du steuerst, ist eine kleine Schildkröte auf dem Bildschirm: Die Turtle. Die Schildkröte versteht verschiedene Anweisungen um sich zu bewegen,
-zu zeichnen oder sich zu verstecken.
-Welche Anweisungen existieren und wie diese Anweisungen geschrieben werden müssen,
-ist in einer <strong>Programmiersprache</strong> definiert.</p>
-<p>Die Programmiersprache, die wir in diesem Kurs lernen werden, ist <strong>C#</strong>.
-C# ist eine moderne, objektorientierte Programmiersprache,
-die besonders für die Entwicklung von Windows-Anwendungen und Spielen beliebt ist.
-Sie wird häufig in der Webentwicklung und für Unternehmenssoftware eingesetzt
-und zeichnet sich durch ihre hohe Leistungsfähigkeit aus.
-Des Weiteren gibt es eine große Schnittmenge zu anderen Programmiersprachen,
-wie Java, C, C++ oder JavaScript, was das Erlernen dieser Sprachen später einfach möglich macht.</p>
-<h2 id="c-mit-roslynpad">C# mit Roslynpad</h2>
-<p>Wir werden mit einer einfachen Umgebung starten, um C# zu programmieren.
-Diese Umgebung benötigt aber einige Schritt um sie zu installieren.
-Befolge folgende Schritte um die Anwendung zu installieren:</p>
-<h3 id="installation">Installation</h3>
-<p>Zur Installation benötigst du einen aktuellen Computer mit dem Betriebssystem Windows.</p>
-<p>Führe folgende Schritte der Reihe nach aus, um Roslynpad zu installieren:</p>
-<ol>
-<li>Download und Installation der .Net SDK <a href="https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/sdk-8.0.401-windows-x64-installer" target="_blank">Download</a></li>
-<li>Download und Installation des .Net Frameworks <a href="https://dotnet.microsoft.com/en-us/download/dotnet-framework/thank-you/net481-developer-pack-offline-installer" target="_blank">Download</a></li>
-<li>Download von Roslynpad <a href="https://github.com/roslynpad/roslynpad/releases/download/19.1/RoslynPad-windows-x64.zip" target="_blank">Download</a></li>
-<li>Entpacken von RoslynPad<ul>
-<li>Rechtsklick auf die Datei: RoslynPad-windows-x64.zip</li>
-<li>“Alle Extrahieren” wählen oder “Weitere Optionen” und dann “Alle Extrahieren” wählen</li>
-<li>Ordner öffnen und Verknüpfung zu RoslynPad.exe auf dem Desktop erstellen</li>
-</ul>
-</li>
-<li>RoslynPad starten und konfigurieren<ul>
-<li>Documents fixieren</li>
-<li>x64 wählen und als Standard setzen</li>
-<li>BulmeSharp laden</li>
-<li>Minimalprogramm testen</li>
-</ul>
-</li>
-</ol>
-<pre><code class="lang-cs"><span class="hljs-meta">#r "nuget: BulmeSharp, 0.9.0"</span>
-<span class="hljs-keyword">using</span> BulmeSharp;
-
-Turtle.fd(<span class="hljs-number">50</span>);
-Turtle.rt(<span class="hljs-number">120</span>);
-Turtle.fd(<span class="hljs-number">50</span>);
-Turtle.rt(<span class="hljs-number">120</span>);
-Turtle.fd(<span class="hljs-number">50</span>);
-Turtle.rt(<span class="hljs-number">120</span>);
-
-Turtle.showTurtle();
+                                <h1 id="ein-minimales-gui-programm">Ein minimales GUI Programm</h1>
+<p>In diesem Abschnitt entwickeln wir ein erstes GUI Programm.
+Zuerst müssen wir das PySimpleGUI Modul installieren
+und anschließend den Code für das Minimalprogramm starten.</p>
+<p>Während das Minimalprogramm für die Turtle nur zwei Zeilen hatte,
+ist es hier schon etwas mehr.</p>
+<h2 id="installation-des-pysimplegui-moduls">Installation des PySimpleGUI Moduls</h2>
+<p>Python Module werden über sogenannte Pakete verteilt,
+wobei ein Paket mehrere Module enthalten kann.
+Häufig werden die Begriffe Module und Pakete jedoch synonym verwendet.</p>
+<p>Um ein Python Paket zu installieren benutzen wir den  Python Paketmanager.
+Dieser wird standardmässig mit Python mitgeliefert
+und verfügt über Funktionen zum installieren, deinstallieren oder auflisten
+von Python Paketen.</p>
+<p>In VS Code kannst du im Terminalbereich folgenden Befehl eingeben:</p>
+<pre><code>pip3 install pysimplegui
+</code></pre><p>In der folgenden Abbildung siehst du wie das Paket installiert wird.
+Wir klicken zuerst auf Terminal (1) und geben dann den Befehl (2) ein.
+Falls kein Terminal geöffnet ist, können wir mit <code>Terminal &gt; New Terminal</code> (3)
+ein neues Terminal öffnen.
+<img src="images/installpysimple.png" alt="Installation von pysimplegui"></img></p>
+<h2 id="das-minimalprogramm">Das Minimalprogramm</h2>
+<p>Das Minimalprogramm von PySimpleGUI ist auf dem ersten Blick, sehr Umfangreich.
+Wir werden es aber Schritt für Schritt aufbauen.</p>
+<h2 id="das-modul-importieren-und-theme-setzen">Das Modul importieren und Theme setzen</h2>
+<p>Beginnen wir mit dem Import des Moduls.
+Bis jetzt haben wir stets die Syntax <code>from abc import *</code> benutzt.
+Das würde prinzipiell auch hier funktionieren, dann hätten wir 
+aber auf einen Schlag hunderte Funktionen importiert.
+Sauberer ist es das Modul mit einem Alias zu laden:</p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> PySimpleGUI <span class="hljs-keyword">as</span> sg
 </code></pre>
-<p><strong>Tipp:</strong>
-Die gesamte Installation wird in diesem <a href="https://bulme-my.sharepoint.com/personal/gl_ms_bulme_at/_layouts/15/stream.aspx?id=%2Fpersonal%2Fgl%5Fms%5Fbulme%5Fat%2FDocuments%2FInstallation%2Emp4&amp;nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0" target="_blank">Video</a> vorgezeigt.</p>
-<h3 id="einführung-in-die-oberfläche">Einführung in die Oberfläche</h3>
-<p>Die Oberfläche ist einfach gestaltet und speziell für Einsteiger entwickelt worden.
-Sie besteht aus folgenden sechs Bereichen.</p>
-<ol>
-<li>Neue Datei: Hier kannst du eine neue Dateien anlegen</li>
-<li>Dateiübersicht: Hier siehst du alle Dateien, die du angelegt hast.
-Mit Doppelklick auf eine Datei öffnest du die entsprechende Datei</li>
-<li>Codeeingabe: Hier gibst du den C#-Code ein</li>
-<li>Ausführen ▶: Mit diesem Button startest du dein Programm</li>
-<li>Beenden ■: Mit diesem Button beendest du dein Programm vorzeitig</li>
-<li>Framework: Hier muss das .Net Framework ausgewählt werden.
-Wir nehmen stets x64 und setzen es mit dem Button daneben gleich als Standard (Default).</li>
-<li>NuGet Bibliotheken: Hier binden wir zusätzliche Bibliotheken ein.
-Bibliotheken enthalten vorgefertigte Programmteile,
-normalerweise nicht im Standardumfang einer Programmiersprache enthalten sind.
-Meistens verwenden wir die BulmeSharp Bibliothek, da diese die Turtle enthält.</li>
-</ol>
-<p><img src="images/roslynPad.png" alt="Roslynpad Übersicht"></img></p>
-<h3 id="📝-übung-1">📝 Übung 1</h3>
-<p>Gib den Programmcode aus der oberen Grafik in RoslynPad ein
-und klicke auf den "Ausführen"-Knopf.
-Es sollte die gleiche Ausgabe erscheinen wie in der Grafik.</p>
-<p><strong>Tipps:</strong> </p>
+<p>Nehmen wir an, es gäbe die Funktion <code>abc</code> in PySimpleGUI.
+Dann könnten wir nach dieser Zeile mit <code>py.abc</code> auf diese Funktion zugreifen.</p>
+<p>Die erste Aufgabe die wir haben, ist das <em>Theme</em> zu setzen.
+Das Theme legt fest, welche Farben in unserer GUI verwendet werden.
+Unter der URL <a href="https://t.ly/qp3l" target="_blank">https://t.ly/qp3l</a> findest du sämtliche Möglichkeiten.</p>
+<p>Ich entscheide mich für das Theme <code>"SandyBeach"</code>.
+Die Funktion um das Theme zu setzen heisst <code>theme</code>
+und muss nun über den alias <code>sg</code> aufgerufen werden,
+Wobei Modulalias und Funktion durch einen Punkt getrennt werden.
+Wir schreiben also:</p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> PySimpleGUI <span class="hljs-keyword">as</span> sg
+sg.theme(<span class="hljs-string">"SandyBeach"</span>)
+</code></pre>
+<p>Teste dieses Programm. Es gibt noch nichts aus,
+aber es sollte auch noch keine Fehlermeldung erscheinen.</p>
+<p>13:30</p>
+<h2 id="elemente-erstellen-und-das-layout-festlegen">Elemente erstellen und das Layout festlegen</h2>
+<p>Unser GUI-Programm besteht am Ende aus GUI-Elementen.
+Diese sind uns aus vielen Softwareprodukten bekannt, wie beispielsweise
+Buttons oder Eingabetextfelder.
+Das Layout definiert welche GUI-Elemente an welcher Position angezeigt werden.
+Wir beginnen mit den drei häufigsten Elementen: dem Button, dem Textlabel
+und dem Eingabetextfeld.</p>
+<p>In der folgenden Abbildungen werden diese GUI-Elemente dargestellt.
+<img src="images/fenster.png" alt="GUI Beispiel"></img></p>
+<h3 id="button-1">Button (1)</h3>
+<p>Ein Button ist ein GUI-Element, welches Benutzern 
+die Interaktion mit einem Programm ermöglicht, indem sie darauf klicken,
+um Funktionen auszulösen.
+In der obigen Grafik sind alle Elemente in der untersten Reihe Buttons.</p>
+<p>Ein Button wird mit <code>sg.Button("Hallo")</code> angelegt.
+Das Argument <code>"Hallo"</code> wird auf dem Button angezeigt.</p>
+<h3 id="textlabel-2">Textlabel (2)</h3>
+<p>Das Textlabel ist ein nicht-interaktives GUI-Element, das dazu dient,
+Informationen oder Beschriftungen anzuzeigen.
+Es ist nicht-interaktiv, da bei einem "Klick" auf das Element üblicherweise
+nichts passiert. Auch kann ein Benutzer dort nichts eingeben.</p>
+<p>Ein Button wird mit <code>sg.Text("Ich bin ein Text")</code> angelegt.
+Wobei das Argument <code>"Ich bin ein Text"</code> angezeigt wird.</p>
+<h3 id="eingabetextfeld-3">Eingabetextfeld (3)</h3>
+<p>Ein Eingabetextfeld ist eine interaktive Benutzeroberflächenkomponente,
+die es Benutzern ermöglicht, Text einzugeben.
+Es wird verwendet, um Benutzereingaben zu sammeln,
+wie z.B. in Formularen oder Suchfeldern.</p>
+<p>Ein Button wird mit sg.InputText("ABC", key="eingabe1") angelegt.
+Wobei das Argument <code>"ABC"</code>  im Texteingabefeld angezeigt wird.
+Das zweite Argument <code>key="eingabe1"</code>, wird benötigt um später auf
+das Texteingabefeld zuzugreifen und die Benutzereingabe auszulesen. </p>
+<h3 id="definieren-des-layouts">Definieren des Layouts</h3>
+<p>Das Layout legt fest wie die GUI-Elemente im Fenster angeordnet werden.
+Mit PySimpleGUI definieren wir die Elemente zeilenweise.
+In unserem Beispiel haben wir drei Zeilen.</p>
+<p><img src="images/dreizeilen.png" alt="Drei Zeilen GUI"></img></p>
+<p>Jede Zeile wird als eine Liste von Elementen definiert.
+Alle Zeilen zusammen kommen wieder in eine Liste.
+Das folgende Beispiel zeigt bereits unsere GUI.</p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> PySimpleGUI <span class="hljs-keyword">as</span> sg
+sg.theme(<span class="hljs-string">"SandyBeach"</span>)
+
+<span class="hljs-comment"># Hier das Layout definieren:</span>
+<span class="hljs-comment"># Das Layout ist eine Liste von Listen</span>
+<span class="hljs-comment"># Jede Zeile wird durch eine Liste definiert</span>
+layout = [  
+            [sg.Text(<span class="hljs-string">"Some text on Row 1"</span>)],
+            [sg.Text(<span class="hljs-string">"Enter something on Row 2"</span>), sg.InputText(<span class="hljs-string">"ABC"</span>, key=<span class="hljs-string">"eingabe1"</span>)],
+            [sg.Button(<span class="hljs-string">"Ok"</span>), sg.Button(<span class="hljs-string">"Change Text"</span>), sg.Button(<span class="hljs-string">"Cancel"</span>)]
+         ]
+
+<span class="hljs-comment"># Window erstellen</span>
+window = sg.Window(<span class="hljs-string">"Window Title"</span>, layout)
+
+<span class="hljs-keyword">while</span> <span class="hljs-literal">True</span>:
+    event, values = window.read()
+</code></pre>
+<p>Dieses Programm solltest du bereits starten können
+und das gewünschte GUI sollte erscheinen.
+Jedoch stürzt das Programm noch ab,
+wenn es geschlossen wird, das ändern wir im nächsten Abschnitt.</p>
+<h2 id="die-event-loop">Die Event-Loop</h2>
+<p>Eine Event-Loop (engl. Ereignisschleife) ist ein häufig 
+wiederkehrendes Muster in der Softwareentwicklung,
+die in vielen Anwendungen verwendet wird. Sie überwacht kontinuierlich
+ob Ereignisse wie Mausklicks oder Tastatureingaben.</p>
+<p>Wenn solch ein Ereignis auftritt, ruft die Event-Loop die entsprechende Funktion auf,
+um darauf zu reagieren.
+Nach der Verarbeitung kehrt die Event-Loop zur Überwachung neuer Ereignisse zurück.</p>
+<p>Im folgenden Programmstück siehst du die Event-Loop.
+Es handelt sich um eine Endlosschleife,
+denn die Schleifenbedingung ist immer wahr,
+da hier fix der Wert <code>True</code> steht.</p>
+<p>In der ersten Zeile der Schleife wird die Funktion <code>read</code>
+aufgerufen. Diese Funktion gibt einen Wert zurück,
+wenn ein Ereignis (engl. event) eintritt,
+also beispielsweise auf einen Button geklickt wird.</p>
+<p>Die <code>read</code>-Funktion gibt zwei Werte zurück,
+den Namen des GUI-Elements, welches den event bewirkt hat,
+in der variable <code>event</code> und eine assoziative Liste aller
+aktuellen Werte der GUI-Elemente in der Variable <code>values</code>.</p>
+<pre><code class="lang-python"><span class="hljs-comment"># Event Loop:</span>
+<span class="hljs-comment"># Jede Benutzereingabe kann mit window.read() abgefragt werden</span>
+<span class="hljs-comment"># Diese Schleife läuft so lange, das Programm läuft (Endlosschleife)</span>
+<span class="hljs-keyword">while</span> <span class="hljs-literal">True</span>:
+    event, values = window.read()
+
+    <span class="hljs-comment">#hier die events (Benutzereingabe unterscheiden)</span>
+    <span class="hljs-keyword">if</span> event == sg.WIN_CLOSED <span class="hljs-keyword">or</span> event == <span class="hljs-string">"Cancel"</span>: 
+        <span class="hljs-keyword">break</span>
+
+    <span class="hljs-keyword">if</span> event == <span class="hljs-string">"Ok"</span>:
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">"You entered "</span>, values[<span class="hljs-string">"eingabe1"</span>])
+
+    <span class="hljs-keyword">if</span> event == <span class="hljs-string">"Change Text"</span>:
+        window[<span class="hljs-string">"eingabe1"</span>].update(<span class="hljs-string">"Hallo Welt"</span>)
+
+<span class="hljs-comment">#Fenster Schließen</span>
+window.close()
+</code></pre>
+<h2 id="auf-events-reagieren">Auf events reagieren</h2>
+<p>Wie wir in der obigen event Loop sehen haben wir
+drei <code>if</code>-Verzweigungen in der Event-Loop.</p>
+<p>Jedes <code>if</code> prüft, ob ein gewisser event eingetreten ist,
+und führt dann eine Aktion durch.</p>
+<p>Die drei wichtigsten Aktionen sind:</p>
 <ul>
-<li>Achte auf Groß- und Kleinschreibung</li>
-<li>Achte darauf, daß Anweisungen mit einem Strichpunkt (Semikolon) ageschlossen werden müssen</li>
-<li>Achte auf die richtigen Klammern! Es werden in dem Beispiel runde Klammern "(" und ")" benutzt. Eckige "[", "]" oder geschwungene "{", "}" Klammern
-bedeuten etwas anderes und funktionieren nicht!</li>
-<li>Wenn du einen Tippfehler gemacht hast, also beispielsweise statt <code>Turtle.showTurtle();</code> 
-den Text <code>Törtle.showTrutel();</code> geschrieben hast, erscheint eine Fehlermeldung im
-unteren Teil des Ausgabefensters. Versuche diese zu verstehen und den Fehler zu beheben.</li>
-<li>Beachte folgende Regel beim Programmieren: <strong>Probiere
-alles selber aus!</strong> Je mehr Programme du selber schreibst, umso mehr
-wirst du verstehen und beherrschen.</li>
-<li>Verwende Shortcuts (Tastenkombinationen) um Zeit zu sparen:<ul>
-<li><kbd>STRG</kbd> + <kbd>S</kbd> ➡ Speichern</li>
-<li><kbd>STRG</kbd> + <kbd>C</kbd> ➡ Kopieren</li>
-<li><kbd>STRG</kbd> + <kbd>V</kbd> ➡ Einfügen</li>
-</ul>
+<li><p>Das Programm beenden: Mit dem Schlüsselwort <code>break</code>, wird die event-Loop gestoppt und danach <code>window.close()</code> ausgeführt, was das Programm beendet</p>
+</li>
+<li><p>Einen Wert auslesen und weiterverarbeiten: Mit <code>values["eingabe1"]</code> können wir auf den aktuellen Wert des GUI-Elements <code>eingabe1</code> zugreifen</p>
+</li>
+<li><p>Einen Wert setzen: Mit <code>window["eingabe1"].update("Hallo Welt")</code> setzen wir einen neuen Wert (<code>"Hallo Welt"</code>) in das GUI-Element mit den Namen <code>"eingabe1"</code>.</p>
 </li>
 </ul>
-<h2 id="🧭-zusammenfassung">🧭 Zusammenfassung</h2>
-<p>Wir haben unsere  erste Umgebung zum Programmieren kennengelernt und
-ein erstes Programm eingetippt.
-Im nächsten Kapitel erfährst du, welche Anweisungen die Turtle versteht
-und wie du interessante Grafiken mit der Turtle zeichnen kannst.</p>
-<!---
-## Quellen
-* https://python-online.ch
-* https://programmierkonzepte.ch
-* https://tobiaskohn.ch/
--->
+<h2 id="zusammenfassung">Zusammenfassung</h2>
+<p>Das gesamte Minimalprogramm findest du nochmals hier.</p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> PySimpleGUI <span class="hljs-keyword">as</span> sg
+sg.theme(<span class="hljs-string">"SandyBeach"</span>)
+
+layout = [  
+            [sg.Text(<span class="hljs-string">"Some text on Row 1"</span>)],
+            [sg.Text(<span class="hljs-string">"Enter something on Row 2"</span>), sg.InputText(<span class="hljs-string">"ABC"</span>, key=<span class="hljs-string">"eingabe1"</span>)],
+            [sg.Button(<span class="hljs-string">"Ok"</span>), sg.Button(<span class="hljs-string">"Change Text"</span>), sg.Button(<span class="hljs-string">"Cancel"</span>)]
+         ]
+
+window = sg.Window(<span class="hljs-string">"Window Title"</span>, layout)
+
+<span class="hljs-keyword">while</span> <span class="hljs-literal">True</span>:
+    event, values = window.read()
+
+    <span class="hljs-keyword">if</span> event == sg.WIN_CLOSED <span class="hljs-keyword">or</span> event == <span class="hljs-string">"Cancel"</span>: 
+        <span class="hljs-keyword">break</span>
+
+    <span class="hljs-keyword">if</span> event == <span class="hljs-string">"Ok"</span>:
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">"You entered "</span>, values[<span class="hljs-string">"eingabe1"</span>])
+
+    <span class="hljs-keyword">if</span> event == <span class="hljs-string">"Change Text"</span>:
+        window[<span class="hljs-string">"eingabe1"</span>].update(<span class="hljs-string">"Hallo Welt"</span>)
+
+window.close()
+</code></pre>
 
                                 
                                 </section>
@@ -905,8 +988,12 @@ und wie du interessante Grafiken mit der Turtle zeichnen kannst.</p>
 
             
                 
+                <a href="510_GUI.html" class="navigation navigation-prev " aria-label="Previous page: Grafische Benutzeroberflächen (GUI) 🖱️">
+                    <i class="fa fa-angle-left"></i>
+                </a>
                 
-                <a href="010_turtle.html" class="navigation navigation-next navigation-unique" aria-label="Next page: Grafik mit der Turtle 🐢">
+                
+                <a href="530_einfacherTR.html" class="navigation navigation-next " aria-label="Next page: Ein einfacher Taschenrechner">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -917,7 +1004,7 @@ und wie du interessante Grafiken mit der Turtle zeichnen kannst.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"book":true,"keywords":["Bulme","C#"],"author":["HTL BULME"],"subject":"C#","classoption":["openany"],"lang":"de","date":"2024-10-16","geometry":"left=1.5cm,right=1.5cm,top=2cm,bottom=2.5cm","title":"Einführung ✨","level":"1.1","depth":1,"next":{"title":"Grafik mit der Turtle 🐢","level":"1.2","depth":1,"path":"010_turtle.md","ref":"010_turtle.md","articles":[{"title":"Übungen mit der Turtle","level":"1.2.1","depth":2,"path":"015_turtle_lines.md","ref":"015_turtle_lines.md","articles":[]},{"title":"Farben verwenden","level":"1.2.2","depth":2,"path":"017_turtle_colors.md","ref":"017_turtle_colors.md","articles":[]},{"title":"Variablen","level":"1.2.3","depth":2,"path":"020_variablen.md","ref":"020_variablen.md","articles":[]},{"title":"Eingabe von Werten","level":"1.2.4","depth":2,"path":"030_input.md","ref":"030_input.md","articles":[]},{"title":"Rechnen mit Variablen","level":"1.2.5","depth":2,"path":"035_variablen_rechnen.md","ref":"035_variablen_rechnen.md","articles":[]},{"title":"Weitere mathematische Funktionen","level":"1.2.6","depth":2,"path":"40_mathematik.md","ref":"40_mathematik.md","articles":[]},{"title":"Kapiteltest 1","level":"1.2.7","depth":2,"path":"070_kapiteltest.md","ref":"070_kapiteltest.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["add-js-css"],"pluginsConfig":{"add-js-css":{"css":["./customStyle/style.css"]},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"README.md","mtime":"2024-10-16T17:49:59.800Z","type":"markdown"},"gitbook":{"version":"6.0.2","time":"2024-10-18T17:04:33.320Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Ein minimales GUI Programm","level":"1.7.1","depth":2,"next":{"title":"Ein einfacher Taschenrechner","level":"1.7.2","depth":2,"path":"530_einfacherTR.md","ref":"530_einfacherTR.md","articles":[]},"previous":{"title":"Grafische Benutzeroberflächen (GUI) 🖱️","level":"1.7","depth":1,"path":"510_GUI.md","ref":"510_GUI.md","articles":[{"title":"Ein minimales GUI Programm","level":"1.7.1","depth":2,"path":"520_minimalprogramm.md","ref":"520_minimalprogramm.md","articles":[]},{"title":"Ein einfacher Taschenrechner","level":"1.7.2","depth":2,"path":"530_einfacherTR.md","ref":"530_einfacherTR.md","articles":[]},{"title":"Kapiteltest 5","level":"1.7.3","depth":2,"path":"570_Kapiteltest.md","ref":"570_Kapiteltest.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["add-js-css"],"pluginsConfig":{"add-js-css":{"css":["./customStyle/style.css"]},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"520_minimalprogramm.md","mtime":"2024-10-02T21:27:10.338Z","type":"markdown"},"gitbook":{"version":"6.0.2","time":"2024-10-18T17:04:33.320Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

@@ -109,7 +109,7 @@ Hier noch zusatz zur Division
 Schreibe ein Programm, bei dem der Benutzer das Geburtsjahr als Integer eingeben kann.
 Das Programm soll das ungefähre Alter der Person in Tagen berechnen.
 Verwende dafür die Formel: (aktuelles Jahr - Geburtsjahr) \* 365,
-also beispielsweise `(2023 - 2006) * 365`
+also beispielsweise `(2024 - 2009) * 365`
 
 Gib das Ergebnis mit `Turtle.Print` aus.
 
