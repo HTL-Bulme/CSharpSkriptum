@@ -14,6 +14,7 @@
   },
   "dependencies": {
     "gitbook-plugin-add-js-css": "0.0.1",
+    "gitbook-plugin-nocache": "^0.0.2",
     "honkit-plugin-katex": "^1.1.7"
   }
 }
