@@ -1,6 +1,7 @@
 {
   "plugins": [
-    "add-js-css"
+    "add-js-css","katex"
+
   ],
   "pluginsConfig": {
     "add-js-css": {

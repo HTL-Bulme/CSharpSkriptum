@@ -13,6 +13,7 @@
     "honkit": "^6"
   },
   "dependencies": {
-    "gitbook-plugin-add-js-css": "0.0.1"
+    "gitbook-plugin-add-js-css": "0.0.1",
+    "honkit-plugin-katex": "^1.1.7"
   }
 }
