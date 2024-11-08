@@ -60,7 +60,7 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="040_mathematik.html" />
+    <link rel="next" href="070_kapiteltest.html" />
     
     
     <link rel="prev" href="030_input.html" />
@@ -184,20 +184,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.6" data-path="040_mathematik.html">
-            
-                <a href="040_mathematik.html">
-            
-                    
-                    Weitere mathematische Funktionen
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.2.7" data-path="070_kapiteltest.html">
+        <li class="chapter " data-level="1.2.6" data-path="070_kapiteltest.html">
             
                 <a href="070_kapiteltest.html">
             
@@ -431,6 +418,10 @@ Turtle.Print(a * <span class="hljs-number">23</span> - <span class="hljs-number"
 Turtle.Print(Turtle.InputInt(<span class="hljs-string">"Geben Sie eine Zahl ein"</span>));
 </code></pre>
 <h2 id="operatoren">Operatoren</h2>
+<p>Die Programmiersprache C# kennt Operatoren,
+die in der folgenden Tabelle aufgelistet sind.
+Die beiden Zahlen mit denen die Rechenoperation durchgeführt wird,
+nennen wir auch die <strong>Operanden</strong>.</p>
 <table>
 <thead>
 <tr>
@@ -467,9 +458,24 @@ Turtle.Print(Turtle.InputInt(<span class="hljs-string">"Geben Sie eine Zahl ein"
 </tr>
 </tbody>
 </table>
-<!--
-Hier noch zusatz zur Division
- -->
+<h2 id="⚠️-spezialfall-division">⚠️ Spezialfall: Division</h2>
+<p>Alle Rechenoperatoren funktionieren so wie du es vom Taschenrechner her kennst.
+Bei der Division gibt jedoch es zwei Fälle die wir unterscheiden müssen.
+Denn das Ergebnis der Division hängt von den Datentypen der beiden
+Zahlen ab, mit denen die Division ausgeführt wird.</p>
+<h3 id="division-von-zwei-int-werten">Division von zwei <code>int</code>-Werten:</h3>
+<pre><code class="lang-cs"><span class="hljs-built_in">int</span> x = <span class="hljs-number">5</span>;
+<span class="hljs-built_in">int</span> y = <span class="hljs-number">2</span>;
+Turtle.Print(x / y);
+</code></pre>
+<p>Ergebnis ist ein <code>int</code>-Wert also <strong>2</strong></p>
+<h3 id="division-wenn-zumindest-einer-der-beiden-werte-vom-datentyp-double-ist">Division, wenn <strong>zumindest einer der beiden</strong> Werte vom Datentyp <code>double</code> ist:</h3>
+<pre><code class="lang-cs"><span class="hljs-built_in">int</span> x = <span class="hljs-number">5</span>;
+<span class="hljs-built_in">double</span> y = <span class="hljs-number">2.0</span>;
+Turtle.Print(x / y);
+</code></pre>
+<p>Ergebnis ist ein <code>double</code>-Wert also <strong>2.5</strong></p>
+<h2 id="übungen">Übungen</h2>
 <h3 id="📝-übung-14">📝 Übung 14</h3>
 <p>Schreibe ein Programm, bei dem der Benutzer das Geburtsjahr als Integer eingeben kann.
 Das Programm soll das ungefähre Alter der Person in Tagen berechnen.
@@ -562,7 +568,7 @@ eine Zahl, eine Berechnung oder ein Funktionsaufruf sein kann.</p>
                 </a>
                 
                 
-                <a href="040_mathematik.html" class="navigation navigation-next " aria-label="Next page: Weitere mathematische Funktionen">
+                <a href="070_kapiteltest.html" class="navigation navigation-next " aria-label="Next page: Kapiteltest 1">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -573,7 +579,7 @@ eine Zahl, eine Berechnung oder ein Funktionsaufruf sein kann.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Rechnen mit Variablen","level":"1.2.5","depth":2,"next":{"title":"Weitere mathematische Funktionen","level":"1.2.6","depth":2,"path":"040_mathematik.md","ref":"040_mathematik.md","articles":[]},"previous":{"title":"Eingabe von Werten","level":"1.2.4","depth":2,"path":"030_input.md","ref":"030_input.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["add-js-css"],"pluginsConfig":{"add-js-css":{"css":["./customStyle/style.css"],"js":["./customScript/app.js"]},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"035_variablen_rechnen.md","mtime":"2024-10-18T16:34:54.911Z","type":"markdown"},"gitbook":{"version":"6.0.2","time":"2024-11-08T06:21:23.552Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Rechnen mit Variablen","level":"1.2.5","depth":2,"next":{"title":"Kapiteltest 1","level":"1.2.6","depth":2,"path":"070_kapiteltest.md","ref":"070_kapiteltest.md","articles":[]},"previous":{"title":"Eingabe von Werten","level":"1.2.4","depth":2,"path":"030_input.md","ref":"030_input.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["add-js-css"],"pluginsConfig":{"add-js-css":{"css":["./customStyle/style.css"],"js":["./customScript/app.js"]},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"035_variablen_rechnen.md","mtime":"2024-11-08T06:42:23.150Z","type":"markdown"},"gitbook":{"version":"6.0.2","time":"2024-11-08T06:43:21.859Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

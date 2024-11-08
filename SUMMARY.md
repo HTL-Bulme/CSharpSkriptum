@@ -7,7 +7,7 @@
 	* [Variablen](020_variablen.md)
 	* [Eingabe von Werten](030_input.md)
 	* [Rechnen mit Variablen](035_variablen_rechnen.md)	
-	* [Weitere mathematische Funktionen](040_mathematik.md)
+#	* [Weitere mathematische Funktionen](040_mathematik.md)
 	* [Kapiteltest 1](070_kapiteltest.md)
 * [Verzweigungen und Schleifen 🔁](100_branch_loops.md)
 	* [Verzweigungen](130_verzweigungen.md)

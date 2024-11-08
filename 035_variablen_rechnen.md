@@ -93,6 +93,11 @@ Turtle.Print(Turtle.InputInt("Geben Sie eine Zahl ein"));
 
 ## Operatoren
 
+Die Programmiersprache C# kennt Operatoren,
+die in der folgenden Tabelle aufgelistet sind.
+Die beiden Zahlen mit denen die Rechenoperation durchgeführt wird,
+nennen wir auch die **Operanden**.
+
 | Operator |  Beschreibung | Beispiel |
 |-------|-------|-------|
 | + | Addition | x + y |
@@ -101,9 +106,31 @@ Turtle.Print(Turtle.InputInt("Geben Sie eine Zahl ein"));
 | / | Division | x / y |
 | % | Modulo, **Rest** der Integer Division, 7 % 3 ergibt 1 | x % y |
 
-<!--
-Hier noch zusatz zur Division
- -->
+## ⚠️ Spezialfall: Division
+
+Alle Rechenoperatoren funktionieren so wie du es vom Taschenrechner her kennst.
+Bei der Division gibt jedoch es zwei Fälle die wir unterscheiden müssen.
+Denn das Ergebnis der Division hängt von den Datentypen der beiden
+Zahlen ab, mit denen die Division ausgeführt wird.
+
+### Division von zwei `int`-Werten:
+```cs
+int x = 5;
+int y = 2;
+Turtle.Print(x / y);
+```
+Ergebnis ist ein `int`-Wert also **2**
+
+### Division, wenn **zumindest einer der beiden** Werte vom Datentyp `double` ist:
+```cs
+int x = 5;
+double y = 2.0;
+Turtle.Print(x / y);
+```
+Ergebnis ist ein `double`-Wert also **2.5**
+
+
+## Übungen
 
 ### 📝 Übung 14
 Schreibe ein Programm, bei dem der Benutzer das Geburtsjahr als Integer eingeben kann.

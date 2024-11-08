@@ -1,7 +1,7 @@
 # Mathematische Funktionen
 
 Bis jetzt haben wir die Grundrechenarten, die Ganzzahldivision,
-Modulo und das Potenzieren in Python kennengelernt.
+und Modulo kennengelernt.
 Python bietet uns aber eine sehr umfangreiches **Modul** an mathematischen Funktionen.
 In diesem Kapitel sehen wir uns einige dieser Funktionen an.
 
