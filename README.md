@@ -73,7 +73,7 @@ Turtle.showTurtle();
 ```
 
 **Tipp:**
-Die gesamte Installation wird in diesem [Video](https://bulme-my.sharepoint.com/personal/gl_ms_bulme_at/_layouts/15/stream.aspx?id=%2Fpersonal%2Fgl%5Fms%5Fbulme%5Fat%2FDocuments%2FInstallation%2Emp4&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0) vorgezeigt.
+Die gesamte Installation wird in diesem 📺 [Video](https://bulme-my.sharepoint.com/:v:/g/personal/gl_ms_bulme_at/EQDEVDg1SVNHlve0qascJxgBaEaAUrX4Fq0Ry1w8b4OyaQ) vorgezeigt.
 
 
 

@@ -1,5 +1,5 @@
 //TODO: Update version number
-let newParam = "v=2024-10-18";
+let newParam = "v=2024-11-08";
 
 document.querySelector("nav a.gitbook-link").remove();
 let links = document.querySelectorAll("nav a");
