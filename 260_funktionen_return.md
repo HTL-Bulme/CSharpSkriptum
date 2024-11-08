@@ -142,3 +142,4 @@ Schreibe eine Funktion `quaderOberflaeche(a)`, welche die Oberfläche eines Quad
 
 
 
+

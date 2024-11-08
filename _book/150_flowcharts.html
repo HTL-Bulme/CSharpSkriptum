@@ -3,7 +3,7 @@
 <html lang="" >
     <head>
         <meta charset="UTF-8">
-        <title>Einführung ✨ · HonKit</title>
+        <title>Grafische Darstellung von Programmen · HonKit</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="HonKit 6.0.2">
@@ -60,8 +60,10 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="010_turtle.html" />
+    <link rel="next" href="180_whileloops.html" />
     
+    
+    <link rel="prev" href="140_logische_operatoren.html" />
     
 
     </head>
@@ -90,7 +92,7 @@
         
         
     
-        <li class="chapter active" data-level="1.1" data-path="./">
+        <li class="chapter " data-level="1.1" data-path="./">
             
                 <a href="./">
             
@@ -253,7 +255,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.3" data-path="150_flowcharts.html">
+        <li class="chapter active" data-level="1.3.3" data-path="150_flowcharts.html">
             
                 <a href="150_flowcharts.html">
             
@@ -340,7 +342,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >Einführung ✨</a>
+        <a href="." >Grafische Darstellung von Programmen</a>
     </h1>
 </div>
 
@@ -355,115 +357,66 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="einführung">Einführung</h1>
-<p>In diesem Kurs lernst du, wie du einen Computer programmieren kannst.
-Dabei gehen wir davon aus, dass du noch kein
-Vorwissen mitbringst, und werden dir schrittweise alles erklären, was
-du dazu brauchst.</p>
-<h2 id="was-heißt-programmieren-überhaupt">Was heißt "Programmieren" überhaupt?</h2>
-<p>Programmieren heißt, einer Maschine <strong>Anweisungen</strong> zu erteilen und sie damit zu steuern.
-Die erste solche Maschine, die du steuerst, ist eine kleine Schildkröte auf dem Bildschirm: Die Turtle. Die Schildkröte versteht verschiedene Anweisungen um sich zu bewegen,
-zu zeichnen oder sich zu verstecken.
-Welche Anweisungen existieren und wie diese Anweisungen geschrieben werden müssen,
-ist in einer <strong>Programmiersprache</strong> definiert.</p>
-<p>Die Programmiersprache, die wir in diesem Kurs lernen werden, ist <strong>C#</strong>.
-C# ist eine moderne, objektorientierte Programmiersprache,
-die besonders für die Entwicklung von Windows-Anwendungen und Spielen beliebt ist.
-Sie wird häufig in der Webentwicklung und für Unternehmenssoftware eingesetzt
-und zeichnet sich durch ihre hohe Leistungsfähigkeit aus.
-Des Weiteren gibt es eine große Schnittmenge zu anderen Programmiersprachen,
-wie Java, C, C++ oder JavaScript, was das Erlernen dieser Sprachen später einfach möglich macht.</p>
-<h2 id="c-mit-roslynpad">C# mit Roslynpad</h2>
-<p>Wir werden mit einer einfachen Umgebung starten, um C# zu programmieren.
-Diese Umgebung benötigt aber einige Schritt um sie zu installieren.
-Befolge folgende Schritte um die Anwendung zu installieren:</p>
-<h3 id="installation">Installation</h3>
-<p>Zur Installation benötigst du einen aktuellen Computer mit dem Betriebssystem Windows.</p>
-<p>Führe folgende Schritte der Reihe nach aus, um Roslynpad zu installieren:</p>
-<ol>
-<li>Download und Installation der .Net SDK <a href="https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/sdk-8.0.401-windows-x64-installer" target="_blank">Download</a></li>
-<li>Download und Installation des .Net Frameworks <a href="https://dotnet.microsoft.com/en-us/download/dotnet-framework/thank-you/net481-developer-pack-offline-installer" target="_blank">Download</a></li>
-<li>Download von Roslynpad <a href="https://github.com/roslynpad/roslynpad/releases/download/19.1/RoslynPad-windows-x64.zip" target="_blank">Download</a></li>
-<li>Entpacken von RoslynPad<ul>
-<li>Rechtsklick auf die Datei: RoslynPad-windows-x64.zip</li>
-<li>“Alle Extrahieren” wählen oder “Weitere Optionen” und dann “Alle Extrahieren” wählen</li>
-<li>Ordner öffnen und Verknüpfung zu RoslynPad.exe auf dem Desktop erstellen</li>
-</ul>
-</li>
-<li>RoslynPad starten und konfigurieren<ul>
-<li>Documents fixieren</li>
-<li>x64 wählen und als Standard setzen</li>
-<li>BulmeSharp laden</li>
-<li>Minimalprogramm testen</li>
-</ul>
-</li>
-</ol>
-<pre><code class="lang-cs"><span class="hljs-meta">#r "nuget: BulmeSharp, 0.9.0"</span>
-<span class="hljs-keyword">using</span> BulmeSharp;
+                                <h1 id="grafische-darstellung-von-programmen">Grafische Darstellung von Programmen</h1>
+<p>Programme werden durch den Programmcode vollständig definiert.
+Es ist aber auch möglich Programme grafisch darzustellen.
+In dieser Darstellung können Programme oft einfacher verstanden werden.
+Des Weiteren ist es auch für "Nicht-Programmierer" möglich ein Programm zu verstehen.</p>
+<h2 id="flussdiagramme">Flussdiagramme</h2>
+<p>Zur Darstellung von einfachen Programmen verwenden wir Flussdiagramme
+(engl. Flowcharts).
+In den folgenden Abbildungen siehst du die Symbole aus
+denen Flussdiagramme bestehen und einige Beispiele für komplette Flussdiagramme.</p>
+<h3 id="start--stop">Start / Stop</h3>
+<p><img style="float: right; width:33%" src="images/start_stop.png"></img>
+Dieses Symbol zeigt den Start und das Ende des Programms.</p>
+<div style="clear:both;"></div>
 
-Turtle.fd(<span class="hljs-number">50</span>);
-Turtle.rt(<span class="hljs-number">120</span>);
-Turtle.fd(<span class="hljs-number">50</span>);
-Turtle.rt(<span class="hljs-number">120</span>);
-Turtle.fd(<span class="hljs-number">50</span>);
-Turtle.rt(<span class="hljs-number">120</span>);
+<h3 id="operation-tätigkeit">Operation (Tätigkeit)</h3>
+<p><img style="float: right; width:33%" src="images/process.png"></img>
+Beschreibt eine Operation, wie eine Berechnung,
+oder eine Wertzuweisung zu einer Variable.</p>
+<div style="clear:both;"></div>
 
-Turtle.showTurtle();
-</code></pre>
-<p><strong>Tipp:</strong>
-Die gesamte Installation wird in diesem <a href="https://bulme-my.sharepoint.com/personal/gl_ms_bulme_at/_layouts/15/stream.aspx?id=%2Fpersonal%2Fgl%5Fms%5Fbulme%5Fat%2FDocuments%2FInstallation%2Emp4&amp;nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0" target="_blank">Video</a> vorgezeigt.</p>
-<h3 id="einführung-in-die-oberfläche">Einführung in die Oberfläche</h3>
-<p>Die Oberfläche ist einfach gestaltet und speziell für Einsteiger entwickelt worden.
-Sie besteht aus folgenden sechs Bereichen.</p>
-<ol>
-<li>Neue Datei: Hier kannst du eine neue Dateien anlegen</li>
-<li>Dateiübersicht: Hier siehst du alle Dateien, die du angelegt hast.
-Mit Doppelklick auf eine Datei öffnest du die entsprechende Datei</li>
-<li>Codeeingabe: Hier gibst du den C#-Code ein</li>
-<li>Ausführen ▶: Mit diesem Button startest du dein Programm</li>
-<li>Beenden ■: Mit diesem Button beendest du dein Programm vorzeitig</li>
-<li>Framework: Hier muss das .Net Framework ausgewählt werden.
-Wir nehmen stets x64 und setzen es mit dem Button daneben gleich als Standard (Default).</li>
-<li>NuGet Bibliotheken: Hier binden wir zusätzliche Bibliotheken ein.
-Bibliotheken enthalten vorgefertigte Programmteile,
-normalerweise nicht im Standardumfang einer Programmiersprache enthalten sind.
-Meistens verwenden wir die BulmeSharp Bibliothek, da diese die Turtle enthält.</li>
-</ol>
-<p><img src="images/roslynPad.png" alt="Roslynpad Übersicht"></img></p>
-<h3 id="📝-übung-1">📝 Übung 1</h3>
-<p>Gib den Programmcode aus der oberen Grafik in RoslynPad ein
-und klicke auf den "Ausführen"-Knopf.
-Es sollte die gleiche Ausgabe erscheinen wie in der Grafik.</p>
-<p><strong>Tipps:</strong> </p>
-<ul>
-<li>Achte auf Groß- und Kleinschreibung</li>
-<li>Achte darauf, daß Anweisungen mit einem Strichpunkt (Semikolon) ageschlossen werden müssen</li>
-<li>Achte auf die richtigen Klammern! Es werden in dem Beispiel runde Klammern "(" und ")" benutzt. Eckige "[", "]" oder geschwungene "{", "}" Klammern
-bedeuten etwas anderes und funktionieren nicht!</li>
-<li>Wenn du einen Tippfehler gemacht hast, also beispielsweise statt <code>Turtle.showTurtle();</code> 
-den Text <code>Törtle.showTrutel();</code> geschrieben hast, erscheint eine Fehlermeldung im
-unteren Teil des Ausgabefensters. Versuche diese zu verstehen und den Fehler zu beheben.</li>
-<li>Beachte folgende Regel beim Programmieren: <strong>Probiere
-alles selber aus!</strong> Je mehr Programme du selber schreibst, umso mehr
-wirst du verstehen und beherrschen.</li>
-<li>Verwende Shortcuts (Tastenkombinationen) um Zeit zu sparen:<ul>
-<li><kbd>STRG</kbd> + <kbd>S</kbd> ➡ Speichern</li>
-<li><kbd>STRG</kbd> + <kbd>C</kbd> ➡ Kopieren</li>
-<li><kbd>STRG</kbd> + <kbd>V</kbd> ➡ Einfügen</li>
-</ul>
-</li>
-</ul>
+<h3 id="eingabe--ausgabe">Eingabe / Ausgabe</h3>
+<p><img style="float: right; width:33%" src="images/input_output.png"></img>
+Beschreibt das Einlesen von Werten vom Benutzer oder die 
+Ausgabe von Werten. Dieses Symbol entspricht den Funktionen <code>input</code> bzw. <code>print</code>.</p>
+<div style="clear:both;"></div>
+
+<h3 id="verzweigung">Verzweigung</h3>
+<p><img style="float: right; width:33%" src="images/decision.png"></img>
+Dieses Symbol repräsentiert die <code>if</code>-Verzweigung.
+Es enthält eine Bedingung und zwei Ausgänge.
+Je nachdem, ob die Bedingung erfüllt ist, wird entweder
+zum einen Ausgang oder zum anderen verzweigt.</p>
+<div style="clear:both;"></div>
+
+<h3 id="pfeil">Pfeil</h3>
+<p><img style="float: right; width:33%" src="images/arrow.png"></img>
+Der Pfeil verbindet die Symbole untereinander.</p>
+<div style="clear:both;"></div>
+
+
+<h2 id="💡-beispiele">💡 Beispiele</h2>
+<h3 id="passworteingabe">Passworteingabe</h3>
+<p>In diesem Beispiel soll der Benutzer eine Geheimnummer eingeben.
+Die Geheimnummer ist 1735.</p>
+<p>Falls die Eingabe richtig ist, soll das Programm: "Okay!" ausgeben.
+Falls die Nummer falsch ist, soll das Programm: "ACCESS DENIED!" ausgeben.</p>
+<p><img src="images/beispiel1_small.png" alt="Flussdiagramm einer einfachen Passworteingabe"></img></p>
+<h3 id="rabatt-ab-1000€">Rabatt ab 1000€</h3>
+<p>In diesem Beispiel soll ein Rabatt von 150€ gewährt werden,
+falls der Einkaufswert mehr als 1000€ beträgt.</p>
+<p><img src="images/beispiel2_small.png" alt="Flussdiagramm des Rabattberechnungsprogramms"></img></p>
+<h3 id="flächenberechnung-quadrat">Flächenberechnung Quadrat</h3>
+<p>In diesem Beispiel der Benutzer nach der Seitenlänge eines
+Quadrats gefragt werden. Falls die Seite kleiner als <code>0</code> ist,
+so soll eine Fehlermeldung ausgegeben werden.
+Ist die Seite größer oder gleich <code>0</code>, soll die Fläche berechnet
+werden und danach ausgegeben werden. </p>
+<p><img src="images/beispiel3_small.png" alt="Flussdiagramm der Flächenberechnung"></img></p>
 <h2 id="🧭-zusammenfassung">🧭 Zusammenfassung</h2>
-<p>Wir haben unsere  erste Umgebung zum Programmieren kennengelernt und
-ein erstes Programm eingetippt.
-Im nächsten Kapitel erfährst du, welche Anweisungen die Turtle versteht
-und wie du interessante Grafiken mit der Turtle zeichnen kannst.</p>
-<!---
-## Quellen
-* https://python-online.ch
-* https://programmierkonzepte.ch
-* https://tobiaskohn.ch/
--->
 
                                 
                                 </section>
@@ -491,8 +444,12 @@ und wie du interessante Grafiken mit der Turtle zeichnen kannst.</p>
 
             
                 
+                <a href="140_logische_operatoren.html" class="navigation navigation-prev " aria-label="Previous page: Logische Operatoren">
+                    <i class="fa fa-angle-left"></i>
+                </a>
                 
-                <a href="010_turtle.html" class="navigation navigation-next navigation-unique" aria-label="Next page: Grafik mit der Turtle 🐢">
+                
+                <a href="180_whileloops.html" class="navigation navigation-next " aria-label="Next page: Wiederholungen mit while-Schleifen">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -503,7 +460,7 @@ und wie du interessante Grafiken mit der Turtle zeichnen kannst.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"book":true,"keywords":["Bulme","C#"],"author":["HTL BULME"],"subject":"C#","classoption":["openany"],"lang":"de","date":"2024-10-16","geometry":"left=1.5cm,right=1.5cm,top=2cm,bottom=2.5cm","title":"Einführung ✨","level":"1.1","depth":1,"next":{"title":"Grafik mit der Turtle 🐢","level":"1.2","depth":1,"path":"010_turtle.md","ref":"010_turtle.md","articles":[{"title":"Übungen mit der Turtle","level":"1.2.1","depth":2,"path":"015_turtle_lines.md","ref":"015_turtle_lines.md","articles":[]},{"title":"Farben verwenden","level":"1.2.2","depth":2,"path":"017_turtle_colors.md","ref":"017_turtle_colors.md","articles":[]},{"title":"Variablen","level":"1.2.3","depth":2,"path":"020_variablen.md","ref":"020_variablen.md","articles":[]},{"title":"Eingabe von Werten","level":"1.2.4","depth":2,"path":"030_input.md","ref":"030_input.md","articles":[]},{"title":"Rechnen mit Variablen","level":"1.2.5","depth":2,"path":"035_variablen_rechnen.md","ref":"035_variablen_rechnen.md","articles":[]},{"title":"Weitere mathematische Funktionen","level":"1.2.6","depth":2,"path":"040_mathematik.md","ref":"040_mathematik.md","articles":[]},{"title":"Kapiteltest 1","level":"1.2.7","depth":2,"path":"070_kapiteltest.md","ref":"070_kapiteltest.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["add-js-css"],"pluginsConfig":{"add-js-css":{"css":["./customStyle/style.css"],"js":["./customScript/app.js"]},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"README.md","mtime":"2024-10-16T17:49:59.800Z","type":"markdown"},"gitbook":{"version":"6.0.2","time":"2024-11-08T06:21:23.552Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Grafische Darstellung von Programmen","level":"1.3.3","depth":2,"next":{"title":"Wiederholungen mit while-Schleifen","level":"1.3.4","depth":2,"path":"180_whileloops.md","ref":"180_whileloops.md","articles":[]},"previous":{"title":"Logische Operatoren","level":"1.3.2","depth":2,"path":"140_logische_operatoren.md","ref":"140_logische_operatoren.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["add-js-css"],"pluginsConfig":{"add-js-css":{"css":["./customStyle/style.css"],"js":["./customScript/app.js"]},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"150_flowcharts.md","mtime":"2024-10-02T21:27:10.338Z","type":"markdown"},"gitbook":{"version":"6.0.2","time":"2024-11-08T06:21:23.552Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

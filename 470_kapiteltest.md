@@ -23,3 +23,4 @@ wie schließende Klammern enthält, eine gültige Formel?
 Schreibe ein Programm, welches bei einem Dateinamen die Endung entfernt.
 
 Zum Beispiel, soll aus `"Mein Bild.jpeg"` der String `"Mein Bild"`  werden.
+

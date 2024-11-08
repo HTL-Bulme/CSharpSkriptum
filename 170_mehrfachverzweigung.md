@@ -43,7 +43,7 @@ else:
 
 ## Übungen
 
-### 📝 Übung 51
+### 📝 Übung 36
 
 Bei einem Test kann man 100 Punkte erlangen.
 Schreibe ein Programm, welches die erreichte Note ausgibt.
@@ -54,7 +54,7 @@ Schreibe ein Programm, welches die erreichte Note ausgibt.
 * über 50 Punkte: Genügend
 * sonst: Nicht Genügend
 
-### 📝 Übung 52
+### 📝 Übung 37
 
 Schreibe ein Programm bei dem der Benutzer eine Temperatur eingeben kann.
 Das Programm soll ausgeben, welchen Aggregatzustand das Wasser bei dieser Temperatur hat,
@@ -71,6 +71,7 @@ bzw. angeben, ob die Temperatur genau am Gefrierpunkt oder am Siedepunkt ist.
 
 
 ## 🧭 Zusammenfassung
+
 
 
 

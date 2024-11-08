@@ -23,3 +23,4 @@ arabische Zeichen und sogar Emojies.
 Wir sehen uns in den folgenden Abschnitten an, wie wir mit Strings in Python arbeiten können.
 
 
+
