@@ -88,7 +88,7 @@ Schreiben Sie ein Programm, bei dem der Benutzer die Länge, Breite und Höhe ei
 ⌨️Input: Geben Sie die Breite des Raumes ein: 4  
 ⌨️Input: Geben Sie die Höhe des Raumes ein: 3  
 🖨️Print: Das Volumen des Raumes beträgt 60 Kubikmeter.  
-🖨️Print: Die Fläche der Wände beträgt 94 Quadratmeter.
+🖨️Print: Die Fläche der Wände beträgt 54 Quadratmeter.
 ```
 
 ## Aufgabe 5: Stromkostenberechnung
