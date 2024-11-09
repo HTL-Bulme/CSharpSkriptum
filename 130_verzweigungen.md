@@ -12,7 +12,7 @@ Wir können sie dann mit einer `if`-Verzweigung überprüfen:
 ```c#
 if (temperatur < 0)
 {
-    Turtle.print("Vorsicht Glatteis!");
+    Turtle.Print("Vorsicht Glatteis!");
 }
 ```
 
@@ -110,8 +110,8 @@ if (Bedingung)
 ```cs
 if (temperatur > 30)
 {
-    Turtle.print("Es ist unglaublich heiss heute :)");
-    Turtle.print("Zeit für eine Eiscreme!");
+    Turtle.Print("Es ist unglaublich heiss heute :)");
+    Turtle.Print("Zeit für eine Eiscreme!");
 }
 ```
 
@@ -140,11 +140,11 @@ else
 ```cs
 if (temperatur > 25)
 {
-    Turtle.print("Es ist warm genug fürs Freibad");
+    Turtle.Print("Es ist warm genug fürs Freibad");
 }
 else
 {
-    Turtle.print("Die Temperatur ist zu niedrig um ins Freibad zu gehen");
+    Turtle.Print("Die Temperatur ist zu niedrig um ins Freibad zu gehen");
 }
 ```
 

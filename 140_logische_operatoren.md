@@ -4,52 +4,64 @@ Mit der `if`-Verzweigung haben wir geprüft, ob eine Bedingung zutrifft.
 Doch was, wenn wir prüfen möchten, ob bei zwei Bedingungen, beide erfüllt sind.
 Nehmen wir an, wir möchten ein Programm schreiben, welches prüft,
 ob einem Bankkunden eine Kredit vergeben werden darf.
-Für einen Kredit muss der Kunde über 18 Jahre alt sein
-und zusätzlich über 50000€ auf seinem Sparkonto haben.
+
+Für einen Kredit muss der Kunde:
+* über 18 Jahre alt sein
+* **und** über 50000€ auf seinem Sparkonto haben.
 
 Für solche Bedingungen benötigen wir **logische Operatoren**.
 Mit diesen lassen sich zwei oder mehrere
 Bedingungen zu einer Bedingung kombinieren.
-In diesem Kapitel lernen wir die Operatoren `and`, `or` und `not` in Python kennen.
-Diese Operatoren werden dir bekannt vorkommen,
-denn du kennst sie bereits aus *NWES*. 😉
+In diesem Kapitel lernen wir die Operatoren **Und**, **Oder** und **Nicht** in C# kennen.
 
-## and, or, not
+Diese Operatoren werden dir bekannt vorkommen,
+denn du kennst sie bereits aus **NWES**. 😉
+
+In C# werden folgende Symbole für die Operatoren verwendet:
+
+| Operator | Symbol | Tastatur |
+| -------- | ------- | ------- |
+| Und | && | <kbd>Shift</kbd> + <kbd>6</kbd>  |
+| Oder | &#124;&#124; |  <kbd>AltGr</kbd>  + <kbd>&lt;</kbd>  | 
+| Nicht | ! | <kbd>Shift</kbd> + <kbd>1</kbd>  |
+
+
+## Und, Oder, Nicht
 
 Das Ergebnis einer Bedingung ist ein Wahrheitswert, also entweder **wahr** oder **falsch**.
-In Python werden diese beiden Begriffe mit `True`, bzw. mit `False` bezeichnet.
+In C# werden diese beiden Begriffe mit `true`, bzw. mit `false` bezeichnet.
 Intern handelt es sich aber nur um Platzhalter für die Werte `0` und `1`.
-Überall, wo wir `True`, bzw. `False` schreiben, könnten wir genauso gut `1`
+Überall, wo wir `true`, bzw. `false` schreiben, könnten wir genauso gut `1`
 bzw. `0` schreiben, jedoch sind die ausgeschriebenen Platzhalter leichter lesbar.
 
 Diese Wahrheitswerte können mit logischen Operatoren
 kombiniert werden. In den folgenden Tabellen siehst du das 
 Ergebnis der Operation.
 
-### and
+### Logisches Und - &&
 
-| A        | B | A and B |
+| A        | B | A && B |
 | :------: | :------: | :------: |
-| False    |   False   | False |
-| False    |   True   | False |
-| True     |  False   | False |
-| True     |  True   | True |
+| false    |   false   | false |
+| false    |   true   | false |
+| true     |  false   | false |
+| true     |  true   | true |
 
-### or
+### Logisches Oder - ||
 
-| A        | B | A or B |
+| A        | B | A &#124;&#124; B |
 | :------: | :------: | :------: |
-| False    |   False   | False |
-| False    |   True   | True |
-| True     |  False   | True |
-| True     |  True   | True |
+| false    |   false   | false |
+| false    |   true   | true |
+| true     |  false   | true |
+| true     |  true   | true |
 
-### not
+### Logisches Nicht - !
 
-| A        | not A |
+| A        | ! A |
 | :------: | :------: | 
-| False    |   True   |
-| True    |   False   | 
+| false    |   true   |
+| true    |   false   | 
 
 
 ## 💡 Beispiel
@@ -59,36 +71,47 @@ Die Bedinungen der `if`-Verzweigungen bestehen aus mehreren
 Bedingungen, die mit logischen Operatoren kombiniert werden.
 
 
+```cs
+#r "nuget: BulmeSharp, 0.10.1"
+using BulmeSharp;
 
-```python
-def main():
-    zahl1 = int(input("Geben Sie eine Zahl ein"))
-    zahl2 = int(input("Geben Sie noch eine Zahl ein"))
+int zahl1 = Turtle.InputInt("Geben Sie eine Zahl ein");
+int zahl2 = Turtle.InputInt("Geben Sie noch eine Zahl ein");
 
-    if ((zahl1 > 0) and (zahl2 > 0)):
-        print("Beide Zahlen sind größer als 0")
+if ((zahl1 > 0) && (zahl2 > 0))
+{
+    Turtle.Print("Beide Zahlen sind größer als 0");
+}
 
-    if ((zahl1 == 5) or (zahl2 == 5)):
-        print("Zumindest eine der beiden Zahlen ist 5")
+if ((zahl1 == 5) || (zahl2 == 5))
+{
+    Turtle.Print("Zumindest eine der beiden Zahlen ist 5");
+}
 
-    if ((zahl1 >= 5) and (zahl1 < 10)):
-        print("Die erste Zahl ist größer oder gleich als 5 und kleiner als 10")
+if ((zahl1 >= 5) && (zahl1 < 10))
+{
+    Turtle.Print("Die erste Zahl ist größer oder gleich als 5 und kleiner als 10");
+}
 
-    if ((zahl1 == 1) or (zahl1 == 3) or (zahl1 == 5)):
-        print("Die erste Zahl ist entweder 1, 3 oder 5")
+if ((zahl1 == 1) || (zahl1 == 3) || (zahl1 == 5))
+{
+    Turtle.Print("Die erste Zahl ist entweder 1, 3 oder 5");
+}
 
-    if (not (zahl1 > 1)):
-        print("Die erste Zahl ist nicht größer als 1")
-        print("sie ist also kleiner oder gleich 1")
-        
-    if ((not (zahl1 == 5)) and (zahl2 < 3)):
-        print("Die erste zahl ist nicht 5 und die zweite ist kleiner als 3")
+if (!(zahl1 > 1))
+{
+    Turtle.Print("Die erste Zahl ist nicht größer als 1");
+    Turtle.Print("sie ist also kleiner oder gleich 1");
+}
 
-main()
+if ((!(zahl1 == 5)) && (zahl2 < 3))
+{
+    Turtle.Print("Die erste zahl ist nicht 5 und die zweite ist kleiner als 3");
+}
+
 ```
 
-**ℹ️ Anmerkung**:
-
+**💡 Anmerkung**:
 In diesem Beispiel wurden die einzelnen Bedingungen in runde
 Klammern geschrieben. Das macht den Code leichter lesbar
 und sagt ausdrücklich, welche Bedingungen mit den logischen Operatoren
@@ -96,14 +119,14 @@ verknüpft werden.
 
 **⚠️ Vorsicht**: Die Klammernsetzung **nicht** ist egal,
 sondern verändert die Bedeutung einer Bedingung.
-Die Bedingung `not ((A > 0) and (A < 5))` ist beispielsweise **nicht** dasselbe wie 
-`(not (A > 0)) and (A < 5)`. 
+Die Bedingung `! ((A > 0) && (A < 5))` ist beispielsweise **nicht** dasselbe wie 
+`(! (A > 0)) && (A < 5))`. 
 
-* Die erste Bedingung `not ((A > 0) and (A < 5))` ist erfüllt
+* Die erste Bedingung `! ((A > 0) && (A < 5))` ist erfüllt
 falls A nicht 1, 2, 3 oder 4 ist.
 Die Bedingung ist also zum Beispiel für die Zahlen: 0, -1, -23, 5, 6 oder 334 erfüllt.
 
-* Die zweite Bedingung `(not (A > 0)) and (A < 5)` sagt:
+* Die zweite Bedingung `(! (A > 0)) && (A < 5)` sagt:
 die Bedingung ist erfüllt, falls A entweder 0, -1, -2, -3, -4, -5 und so weiter ist.
 
 **Deshalb** gilt bei Bedingungen, und beim Programmieren allgemein:
@@ -161,20 +184,13 @@ Die Regel ist die folgende:
 
 ## 🧭 Zusammenfassung
 
+Die logischen Operatoren in C# werden verwendet, um mehrere Bedingungen zu verknüpfen
+und zusammengesetzte logische Ausdrücke zu erstellen.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+* Der Operator `&&` (und) prüft, ob beide Bedingungen wahr sind.
+* Der Operator `||` (oder) überprüft, ob mindestens eine der Bedingungen wahr ist.
+* Der Operator `!` (nicht) dreht den Wahrheitswert einer Bedingung um. Aus `true` wird `false`
+und aus `false` wird `true`
 
 
 

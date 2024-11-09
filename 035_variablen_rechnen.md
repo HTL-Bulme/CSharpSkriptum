@@ -81,7 +81,7 @@ Als Ausdrücke bezeichnen wir alles, was einen Wert hat,
 also beispielsweise Variablen, Zahlen, Berechnungen
 oder auch ein Funktionsaufruf.
 
-Folgende `print` Funktionsaufrufe sind beispielsweise gültig:
+Folgende `Print` Funktionsaufrufe sind beispielsweise gültig:
 ```cs
 int a = 23;
 Turtle.Print(a);
