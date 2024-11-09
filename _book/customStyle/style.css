@@ -9,9 +9,11 @@ kbd {
 }
 
 .bg-true {
-  background-color: LawnGreen;
+  color: ForestGreen;
+  font-weight: bold;
 }
 
 .bg-false {
-  background-color: Tomato;
+  color: FireBrick;
+  font-weight: bold;
 }
