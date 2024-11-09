@@ -88,22 +88,23 @@ der Nachteil ist, dass man keinen Zugriff mehr auf die Index-Variable `i` hat.
 
 ## Übungen
 
-### 📝 Übung 73
+### 📝 Übung 72
 
 Mittelwert
 
-### 📝 Übung 74
+### 📝 Übung 73
 
 Produkt
 
-### 📝 Übung 75
+### 📝 Übung 74
 
 Summe aller geraden Zahlen
 
 
-### 📝 Übung 76
+### 📝 Übung 75
 
 True falls Summe größer 100
+
 
 
 

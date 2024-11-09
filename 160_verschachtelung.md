@@ -66,7 +66,7 @@ main()
 
 ## Übungen
 
-### 📝 Übung 33
+### 📝 Übung 30
 
 Zeichne zuerst ein Flussdiagramm und schreibe ein Programm,
 bei dem der Benutzer zuerst die aktuelle Temperatur
@@ -82,14 +82,14 @@ so soll: "Ich gehe ein Eis essen" ausgegeben werden.
 **und** der Kontostand kleiner oder gleich 10€ ist,
 so soll: "Es ist zu kalt für ein Eis und ich habe kein Geld" ausgegeben werden.
 
-### 📝 Übung 34
+### 📝 Übung 31
 
 Schreibe ein Programm bei dem der Benutzer zuerst drei Zahlen `a`, `b` und `c` eingeben kann.
 Das Programm soll die größte der drei zahlen ausgeben.
 
 Zeichne wieder zuerst ein Flussdiagramm und schreibe dann ein Programm.
 
-### 📝 Übung 35
+### 📝 Übung 32
 
 Schreibe ein Programm bei dem der Benutzer eine Zahl eingeben kann.
 
@@ -104,6 +104,7 @@ die zweite Schleifenbedingung muss `< 0` sein.
 
 
 ## 🧭 Zusammenfassung
+
 
 
 

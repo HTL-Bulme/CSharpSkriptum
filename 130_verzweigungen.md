@@ -21,14 +21,14 @@ Situationen gezielt zu reagieren. Dazu braucht `if` immer eine Bedingung,
 um entscheiden zu können, ob diese Situation wirklich eintrifft.
 Eine **Bedingung** ist ein Ausdruck, der entweder **wahr** oder **falsch** ist.
 
+**⚠️ Vorsicht:** Achte darauf, dass die Bedingung in **runden Klammern** steht. Die Anweisungen, die ausgeführt werden, wenn die Bedingung zutrifft, schreibst du in **geschweifte Klammern**.
+
+
 Üblicherweise entstehen Bedingungen durch die Anwendung von Vergleichsoperatoren.
 Diese sind uns bereits aus der Mathematik bekannt,
 müssen aber beim Programmieren anders geschrieben werden,
 da Spezialzeichen wie "≤" nicht auf der Tastatur vorhanden sind.
 
-**⚠️ Vorsicht:** Bei "ist gleich" benötigst du unbedingt zwei Gleichheitszeichen!
-Ein Gleichheitszeichen ist der Zuweisungsoperator und damit eine
-komplett andere Operation.
 
 | Operator | Beschreibung |
 |-------|-------|
@@ -38,6 +38,10 @@ komplett andere Operation.
 | >= | größer oder gleich |
 | > | größer |
 | != | ungleich |
+
+**⚠️ Vorsicht:** Bei "ist gleich" benötigst du unbedingt zwei Gleichheitszeichen!
+Ein Gleichheitszeichen ist der Zuweisungsoperator und damit eine
+komplett andere Operation.
 
 ## 💡 Beispiel
 
@@ -58,14 +62,12 @@ if (seitenlaenge > 0)
 }
 ```
 
-
-
 Das Programm gibt die Seitenlänge aus, falls die Fläche größer oder gleich 0 ist.
 Das Programm gibt aber nichts aus, falls die Zahl negativ ist.
 Besser wäre es, wenn das Programm eine Fehlermeldung ausgeben würde,
-falls die Eingabe negativ war. Das können wir mit der if-else Verzweigung erreichen.
+falls die Eingabe negativ war. Das können wir mit der `if`-`else` Verzweigung erreichen.
 
-## Die if-else-Verzweigung
+## Die if-else Verzweigung
 
 Du kannst die if-Verzweigung um das Schlüsselwort `else` und einen weiteren
 Programmblock erweitern. Dieser Programmblock wird dann ausgeführt,
@@ -102,7 +104,6 @@ if (Bedingung)
 ```
 
 **⚠️ Vorsicht:** Beachte, dass nach den runden Klammern kein Semikolon kommt. 
-
 
 ### Beispiel
 
@@ -149,25 +150,25 @@ else
 
 ## Übungen
 
-### 📝 Übung 23
+### 📝 Übung 21
 
 Schreibe ein Programm bei dem der Benutzer seine Punkteanzahl vom 
 SWP-Test eingeben kann. Falls die Punkteanzahl größer oder gleich 16 ist,
 soll "Positive Note" werden.
 Ansonsten soll "Negative Note" ausgegeben werden.
 
-### 📝 Übung 24
+### 📝 Übung 22
 
 Schreibe ein Programm bei dem der Benutzer eine Ganzzahl eingeben kann.
 Das Programm soll ausgeben, ob die Zahl positiv, negativ oder Null ist.
 
 **Tipp:** Du wirst mehr als eine if-Verzweigung brauchen.
 
-### 📝 Übung 25
+### 📝 Übung 23
 Schreibe ein Programm bei dem der Benutzer zwei Ganzzahlen eingeben kann.
 Das Programm soll ausgeben, ob die erste Zahl größer als die zweite Zahl ist.
 
-### 📝 Übung 26
+### 📝 Übung 24
 Schreibe ein Programm bei dem der Benutzer eine Ganzzahl eingeben kann.
 Das Programm soll ausgeben, ob die zahl eine gerade Zahl ist, oder nicht.
 
@@ -207,6 +208,7 @@ else
 }
 ```
  
+
 
 
 

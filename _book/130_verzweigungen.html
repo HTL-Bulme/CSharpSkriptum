@@ -303,13 +303,11 @@ Wir können sie dann mit einer <code>if</code>-Verzweigung überprüfen:</p>
 Situationen gezielt zu reagieren. Dazu braucht <code>if</code> immer eine Bedingung,
 um entscheiden zu können, ob diese Situation wirklich eintrifft.
 Eine <strong>Bedingung</strong> ist ein Ausdruck, der entweder <strong>wahr</strong> oder <strong>falsch</strong> ist.</p>
+<p><strong>⚠️ Vorsicht:</strong> Achte darauf, dass die Bedingung in <strong>runden Klammern</strong> steht. Die Anweisungen, die ausgeführt werden, wenn die Bedingung zutrifft, schreibst du in <strong>geschweifte Klammern</strong>.</p>
 <p>Üblicherweise entstehen Bedingungen durch die Anwendung von Vergleichsoperatoren.
 Diese sind uns bereits aus der Mathematik bekannt,
 müssen aber beim Programmieren anders geschrieben werden,
 da Spezialzeichen wie "≤" nicht auf der Tastatur vorhanden sind.</p>
-<p><strong>⚠️ Vorsicht:</strong> Bei "ist gleich" benötigst du unbedingt zwei Gleichheitszeichen!
-Ein Gleichheitszeichen ist der Zuweisungsoperator und damit eine
-komplett andere Operation.</p>
 <table>
 <thead>
 <tr>
@@ -344,6 +342,9 @@ komplett andere Operation.</p>
 </tr>
 </tbody>
 </table>
+<p><strong>⚠️ Vorsicht:</strong> Bei "ist gleich" benötigst du unbedingt zwei Gleichheitszeichen!
+Ein Gleichheitszeichen ist der Zuweisungsoperator und damit eine
+komplett andere Operation.</p>
 <h2 id="💡-beispiel">💡 Beispiel</h2>
 <p>Im folgenden Beispiel gibt der Benutzer die Seitenlaenge eines Quadrats ein,
 und das Programm berechnet den Umfang und den Flächeninhalt.
@@ -362,8 +363,8 @@ da eine negative Seitenlänge keinen Sinn macht.</p>
 <p>Das Programm gibt die Seitenlänge aus, falls die Fläche größer oder gleich 0 ist.
 Das Programm gibt aber nichts aus, falls die Zahl negativ ist.
 Besser wäre es, wenn das Programm eine Fehlermeldung ausgeben würde,
-falls die Eingabe negativ war. Das können wir mit der if-else Verzweigung erreichen.</p>
-<h2 id="die-if-else-verzweigung">Die if-else-Verzweigung</h2>
+falls die Eingabe negativ war. Das können wir mit der <code>if</code>-<code>else</code> Verzweigung erreichen.</p>
+<h2 id="die-if-else-verzweigung">Die if-else Verzweigung</h2>
 <p>Du kannst die if-Verzweigung um das Schlüsselwort <code>else</code> und einen weiteren
 Programmblock erweitern. Dieser Programmblock wird dann ausgeführt,
 wenn die Bedingung nicht wahr ist.</p>
@@ -382,10 +383,12 @@ wenn die Bedingung nicht wahr ist.</p>
 }
 </code></pre>
 <h2 id="📜-syntax">📜 Syntax</h2>
-<p>Die Syntax der <code>if</code>-Verzweigung ist wie folgt:</p>
-<pre><code class="lang-cs"><span class="hljs-keyword">if</span> (&lt;Bedingung&gt;)
+<p>Die Syntax der <code>if</code>-Verzweigung ist im folgenden Codestück angegeben:</p>
+<pre><code class="lang-cs"><span class="hljs-keyword">if</span> (Bedingung)
 {
-    &lt;Anweisungen&gt;
+    Anweisungen, die
+    ausgeführt werden
+    falls Bedingung erfüllt ist
 }
 </code></pre>
 <p><strong>⚠️ Vorsicht:</strong> Beachte, dass nach den runden Klammern kein Semikolon kommt. </p>
@@ -401,13 +404,16 @@ mit angegeben werden. Man sagt auch dieser ist <em>optional</em>,
 es besteht also die Option diesen dazuzunehmen,
 man muss aber nicht.</p>
 <p>Die Syntax  der <code>if</code>-Verzweigung mit <code>else</code>-Teil ist:</p>
-<pre><code class="lang-cs"><span class="hljs-keyword">if</span> (&lt;Bedingung&gt;)
+<pre><code class="lang-cs"><span class="hljs-keyword">if</span> (Bedingung)
 {
-    &lt;Anweisungen&gt;
+    Anweisungen, die
+    ausgeführt werden
+    falls Bedingung erfüllt ist
 }
 <span class="hljs-keyword">else</span>
-{
-   &lt;Anweisungen&gt; 
+    Anweisungen, die
+    ausgeführt werden
+    falls Bedingung NICHT erfüllt ist
 }
 </code></pre>
 <h3 id="beispiel">Beispiel</h3>
@@ -421,19 +427,19 @@ man muss aber nicht.</p>
 }
 </code></pre>
 <h2 id="übungen">Übungen</h2>
-<h3 id="📝-übung-23">📝 Übung 23</h3>
+<h3 id="📝-übung-21">📝 Übung 21</h3>
 <p>Schreibe ein Programm bei dem der Benutzer seine Punkteanzahl vom 
 SWP-Test eingeben kann. Falls die Punkteanzahl größer oder gleich 16 ist,
 soll "Positive Note" werden.
 Ansonsten soll "Negative Note" ausgegeben werden.</p>
-<h3 id="📝-übung-24">📝 Übung 24</h3>
+<h3 id="📝-übung-22">📝 Übung 22</h3>
 <p>Schreibe ein Programm bei dem der Benutzer eine Ganzzahl eingeben kann.
 Das Programm soll ausgeben, ob die Zahl positiv, negativ oder Null ist.</p>
 <p><strong>Tipp:</strong> Du wirst mehr als eine if-Verzweigung brauchen.</p>
-<h3 id="📝-übung-25">📝 Übung 25</h3>
+<h3 id="📝-übung-23">📝 Übung 23</h3>
 <p>Schreibe ein Programm bei dem der Benutzer zwei Ganzzahlen eingeben kann.
 Das Programm soll ausgeben, ob die erste Zahl größer als die zweite Zahl ist.</p>
-<h3 id="📝-übung-26">📝 Übung 26</h3>
+<h3 id="📝-übung-24">📝 Übung 24</h3>
 <p>Schreibe ein Programm bei dem der Benutzer eine Ganzzahl eingeben kann.
 Das Programm soll ausgeben, ob die zahl eine gerade Zahl ist, oder nicht.</p>
 <!-- 
@@ -504,7 +510,7 @@ Dieser <code>else</code>-Teil wird ausgeführt, falls die Bedingung nicht erfül
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Verzweigungen","level":"1.3.1","depth":2,"previous":{"title":"Verzweigungen 🌱 und Schleifen 🔁","level":"1.3","depth":1,"path":"100_branch_loops.md","ref":"100_branch_loops.md","articles":[{"title":"Verzweigungen","level":"1.3.1","depth":2,"path":"130_verzweigungen.md","ref":"130_verzweigungen.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["add-js-css","katex","nocache"],"pluginsConfig":{"add-js-css":{"css":["./customStyle/style.css"],"js":["./customScript/app.js"]},"katex":{},"nocache":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"130_verzweigungen.md","mtime":"2024-11-09T17:48:55.466Z","type":"markdown"},"gitbook":{"version":"6.0.2","time":"2024-11-09T17:49:19.446Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Verzweigungen","level":"1.3.1","depth":2,"previous":{"title":"Verzweigungen 🌱 und Schleifen 🔁","level":"1.3","depth":1,"path":"100_branch_loops.md","ref":"100_branch_loops.md","articles":[{"title":"Verzweigungen","level":"1.3.1","depth":2,"path":"130_verzweigungen.md","ref":"130_verzweigungen.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["add-js-css","katex","nocache"],"pluginsConfig":{"add-js-css":{"css":["./customStyle/style.css"],"js":["./customScript/app.js"]},"katex":{},"nocache":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"130_verzweigungen.md","mtime":"2024-11-09T18:08:49.161Z","type":"markdown"},"gitbook":{"version":"6.0.2","time":"2024-11-09T18:08:55.992Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

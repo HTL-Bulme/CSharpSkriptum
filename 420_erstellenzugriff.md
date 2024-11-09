@@ -135,7 +135,7 @@ und benötigst die Hex-Schreibweise nicht.
 
 ## Übungen
 
-### 📝 Übung 80
+### 📝 Übung 79
 
 Benutzer muss namen, vorname, strasse und hausnummer eingeben
 in folgendem format ausgegeben:
@@ -143,18 +143,19 @@ in folgendem format ausgegeben:
 Max Mustermann
 Musterstrasse  83
 
-### 📝 Übung 81
+### 📝 Übung 80
 
 Rückwärts
 
-### 📝 Übung 82
+### 📝 Übung 81
 
 zähle wie oft das Zeichen a vorkommt
 
 
-### 📝 Übung 83
+### 📝 Übung 82
 
 Ist ein Wort ein Parlindrom oder nicht
+
 
 
 

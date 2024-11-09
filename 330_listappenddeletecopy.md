@@ -122,21 +122,22 @@ da es keine Elemente gibt die nachrücken müssen.
 
 ## Übungen
 
-### 📝 Übung 65
+### 📝 Übung 64
 Liste aller geraden Zahlen von 2 bis 100
 
-### 📝 Übung 66
+### 📝 Übung 65
 Liste der Quadratzahlen bis 100
 
 
-### 📝 Übung 67
+### 📝 Übung 66
 Liste von 100 bis 0
 
 
-### 📝 Übung 68
+### 📝 Übung 67
 Liste aller Zahlen von 20 bis 50 erstellen
 Benutzer kann sagen welche Elemente er entfernen möchte
 bei negativer Zahl abbruch
+
 
 
 

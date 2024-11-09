@@ -31,17 +31,18 @@ print ("Das Minimum ist:", minimum)
 
 ## Übungen
 
-### 📝 Übung 77
+### 📝 Übung 76
 
 maximum
 
-### 📝 Übung 78
+### 📝 Übung 77
 
 minimum als Funktion
 
-### 📝 Übung 79
+### 📝 Übung 78
 
 größte Zahl, die durch drei teilbar ist
+
 
 
 

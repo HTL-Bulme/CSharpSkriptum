@@ -170,20 +170,21 @@ Beim zweiten Mal wird `False` ausgegeben, da `555` **kein** Element der Liste is
 
 ## Übungen
 
-### 📝 Übung 69
+### 📝 Übung 68
 
 neue funktione
 auf welchem index vorkommt
 
-### 📝 Übung 70
+### 📝 Übung 69
 zählen wie oft vorkommt
 
-### 📝 Übung 71
+### 📝 Übung 70
 ersetzen falls gefunden
 
 
-### 📝 Übung 72
+### 📝 Übung 71
 zählen wir viele gerade zahlen
+
 
 
 

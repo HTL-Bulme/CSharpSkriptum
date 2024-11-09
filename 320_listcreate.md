@@ -59,7 +59,7 @@ sondern das 5.
 
 ## Übungen
 
-### 📝 Übung 63
+### 📝 Übung 62
 
 In der folgenden Abbildung siehst du eine Liste.
 
@@ -72,11 +72,12 @@ Beantworte folgende Fragen:
 
 ![Darstellung einer Liste](./images/listsBeispiel.png)
 
-### 📝 Übung 64
+### 📝 Übung 63
 Schreibe ein Python Programm, welches die oben 
 abgebildete Liste erstellt.
 
 ## 🧭 Zusammenfassung
+
 
 
 

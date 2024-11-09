@@ -91,15 +91,16 @@ def caesearDecrypt(text, schluessel):
 ## Übungen
 
 
-### 📝 Übung 85
+### 📝 Übung 84
 Überlege dir wie viele Schlüssel es Maximal geben kann.
 
-### 📝 Übung 86
+### 📝 Übung 85
 
 Du hast den Geheimtext "QH UNFG RF REENGRA" erhalten,
 aber leider keinen Schlüssel.
 Probiere alle möglichen Schlüssel durch um den Klartext zu erhalten
 
 **Tipp:** Verwende eine `for`-Schleife
+
 
 

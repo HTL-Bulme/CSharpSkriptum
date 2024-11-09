@@ -97,7 +97,7 @@ Die unterschiedlichen Pfeile sind fett hervorgehoben.
 
 ## Übungen
 
-### 📝 Übung 38
+### 📝 Übung 35
 Schreibe ein Programm bei dem der Benutzer eine Zahl eingeben kann.
 Das Programm soll die Zahl solange verdoppeln,
 solange die Zahl kleiner als 100 ist.
@@ -113,7 +113,7 @@ Ausgabe:
 80
 ```
 
-### 📝 Übung 39
+### 📝 Übung 36
 Schreibe ein Programm, bei dem der Benutzer so lange eine Zahl eingeben muss,
 bis er eine Zahl eingibt die größer als 1000 ist.
 
@@ -125,12 +125,12 @@ so das äquivalent zu: **solange die Zahl kleiner oder gleich 1000** ist.
 
 Du brauchst also eine Schleife in der Form: `while (zahl <= 1000)`
 
-### 📝 Übung 40
+### 📝 Übung 37
 Schreibe ein Programm, bei dem der Benutzer solange eine Zahl
 eingeben muss, bis die Summe aller bis dahin eingegeben Zahlen
 den Wert 1000 übersteigt.
 
-### 📝 Übung 41
+### 📝 Übung 38
 
 Schreibe ein Programm, beim der Benutzer eine positive Zahl eingeben kann. Falls die Zahl
 negativ ist, soll die Eingabe *solange* wiederholt werden, bis die Zahl positiv ist.
@@ -142,7 +142,7 @@ eingegeben Zahl ermitteln und ausgeben.
 * Eingabe: 24
 * Ausgabe: 1, 2, 3, 4, 6, 8, 12
 
-### 📝 Übung 42
+### 📝 Übung 39
 
 Schreibe ein Programm bei der Zuerst eine Zufallszahl zwischen 1 und 100 generiert wird.
 Der folgende Code demonstriert wie das funktioniert.
@@ -157,6 +157,7 @@ Falls die Eingabe zu hoch ist, gibst du "zu hoch" aus.
 So unterstützt du den Benutzer deines Programms.
 
 ## 🧭 Zusammenfassung
+
 
 
 

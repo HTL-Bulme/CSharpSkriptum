@@ -110,20 +110,21 @@ Programm sofort zu beenden.
 
 ## Übungen
 
-### 📝 Übung 60
+### 📝 Übung 59
 
 Schreibe eine Funktion `average(a, b)`, die den Durchschnitt der
 beiden Zahlen a und b berechnet und zurückgibt
 
-### 📝 Übung 61
+### 📝 Übung 60
 Schreibe eine Funktion `minimum(a, b)`, die von den beiden Zahlen
 a und b die kleinere zurückgibt. Natürlich machst du das ohne Pythons
 Funktion min zu verwenden.
 
-### 📝 Übung 62
+### 📝 Übung 61
 Schreibe eine Funktion `quaderOberflaeche(a)`, welche die Oberfläche eines Quaders zurückgibt.
 
 ## 🧭 Zusammenfassung
+
 
 
 

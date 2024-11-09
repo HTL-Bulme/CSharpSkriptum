@@ -10,7 +10,7 @@ Im Alltag triffst du ständig Entscheidungen, die von bestimmten **Bedingungen**
 ![Verzweigung Wetter](./images/verzweigung.png)
 
 Auch in der Programmierung können Anweisungen von bestimmten Bedingungen abhängen.
-Solche **Verzweigungen** ermöglichen es einem Programm, je nach Situation unterschiedliche Anweisungen auszüfhren. Sie zählen zu den Grundbausteinen jeder Programmiersprache und sorgen dafür, dass Programme flexibel auf verschiedene Bedingungen reagieren können.
+Solche **Verzweigungen** ermöglichen es einem Programm, je nach Situation unterschiedliche Anweisungen auszuführen. Sie zählen zu den Grundbausteinen jeder Programmiersprache und sorgen dafür, dass Programme flexibel auf verschiedene Bedingungen reagieren können.
 
 
 ## Schleifen
@@ -27,4 +27,5 @@ Während diese Bedingung gilt, führst du die Anweisung aus, also gräbst du wei
 In der Programmierung funktioniert das ähnlich: Mit einer **Schleife** kannst du dafür sorgen, dass bestimmte Anweisungen mehrmals wiederholt werden,
 ohne dass du jeden Schritt einzeln aufschreiben musst.
 Stattdessen gibst du nur an, wie oft oder wie lange der Ablauf wiederholt werden soll.
-Solche Schleifen gehören zu den Grundstrukturen jeder Programmiersprache und helfen dabei, Programme kürzer und einfacher zu gestalten.
+Schleifen gehören zu den Grundstrukturen jeder Programmiersprache und helfen dabei, Programme kürzer und einfacher zu gestalten.
+
