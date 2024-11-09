@@ -1,13 +1,12 @@
 # Wiederholungen mit while-Schleifen
 
-Du hast bereits die `for`-Schleife kennengelernt, mit der du einen Codeblock mehrmals wiederholen kannst. Die `for`-Schleife setzt du dann ein, wenn du schon vorher weißt,
-wie oft der Codeblock wiederholt werden soll.
+Mit Schleifen können wir bestimmte Codeblöcke mehrfach wiederholen.
 
-Häufig weiß man aber das im Vorhinein nicht. Nehmen wir zum Beispiel eine Passwortabfrage.
-Wir möchten den Benutzer nach dem Passwort fragen, bis er es richtig eingibt.
-Hier weiß man im Vorhinein nicht wie viele Anläufe der Benutzer benötigt.
+Ein Beispiel ist eine Passwortabfrage:
+Wir möchten den Benutzer so lange nach dem Passwort fragen, bis er es richtig eingibt.
 
-In Fällen in denen wir einen Codeblock wiederholen solange eine Bedingung gilt, verwenden wir die `while`-Schleife.
+Immer wenn wir einen Codeblock wiederholen möchten, 
+**solange** eine bestimmte Bedingung erfüllt ist, verwenden wir die `while`-Schleife.
 
 ## 💡 Beispiel: Eingabe einer Geheimzahl
 
@@ -15,21 +14,52 @@ Nehmen wir an wir möchten ein Programm schreiben,
 bei dem der Benutzer beliebig oft eine Zahl eingeben kann,
 bis er die Geheimzahl erraten hat.
 
-Zuerst brauchen wir die sogenannte Schleifenbedingung.
+Zuerst brauchen wir die sogenannte **Schleifenbedingung**.
 Solange diese Bedingung gilt, wird die Schleife wiederholt.
-Nehmen wir an unsere Geheimzahl ist 13, dann wäre die Bedingung: `not (eingabe == 13)`
-oder in Kurzschreibweise: `eingabe != 13`.
+Nehmen wir an unsere Geheimzahl ist 13, dann wäre die Bedingung: `!(eingabe == 13)`
+oder in Kurzschreibweise: `(eingabe != 13)`.
 
-```python
-eingabe = 0
 
-while (eingabe != 13):
-    eingabe = int(input("Raten sie die Geheimzahl: "))
+```cs
+int eingabe = 0;
 
-print("Sie haben die Zahl erraten")
+while (eingabe != 13)
+{
+    eingabe = Turtle.InputInt("Rate die Geheimzahl: "))
+}
+
+Turtle.Print("Du hast die Geheimzahl erraten")
 ```
 
-Die `while`-Schleife wird mit dem Schlüsselwort while eingeleitet, gefolgt von einer Schleifenbedingung. Die Anweisungen im Codeblock werden wiederholt, so lange die Bedingung erfüllt ist. Nach Ende der Wiederholungen wird das Programm mit der nächsten Anweisung nach dem Schleifenblock fortgesetzt.
+Die `while`-Schleife wird mit dem Schlüsselwort **while** eingeleitet, gefolgt von einer Schleifenbedingung.
+Die Anweisungen im Codeblock werden wiederholt, **solange** die Bedingung erfüllt ist.
+Nach Ende der Wiederholungen wird das Programm mit der nächsten Anweisung nach dem Schleifenblock fortgesetzt.
+
+## "Bis"-Bedingungen in "While"-Bedingungen umwandeln
+
+Die Angabe einer **while**-Bedingung ist für uns am Anfang etwas unnatürlich.
+Beim obigen beispiel würde man natürlichsprachlich sagen:
+"Die Schleife muss wiederholt werden **bis** der Benutzer die Geheimzahl richtig hat.
+Wir möchten also die Schleife ausführen, bis `(eingabe == 13)` gilt.
+
+Die `while`-Schleife verlangt aber nach **solange**-Bedingungen.
+Deshalb müssen wir die natürlichsprachliche Bedingung umwandeln.
+Das können wir, indem wir die "Bis"-Bedingung mit einem **logischen Nicht** umdrehen.
+
+Die Aussage:
+* Wiederhole die Schleife bis `(eingabe == 13)` ist dasselbe wie
+* Wiederhole die Schleife solange `(eingabe != 13)`
+
+Hierzu noch einige Beispiele:
+
+| Bis-Bedingung  | while-Bedingung | C# Code |
+| ------------- | ------------- | ------------- |
+| Ich spare **bis** ich **1000€ oder mehr** habe | Ich spare **solange** ich **weniger als 1000€** habe | `(geld < 1000)` |
+| Ich beschleunige **bis** ich **60 km/h** habe | Ich beschleunige **solange** ich  **weniger als 60 km/h** habe |  `(speed < 60)` |
+| Ich besuche die Schule **bis** ich die Matura **habe** | Ich besuche die Schule **solange** ich die Matura **nicht habe** | `(!matura)` |
+| Ich trainiere bis ich die 100 Meter unter 11 Sekunden laufe | Solange ich für 100 Meter mehr als 11 Sekunden brauche trainiere ich | `(time >= 11)` |
+
+
 
 ## 💡 Beispiel: Mit while-Schleife zählen
 

@@ -1,7 +1,17 @@
 //TODO: Update version number
-document.querySelector("nav a.gitbook-link").remove();
 
 gitbook.events.on('page.change', function () {
-    $('td:contains("false")').addClass("bg-false"); 
-    $('td:contains("true")').addClass("bg-true");
+
+
+    $("td").filter(function () {
+        return $(this).text() === "true";
+    }).addClass("bg-true");
+
+
+    $("td").filter(function () {
+        return $(this).text() === "false";
+    }).addClass("bg-false");
+
+
+    document.querySelector("nav a.gitbook-link").remove();
 });
