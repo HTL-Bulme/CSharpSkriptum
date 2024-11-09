@@ -89,12 +89,15 @@ else
 ```
 ## 📜 Syntax
 
-Die Syntax der `if`-Verzweigung ist wie folgt:
+Die Syntax der `if`-Verzweigung ist im folgenden Codestück angegeben:
+
 
 ```cs
-if (<Bedingung>)
+if (Bedingung)
 {
-    <Anweisungen>
+    Anweisungen, die
+    ausgeführt werden
+    falls Bedingung erfüllt ist
 }
 ```
 
@@ -118,13 +121,16 @@ man muss aber nicht.
 
 Die Syntax  der `if`-Verzweigung mit `else`-Teil ist:
 ```cs
-if (<Bedingung>)
+if (Bedingung)
 {
-    <Anweisungen>
+    Anweisungen, die
+    ausgeführt werden
+    falls Bedingung erfüllt ist
 }
 else
-{
-   <Anweisungen> 
+    Anweisungen, die
+    ausgeführt werden
+    falls Bedingung NICHT erfüllt ist
 }
 ```
 
