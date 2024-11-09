@@ -1,4 +1,4 @@
-#r "nuget: BulmeSharp, 0.9.0"
+#r "nuget: BulmeSharp, 0.10.1"
 using BulmeSharp;
 
 Turtle.fd(50);

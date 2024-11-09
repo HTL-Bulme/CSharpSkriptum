@@ -18,13 +18,13 @@ den Text *BulmeSharp* eingibst und die entsprechende Bibliothek anklickst.
 Daraufhin wird folgende Zeile automatisch im Code eingefügt.
 
 ```cs
-#r "nuget: BulmeSharp, 0.9.0"
+#r "nuget: BulmeSharp, 0.10.1"
 ```
 
 Um die Bibliothek tatsächlich zu benutzen müssen wir unterhalb noch eine Zeile hinzufügen.
 
 ```cs
-#r "nuget: BulmeSharp, 0.9.0"
+#r "nuget: BulmeSharp, 0.10.1"
 using BulmeSharp;
 ```
 
