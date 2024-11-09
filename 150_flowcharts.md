@@ -76,21 +76,12 @@ werden und danach ausgegeben werden.
 
 ## 🧭 Zusammenfassung
 
+Programme können als Flussdiagramme grafisch dargestellt werden,
+um sie leichter verständlich zu machen.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Flussdiagramm bestehen aus folgenden Symbolen:
+* **Start/Stop** zeigt den Beginn oder das Ende an,
+* **Operationen** stehen für Berechnungen oder Wertzuweisungen,
+* **Eingabe/Ausgabe** für Interaktionen mit dem Benutzer,
+* **Verzweigungen** repräsentieren die uns bekannten `if`-Verzweigungen.
+* **Pfeile** verbinden Symbole und zeigen so den Ablauf des Programms 

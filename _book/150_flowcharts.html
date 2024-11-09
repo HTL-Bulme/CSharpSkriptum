@@ -3,7 +3,7 @@
 <html lang="" >
     <head>
         <meta charset="UTF-8">
-        <title>Eingabe von Werten · HonKit</title>
+        <title>Grafische Darstellung von Programmen · HonKit</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="HonKit 6.0.2">
@@ -68,10 +68,8 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="035_variablen_rechnen.html" />
     
-    
-    <link rel="prev" href="020_variablen.html" />
+    <link rel="prev" href="140_logische_operatoren.html" />
     
 
 
@@ -167,7 +165,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2.4" data-path="030_input.html">
+        <li class="chapter " data-level="1.2.4" data-path="030_input.html">
             
                 <a href="030_input.html">
             
@@ -251,7 +249,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.3" data-path="150_flowcharts.html">
+        <li class="chapter active" data-level="1.3.3" data-path="150_flowcharts.html">
             
                 <a href="150_flowcharts.html">
             
@@ -299,7 +297,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >Eingabe von Werten</a>
+        <a href="." >Grafische Darstellung von Programmen</a>
     </h1>
 </div>
 
@@ -314,57 +312,76 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="eingabe-von-werten">Eingabe von Werten</h1>
-<p>Mit Variablen haben wir unsere Programme bereits flexibler gemacht.
-Jedoch möchten wir noch, dass der Benutzer des Programms,
-jedes Mal andere Variablenwerte verwenden kann.</p>
-<p>In diesem Kapitel sehen wir uns an, wie Benutzer Werte für Variablen eingeben können.</p>
-<h2 id="eingabe-mit-den-input-funktionen">Eingabe mit den <code>Input</code> Funktionen</h2>
-<p>Bevor wir den Benutzer nach einem Wert für eine Variable fragen, müssen wir uns
-Gedanken machen, welchen <strong>Typ</strong> die Variable haben soll.
-Die Turtle stellt zur Eingabe von Daten vier Funktionen zur Verfügung:</p>
-<ul>
-<li><code>InputInt</code> zur Eingabe von Ganzzahlen</li>
-<li><code>InputDouble</code> zur Eingabe von Gleitkommzahlen mit doppelter Genauigkeit</li>
-<li><code>InputFloat</code> zur Eingabe von Gleitkommzahlen mit einfacher Genauigkeit</li>
-<li><code>InputString</code> zur Eingabe von Strings (Texten)</li>
-</ul>
-<p>Um Werte vom Benutzer abzufragen, können wir die Funktionen wie folgt aufrufen:</p>
-<ul>
-<li><code>int a = Turtle.InputInt("Bitte Zahl eingeben!");</code> - um <strong>Integer</strong> Werte einzulesen</li>
-<li><code>double c = Turtle.InputDouble("Bitte Zahl eingeben!");</code> - um <strong>Double</strong> Werte einzulesen</li>
-<li><code>float b = Turtle.InputFloat("Bitte Zahl eingeben!");</code> - um <strong>Float</strong> Werte einzulesen</li>
-<li><code>string d = Turtle.InputString("Etwas eingeben!");</code> - um <strong>String</strong> Werte einzulesen</li>
-</ul>
-<p>Auf der linken Seite des Zeichens <code>=</code> steht der Name der Variablen,
-der ein neuer Wert zugewiesen werden soll.
-Auf der rechten Seite hatten wir bis jetzt immer einen fixen Wert.
-Statt dem fixen Wert steht jetzt der Funktionsaufruf der jeweiligen <code>Input</code>-Funktion mit einem Argument.
-Das Argument ist der Text der dem Benutzer angezeigt wird,
-wenn er einen Wert eingeben soll.</p>
-<p>In den ersten Kapiteln beschäftigen wir uns ausschließlich mit den beiden
-Typen Integer und Double. Für Strings gibt es später ein eigenes Kapitel.</p>
-<p>In der folgenden Abbildung ist das Eingabefenster zu sehen:</p>
-<p><img src="images/input.png" alt="Eingabe eines Werts"></img></p>
-<h2 id="übungen">Übungen</h2>
-<h3 id="📝-übung-11">📝 Übung 11</h3>
-<p>Schreibe ein Programm, welches ein gleichseitiges Dreieck zeichnet.
-Die Länge a des Dreiecks soll der Benutzer selbst eingeben.
-Der Typ der Eingabe soll Double sein, damit der Benutzer beispielsweise 20.5 
-eingeben kann.</p>
-<h3 id="📝-übung-12">📝 Übung 12</h3>
-<p>Schreibe ein Programm, welches ein Haus zeichnet.
-Die Höhe des Hauses soll vom Benutzer eingegeben werden können.
-Im folgenden Bild siehst du drei mögliche Ergebnisse.
-Je nachdem welchen Wert der Benutzer eingibt, kommt ein anderes Haus dabei raus.</p>
-<p><img src="images/house.png" alt="Haus mit verschiedenen Höhen"></img></p>
-<h3 id="📝-übung-13">📝 Übung 13</h3>
-<p>Erweitere das Programm von Übung 12 um eine weitere Eingabe.
-Der Benutzer soll zusätzlich die Größe der Fenster eingeben können.</p>
+                                <h1 id="grafische-darstellung-von-programmen">Grafische Darstellung von Programmen</h1>
+<p>Programme werden durch den Programmcode vollständig definiert.
+Es ist aber auch möglich Programme grafisch darzustellen.
+In dieser Darstellung können Programme oft einfacher verstanden werden.
+Des Weiteren ist es auch für "Nicht-Programmierer" möglich ein Programm zu verstehen.</p>
+<h2 id="flussdiagramme">Flussdiagramme</h2>
+<p>Zur Darstellung von einfachen Programmen verwenden wir Flussdiagramme
+(engl. Flowcharts).
+In den folgenden Abbildungen siehst du die Symbole aus
+denen Flussdiagramme bestehen und einige Beispiele für komplette Flussdiagramme.</p>
+<h3 id="start--stop">Start / Stop</h3>
+<p><img style="float: right; width:33%" src="images/start_stop.png"></img>
+Dieses Symbol zeigt den Start und das Ende des Programms.</p>
+<div style="clear:both;"></div>
+
+<h3 id="operation-tätigkeit">Operation (Tätigkeit)</h3>
+<p><img style="float: right; width:33%" src="images/process.png"></img>
+Beschreibt eine Operation, wie eine Berechnung,
+oder eine Wertzuweisung zu einer Variable.</p>
+<div style="clear:both;"></div>
+
+<h3 id="eingabe--ausgabe">Eingabe / Ausgabe</h3>
+<p><img style="float: right; width:33%" src="images/input_output.png"></img>
+Beschreibt das Einlesen von Werten vom Benutzer oder die 
+Ausgabe von Werten. Dieses Symbol entspricht den Funktionen <code>input</code> bzw. <code>print</code>.</p>
+<div style="clear:both;"></div>
+
+<h3 id="verzweigung">Verzweigung</h3>
+<p><img style="float: right; width:33%" src="images/decision.png"></img>
+Dieses Symbol repräsentiert die <code>if</code>-Verzweigung.
+Es enthält eine Bedingung und zwei Ausgänge.
+Je nachdem, ob die Bedingung erfüllt ist, wird entweder
+zum einen Ausgang oder zum anderen verzweigt.</p>
+<div style="clear:both;"></div>
+
+<h3 id="pfeil">Pfeil</h3>
+<p><img style="float: right; width:33%" src="images/arrow.png"></img>
+Der Pfeil verbindet die Symbole untereinander.</p>
+<div style="clear:both;"></div>
+
+
+<h2 id="💡-beispiele">💡 Beispiele</h2>
+<h3 id="passworteingabe">Passworteingabe</h3>
+<p>In diesem Beispiel soll der Benutzer eine Geheimnummer eingeben.
+Die Geheimnummer ist 1735.</p>
+<p>Falls die Eingabe richtig ist, soll das Programm: "Okay!" ausgeben.
+Falls die Nummer falsch ist, soll das Programm: "ACCESS DENIED!" ausgeben.</p>
+<p><img src="images/beispiel1_small.png" alt="Flussdiagramm einer einfachen Passworteingabe"></img></p>
+<h3 id="rabatt-ab-1000€">Rabatt ab 1000€</h3>
+<p>In diesem Beispiel soll ein Rabatt von 150€ gewährt werden,
+falls der Einkaufswert mehr als 1000€ beträgt.</p>
+<p><img src="images/beispiel2_small.png" alt="Flussdiagramm des Rabattberechnungsprogramms"></img></p>
+<h3 id="flächenberechnung-quadrat">Flächenberechnung Quadrat</h3>
+<p>In diesem Beispiel der Benutzer nach der Seitenlänge eines
+Quadrats gefragt werden. Falls die Seite kleiner als <code>0</code> ist,
+so soll eine Fehlermeldung ausgegeben werden.
+Ist die Seite größer oder gleich <code>0</code>, soll die Fläche berechnet
+werden und danach ausgegeben werden. </p>
+<p><img src="images/beispiel3_small.png" alt="Flussdiagramm der Flächenberechnung"></img></p>
 <h2 id="🧭-zusammenfassung">🧭 Zusammenfassung</h2>
-<p>Unsere Programme können nun Zahlenwerte als Eingabe vom Benutzer entgegennehmen.
-Hierzu nutzen sie die Funktionen <code>InputInt</code> und <code>InputDouble</code>.
-Dadurch sind die Programme flexibler einsetzbar.</p>
+<p>Programme können als Flussdiagramme grafisch dargestellt werden,
+um sie leichter verständlich zu machen.</p>
+<p>Flussdiagramm bestehen aus folgenden Symbolen:</p>
+<ul>
+<li><strong>Start/Stop</strong> zeigt den Beginn oder das Ende an,</li>
+<li><strong>Operationen</strong> stehen für Berechnungen oder Wertzuweisungen,</li>
+<li><strong>Eingabe/Ausgabe</strong> für Interaktionen mit dem Benutzer,</li>
+<li><strong>Verzweigungen</strong> repräsentieren die uns bekannten <code>if</code>-Verzweigungen.</li>
+<li><strong>Pfeile</strong> verbinden Symbole und zeigen so den Ablauf des Programms </li>
+</ul>
 
                                 
                                 </section>
@@ -392,14 +409,10 @@ Dadurch sind die Programme flexibler einsetzbar.</p>
 
             
                 
-                <a href="020_variablen.html" class="navigation navigation-prev " aria-label="Previous page: Variablen">
+                <a href="140_logische_operatoren.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Logische Operatoren">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="035_variablen_rechnen.html" class="navigation navigation-next " aria-label="Next page: Rechnen mit Variablen">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -408,7 +421,7 @@ Dadurch sind die Programme flexibler einsetzbar.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Eingabe von Werten","level":"1.2.4","depth":2,"next":{"title":"Rechnen mit Variablen","level":"1.2.5","depth":2,"path":"035_variablen_rechnen.md","ref":"035_variablen_rechnen.md","articles":[]},"previous":{"title":"Variablen","level":"1.2.3","depth":2,"path":"020_variablen.md","ref":"020_variablen.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["add-js-css","katex","nocache"],"pluginsConfig":{"add-js-css":{"css":["./customStyle/style.css"],"js":["./customScript/app.js"]},"katex":{},"nocache":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"030_input.md","mtime":"2024-11-09T18:08:49.157Z","type":"markdown"},"gitbook":{"version":"6.0.2","time":"2024-11-09T20:25:05.260Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Grafische Darstellung von Programmen","level":"1.3.3","depth":2,"previous":{"title":"Logische Operatoren","level":"1.3.2","depth":2,"path":"140_logische_operatoren.md","ref":"140_logische_operatoren.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["add-js-css","katex","nocache"],"pluginsConfig":{"add-js-css":{"css":["./customStyle/style.css"],"js":["./customScript/app.js"]},"katex":{},"nocache":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"150_flowcharts.md","mtime":"2024-11-09T20:25:02.167Z","type":"markdown"},"gitbook":{"version":"6.0.2","time":"2024-11-09T20:25:05.260Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
