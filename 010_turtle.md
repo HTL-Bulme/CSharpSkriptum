@@ -130,12 +130,37 @@ Uns bekannte Syntaxregeln sind beispielsweise:
 ## Syntaxfehler finden und beheben
 
 Syntaxfehler entstehen, wenn der Code gegen die Syntax, also den Regeln der Programmiersprache,
-verstößt – zum Beispiel durch ein fehlendes Semikolon oder eine falsch gesetzte Klammer. Falls ein
-Syntaxfehler exisitert, wird das Programm gar nicht erst ausgeführt,
+verstößt – zum Beispiel durch ein fehlendes Semikolon oder eine falsch gesetzte Klammer.
+Falls ein Syntaxfehler exisitert, wird das Programm gar nicht erst ausgeführt,
 da der Computer es nicht interpretieren kann.
 
 RoslynPad zeigt uns im unteren Bereich des Programms Syntaxfehler an.
-Die Beschreibung ist 
+In der folgenden Abbildung siehst du einen Ausschnitt eines Programms,
+in welches wir zwei Syntaxfehler eingebaut haben.
+
+![Syntaxfehler](./images/syntax_error.png)
+
+Sehen wir uns die beiden Fehler genauer an.
+
+Die **erste** Fehlermeldung lautet: "There is no argument given that corresponds to the
+required parameter 'distance' of Turtle.fd".
+Auf deutsch übersetzt könnte man sagen: Es wurde kein Argument für die Distanz
+bei `Turtle.fd` angegeben.
+RoslynPad zeigt uns hinter der Fehlermeldung noch die Position des
+Fehlers an. In diesem Fall steht "8,8". 
+Das bedeutet, dass der Fehler in **Zeile 8** bei Zeichen **Nummer 8** auftritt.
+Dieser Fehler kann behoben werden, indem man ein Argument zwischen die 
+beiden runden Klammern bei schreibt, also zum Beispiel `Turtle.fd(23);`
+
+
+Die **zweite** Fehlermeldung lautet: "The name 'test' does not exist
+in the current context". Auf deutsch also etwa: Der Begriff **test** ist
+existiert nicht. Die Fehlerposition ist "9,11". 
+Der Fehler ist also in **Zeile 9** beim Zeichen **Nummer 11** zu suchen.
+Tatsächlich sieht man in Zeile 9, dass bei `Turtle.rt` statt einem 
+Winkel der Begriff "test" geschrieben wurde.
+Der Fehler kann behoben werden, indem man test durch einen gültigen Winkel
+ersetzt, also zum Beispiel `Turtle.rt(90);`
 
 ## 🧭 Zusammenfassung
 Wir haben uns die wichtigsten Funktionen der Turtle in C# angesehen. 

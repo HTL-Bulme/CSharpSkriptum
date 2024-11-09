@@ -442,11 +442,31 @@ Wenn die Syntax nicht stimmt, kann das Programm nicht ausgeführt werden und es 
 </ul>
 <h2 id="syntaxfehler-finden-und-beheben">Syntaxfehler finden und beheben</h2>
 <p>Syntaxfehler entstehen, wenn der Code gegen die Syntax, also den Regeln der Programmiersprache,
-verstößt – zum Beispiel durch ein fehlendes Semikolon oder eine falsch gesetzte Klammer. Falls ein
-Syntaxfehler exisitert, wird das Programm gar nicht erst ausgeführt,
+verstößt – zum Beispiel durch ein fehlendes Semikolon oder eine falsch gesetzte Klammer.
+Falls ein Syntaxfehler exisitert, wird das Programm gar nicht erst ausgeführt,
 da der Computer es nicht interpretieren kann.</p>
 <p>RoslynPad zeigt uns im unteren Bereich des Programms Syntaxfehler an.
-Die Beschreibung ist </p>
+In der folgenden Abbildung siehst du einen Ausschnitt eines Programms,
+in welches wir zwei Syntaxfehler eingebaut haben.</p>
+<p><img src="images/syntax_error.png" alt="Syntaxfehler"></img></p>
+<p>Sehen wir uns die beiden Fehler genauer an.</p>
+<p>Die <strong>erste</strong> Fehlermeldung lautet: "There is no argument given that corresponds to the
+required parameter 'distance' of Turtle.fd".
+Auf deutsch übersetzt könnte man sagen: Es wurde kein Argument für die Distanz
+bei <code>Turtle.fd</code> angegeben.
+RoslynPad zeigt uns hinter der Fehlermeldung noch die Position des
+Fehlers an. In diesem Fall steht "8,8". 
+Das bedeutet, dass der Fehler in <strong>Zeile 8</strong> bei Zeichen <strong>Nummer 8</strong> auftritt.
+Dieser Fehler kann behoben werden, indem man ein Argument zwischen die 
+beiden runden Klammern bei schreibt, also zum Beispiel <code>Turtle.fd(23);</code></p>
+<p>Die <strong>zweite</strong> Fehlermeldung lautet: "The name 'test' does not exist
+in the current context". Auf deutsch also etwa: Der Begriff <strong>test</strong> ist
+existiert nicht. Die Fehlerposition ist "9,11". 
+Der Fehler ist also in <strong>Zeile 9</strong> beim Zeichen <strong>Nummer 11</strong> zu suchen.
+Tatsächlich sieht man in Zeile 9, dass bei <code>Turtle.rt</code> statt einem 
+Winkel der Begriff "test" geschrieben wurde.
+Der Fehler kann behoben werden, indem man test durch einen gültigen Winkel
+ersetzt, also zum Beispiel <code>Turtle.rt(90);</code></p>
 <h2 id="🧭-zusammenfassung">🧭 Zusammenfassung</h2>
 <p>Wir haben uns die wichtigsten Funktionen der Turtle in C# angesehen. </p>
 <p>Funktionen haben am Ende zwei runde Klammern.
@@ -499,7 +519,7 @@ schreibt man zuerst den Namen des Objekts, gefolgt von einem Punkt und anschlie�
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Grafik mit der Turtle 🐢","level":"1.2","depth":1,"next":{"title":"Übungen mit der Turtle","level":"1.2.1","depth":2,"path":"015_turtle_lines.md","ref":"015_turtle_lines.md","articles":[]},"previous":{"title":"Einführung ✨","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"articles":[{"title":"Übungen mit der Turtle","level":"1.2.1","depth":2,"path":"015_turtle_lines.md","ref":"015_turtle_lines.md","articles":[]},{"title":"Farben verwenden","level":"1.2.2","depth":2,"path":"017_turtle_colors.md","ref":"017_turtle_colors.md","articles":[]},{"title":"Variablen","level":"1.2.3","depth":2,"path":"020_variablen.md","ref":"020_variablen.md","articles":[]},{"title":"Eingabe von Werten","level":"1.2.4","depth":2,"path":"030_input.md","ref":"030_input.md","articles":[]},{"title":"Rechnen mit Variablen","level":"1.2.5","depth":2,"path":"035_variablen_rechnen.md","ref":"035_variablen_rechnen.md","articles":[]},{"title":"Kapiteltest 1","level":"1.2.6","depth":2,"path":"070_kapiteltest.md","ref":"070_kapiteltest.md","articles":[]}],"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["add-js-css","katex","nocache"],"pluginsConfig":{"add-js-css":{"css":["./customStyle/style.css"],"js":["./customScript/app.js"]},"katex":{},"nocache":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"010_turtle.md","mtime":"2024-11-09T18:11:22.529Z","type":"markdown"},"gitbook":{"version":"6.0.2","time":"2024-11-09T18:41:50.255Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Grafik mit der Turtle 🐢","level":"1.2","depth":1,"next":{"title":"Übungen mit der Turtle","level":"1.2.1","depth":2,"path":"015_turtle_lines.md","ref":"015_turtle_lines.md","articles":[]},"previous":{"title":"Einführung ✨","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"articles":[{"title":"Übungen mit der Turtle","level":"1.2.1","depth":2,"path":"015_turtle_lines.md","ref":"015_turtle_lines.md","articles":[]},{"title":"Farben verwenden","level":"1.2.2","depth":2,"path":"017_turtle_colors.md","ref":"017_turtle_colors.md","articles":[]},{"title":"Variablen","level":"1.2.3","depth":2,"path":"020_variablen.md","ref":"020_variablen.md","articles":[]},{"title":"Eingabe von Werten","level":"1.2.4","depth":2,"path":"030_input.md","ref":"030_input.md","articles":[]},{"title":"Rechnen mit Variablen","level":"1.2.5","depth":2,"path":"035_variablen_rechnen.md","ref":"035_variablen_rechnen.md","articles":[]},{"title":"Kapiteltest 1","level":"1.2.6","depth":2,"path":"070_kapiteltest.md","ref":"070_kapiteltest.md","articles":[]}],"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["add-js-css","katex","nocache"],"pluginsConfig":{"add-js-css":{"css":["./customStyle/style.css"],"js":["./customScript/app.js"]},"katex":{},"nocache":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"010_turtle.md","mtime":"2024-11-09T19:21:23.260Z","type":"markdown"},"gitbook":{"version":"6.0.2","time":"2024-11-09T19:21:28.736Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
