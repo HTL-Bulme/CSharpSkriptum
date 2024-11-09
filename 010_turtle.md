@@ -115,13 +115,37 @@ und geht dann wieder 30 Pixel nach vorne.
 
 In Zeile **21** wird `Turtle.showTurtle()` aufgerufen, damit das Fenster sichtbar wird.
 
+## Ein neuer Begriff: "Syntax"
+
+Syntax in der Programmierung bedeutet die Regeln, nach denen Code geschrieben werden muss, damit der Computer ihn versteht.
+Ähnlich wie Grammatik in einer Sprache festlegt, wie Sätze aufgebaut sind, bestimmt die Syntax, wie Befehle und Strukturen in einer Programmiersprache aussehen müssen.
+Wenn die Syntax nicht stimmt, kann das Programm nicht ausgeführt werden und es wird eine Fehlermeldung angezeigt.
+
+Uns bekannte Syntaxregeln sind beispielsweise:
+* Eine Anweisung muss mit einem Semikolon (`;`) abgeschlossen werden
+* Beim Aufrufen einer Funktion müssen hinter dem Funktionsnamen runde Klammern geschrieben werden
+* Falls ein Funktionsaufruf ein Argument verlangt, so muss das Argument in die runden Klammern nach dem Funktionsnamen geschrieben werden
+
+
+## Syntaxfehler finden und beheben
+
+Syntaxfehler entstehen, wenn der Code gegen die Syntax, also den Regeln der Programmiersprache,
+verstößt – zum Beispiel durch ein fehlendes Semikolon oder eine falsch gesetzte Klammer. Falls ein
+Syntaxfehler exisitert, wird das Programm gar nicht erst ausgeführt,
+da der Computer es nicht interpretieren kann.
+
+RoslynPad zeigt uns im unteren Bereich des Programms Syntaxfehler an.
+Die Beschreibung ist 
 
 ## 🧭 Zusammenfassung
 Wir haben uns die wichtigsten Funktionen der Turtle in C# angesehen. 
 
-Funktionen haben am Ende zwei runde Klammern. Zwischen den runden Klammern können Argumente stehen, das sind weitere Angaben zum Funktionsaufruf, beispielsweise die Anzahl der Pixel bei der Funktion `fd(100)`.
+Funktionen haben am Ende zwei runde Klammern.
+Zwischen den runden Klammern können Argumente stehen,
+das sind weitere Angaben zum Funktionsaufruf, beispielsweise die Anzahl der Pixel bei der Funktion `fd(100)`.
 
-Damit klar ist, dass die Funktion `fd` des Objekts `Turtle` gemeint ist, schreibt man zuerst den Namen des Objekts, gefolgt von einem Punkt und anschließend den Funktionsaufruf: `Turtle.fd(100);`.
+Damit klar ist, dass die Funktion `fd` des Objekts `Turtle` gemeint ist,
+schreibt man zuerst den Namen des Objekts, gefolgt von einem Punkt und anschließend den Funktionsaufruf: `Turtle.fd(100);`.
 
 In C# müssen Funktionsaufrufe mit einem Semikolon (`;`) abgeschlossen werden, um das Ende der Anweisung zu markieren.
 

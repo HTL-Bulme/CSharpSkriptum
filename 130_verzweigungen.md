@@ -1,21 +1,19 @@
 # Verzweigungen
 
-Was du im täglichen Leben unternimmst, hängt oft von gewissen Bedingungen ab. So entscheidest du dich je nach Wetter, wie du in die Schule fährst. Du sagst: "Falls es regnet, fahre ich mit der Bim, sonst mit dem Fahrrad".
-
-Auch der Ablauf eines Programms kann von Bedingungen abhängig sein. Solche Programmverzweigungen auf Grund von bestimmten Bedingungen gehören zu den Grundstrukturen jeder Programmiersprache.
-
 In diesem Kapitel sehen wir uns an wie
-Programmblöcke nur unter gewissen Bedingungen ausgeführt werden.
+Programmblöcke nur unter gewissen **Bedingungen** ausgeführt werden.
 
 ## Die if-Verzweigung
 Stell dir beispielsweise vor, du möchtest die aktuelle Temperatur prüfen,
 und eine Warnung ausgeben, falls die Temperatur unter 0° ist.
-Nehmen wir an wie haben die aktuelle Temperatur in einer Variable gespeichert,
-können wir sie mit einer `if`-Verzweigung überprüfen:
+Nehmen wir an, wir haben die aktuelle Temperatur in einer Variable gespeichert.
+Wir können sie dann mit einer `if`-Verzweigung überprüfen:
 
-```python
-if (temperatur < 0):
-    print("Vorsicht Glatteis!")
+```c#
+if (temperatur < 0)
+{
+    Turtle.print("Vorsicht Glatteis!");
+}
 ```
 
 Mit `if` hast du also beim Programmieren die Möglichkeit, auf spezielle
@@ -43,27 +41,23 @@ komplett andere Operation.
 
 ## 💡 Beispiel
 
-Im folgenden Beispiel gibt der Benutzer den Flächeninhalt eines Quadrats ein,
-und das Programm berechnet die Seitenlänge mithilfe der Quadratwurzel.
-Das ist jedoch nur möglich, wenn der Flächeninhalt positiv ist,
-da eine Wurzel aus einer negativen Zahl nicht existiert.
+Im folgenden Beispiel gibt der Benutzer die Seitenlaenge eines Quadrats ein,
+und das Programm berechnet den Umfang und den Flächeninhalt.
+Das ist jedoch nur möglich, wenn die Seitenlänge positiv ist,
+da eine negative Seitenlänge keinen Sinn macht.
 
-```python
-def main():
-    flaeche = float(input("Geben Sie die Fläche ein: "))
-    if (flaeche >= 0):
-        seite = flaeche ** 0.5
-        print(seite)
+```c#
+double seitenlaenge = Turtle.InputDouble("Bitte Seitenlänge eingeben!");
+if (seitenlaenge > 0) 
+{
+    double umfang = seitenlaenge * 4;
+    double flaeche = seitenlaenge * seitenlaenge;
 
-main()
+    Turtle.Print("Der Umfang ist " + umfang);
+    Turtle.Print("Die Fläche ist " + flaeche);
+}
 ```
 
-**⚠️ Vorsicht:** Im VS Code startest du das Programm mit dem Play-Button
-rechts oben (1). Ausgaben erscheinen im Terminal-Fenster unter dem Code.
-In diesem Fenster (2) müssen auch die Eingaben getätigt werden.
-Siehe dazu die folgende Abbildung:
-
-![Ein- und Ausgabe in VS Code](./images/inputvscode.png)
 
 
 Das Programm gibt die Seitenlänge aus, falls die Fläche größer oder gleich 0 ist.
@@ -77,19 +71,75 @@ Du kannst die if-Verzweigung um das Schlüsselwort `else` und einen weiteren
 Programmblock erweitern. Dieser Programmblock wird dann ausgeführt,
 wenn die Bedingung nicht wahr ist.
 
-```python
-def main():
-    flaeche = float(input("Geben Sie die Fläche ein"))
-    if (flaeche >= 0):
-        seite = flaeche ** 0.5
-        print(seite)
-    else:
-        print("Fehler: Die eingegebene Fläche ist negativ")
 
-main()
+```c#
+double seitenlaenge = Turtle.InputDouble("Bitte Seitenlänge eingeben!");
+if (seitenlaenge > 0) 
+{
+    double umfang = seitenlaenge * 4;
+    double flaeche = seitenlaenge * seitenlaenge;
+
+    Turtle.Print("Der Umfang ist " + umfang);
+    Turtle.Print("Die Fläche ist " + flaeche);
+}
+else
+{
+    Turtle.Print("Falsche Eingabe: Die Seitenlänge darf nicht negativ sein");
+}
+```
+## 📜 Syntax
+
+Die Syntax der `if`-Verzweigung ist wie folgt:
+
+```cs
+if (<Bedingung>)
+{
+    <Anweisungen>
+}
 ```
 
+**⚠️ Vorsicht:** Beachte, dass nach den runden Klammern kein Semikolon kommt. 
 
+
+### Beispiel
+
+```cs
+if (temperatur > 30)
+{
+    Turtle.print("Es ist unglaublich heiss heute :)");
+    Turtle.print("Zeit für eine Eiscreme!");
+}
+```
+
+Der `else`-Teil der `if`-Verzweigung muss nicht zwingend
+mit angegeben werden. Man sagt auch dieser ist *optional*,
+es besteht also die Option diesen dazuzunehmen,
+man muss aber nicht.
+
+Die Syntax  der `if`-Verzweigung mit `else`-Teil ist:
+```cs
+if (<Bedingung>)
+{
+    <Anweisungen>
+}
+else
+{
+   <Anweisungen> 
+}
+```
+
+### Beispiel
+
+```cs
+if (temperatur > 25)
+{
+    Turtle.print("Es ist warm genug fürs Freibad");
+}
+else
+{
+    Turtle.print("Die Temperatur ist zu niedrig um ins Freibad zu gehen");
+}
+```
 
 ## Übungen
 
@@ -115,13 +165,16 @@ Das Programm soll ausgeben, ob die erste Zahl größer als die zweite Zahl ist.
 Schreibe ein Programm bei dem der Benutzer eine Ganzzahl eingeben kann.
 Das Programm soll ausgeben, ob die zahl eine gerade Zahl ist, oder nicht.
 
-### 📝 Übung 27
+<!-- 
 Schreibe ein Programm bei dem der Benutzer einen String eingeben kann.
 Prüfe ob der eingegebene Wert gleich "Sesam öffne dich" ist.
 Falls ja, soll "Du hast das Passwort erraten" ausgegeben werden.
 Falls nein, soll "Das war falsch" ausgegeben werden.
 
 **Tipp:** Beachte, dass du Strings immer in doppelten Hochkomma schreiben musst!
+-->
+
+
 
 ## 🧭 Zusammenfassung
 Mit der `if`-Verzweigung kannst du Codeblöcke nur dann ausführen lassen,
@@ -133,15 +186,19 @@ Dieser `else`-Teil wird ausgeführt, falls die Bedingung nicht erfüllt ist.
 Der `else`-Teil ist **optional**, das heißt, er kann angeführt werden, muss aber nicht.
 
 Die Syntax einer `if`-Verzweigung ist:
-```python
-if (Bedingung):
+```cs
+if (Bedingung)
+{
     Anweisungen, die
     ausgeführt werden
     falls Bedingung erfüllt ist
-else:
+}
+else
+{
     Anweisungen, die
     ausgeführt werden
     falls Bedingung NICHT erfüllt
+}
 ```
  
 

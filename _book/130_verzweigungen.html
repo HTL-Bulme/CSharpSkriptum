@@ -68,8 +68,6 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="140_logische_operatoren.html" />
-    
     
     <link rel="prev" href="100_branch_loops.html" />
     
@@ -238,71 +236,6 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.2" data-path="140_logische_operatoren.html">
-            
-                <a href="140_logische_operatoren.html">
-            
-                    
-                    Logische Operatoren
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.3.3" data-path="150_flowcharts.html">
-            
-                <a href="150_flowcharts.html">
-            
-                    
-                    Grafische Darstellung von Programmen
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.3.4" data-path="180_whileloops.html">
-            
-                <a href="180_whileloops.html">
-            
-                    
-                    Wiederholungen mit while-Schleifen
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.3.5" data-path="190_wiederholungen.html">
-            
-                <a href="190_wiederholungen.html">
-            
-                    
-                    Wiederholungen mit der for-Schleife
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.3.6" data-path="195_kapiteltest.html">
-            
-                <a href="195_kapiteltest.html">
-            
-                    
-                    Kapiteltest 2
-            
-                </a>
-            
-
-            
-        </li>
-    
 
             </ul>
             
@@ -354,17 +287,17 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="verzweigungen">Verzweigungen</h1>
-<p>Was du im täglichen Leben unternimmst, hängt oft von gewissen Bedingungen ab. So entscheidest du dich je nach Wetter, wie du in die Schule fährst. Du sagst: "Falls es regnet, fahre ich mit der Bim, sonst mit dem Fahrrad".</p>
-<p>Auch der Ablauf eines Programms kann von Bedingungen abhängig sein. Solche Programmverzweigungen auf Grund von bestimmten Bedingungen gehören zu den Grundstrukturen jeder Programmiersprache.</p>
 <p>In diesem Kapitel sehen wir uns an wie
-Programmblöcke nur unter gewissen Bedingungen ausgeführt werden.</p>
+Programmblöcke nur unter gewissen <strong>Bedingungen</strong> ausgeführt werden.</p>
 <h2 id="die-if-verzweigung">Die if-Verzweigung</h2>
 <p>Stell dir beispielsweise vor, du möchtest die aktuelle Temperatur prüfen,
 und eine Warnung ausgeben, falls die Temperatur unter 0° ist.
-Nehmen wir an wie haben die aktuelle Temperatur in einer Variable gespeichert,
-können wir sie mit einer <code>if</code>-Verzweigung überprüfen:</p>
-<pre><code class="lang-python"><span class="hljs-keyword">if</span> (temperatur &lt; <span class="hljs-number">0</span>):
-    <span class="hljs-built_in">print</span>(<span class="hljs-string">"Vorsicht Glatteis!"</span>)
+Nehmen wir an, wir haben die aktuelle Temperatur in einer Variable gespeichert.
+Wir können sie dann mit einer <code>if</code>-Verzweigung überprüfen:</p>
+<pre><code class="lang-c#"><span class="hljs-keyword">if</span> (temperatur &lt; <span class="hljs-number">0</span>)
+{
+    Turtle.print(<span class="hljs-string">"Vorsicht Glatteis!"</span>);
+}
 </code></pre>
 <p>Mit <code>if</code> hast du also beim Programmieren die Möglichkeit, auf spezielle
 Situationen gezielt zu reagieren. Dazu braucht <code>if</code> immer eine Bedingung,
@@ -412,23 +345,20 @@ komplett andere Operation.</p>
 </tbody>
 </table>
 <h2 id="💡-beispiel">💡 Beispiel</h2>
-<p>Im folgenden Beispiel gibt der Benutzer den Flächeninhalt eines Quadrats ein,
-und das Programm berechnet die Seitenlänge mithilfe der Quadratwurzel.
-Das ist jedoch nur möglich, wenn der Flächeninhalt positiv ist,
-da eine Wurzel aus einer negativen Zahl nicht existiert.</p>
-<pre><code class="lang-python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">main</span>():
-    flaeche = <span class="hljs-built_in">float</span>(<span class="hljs-built_in">input</span>(<span class="hljs-string">"Geben Sie die Fläche ein: "</span>))
-    <span class="hljs-keyword">if</span> (flaeche &gt;= <span class="hljs-number">0</span>):
-        seite = flaeche ** <span class="hljs-number">0.5</span>
-        <span class="hljs-built_in">print</span>(seite)
+<p>Im folgenden Beispiel gibt der Benutzer die Seitenlaenge eines Quadrats ein,
+und das Programm berechnet den Umfang und den Flächeninhalt.
+Das ist jedoch nur möglich, wenn die Seitenlänge positiv ist,
+da eine negative Seitenlänge keinen Sinn macht.</p>
+<pre><code class="lang-c#"><span class="hljs-built_in">double</span> seitenlaenge = Turtle.InputDouble(<span class="hljs-string">"Bitte Seitenlänge eingeben!"</span>);
+<span class="hljs-keyword">if</span> (seitenlaenge &gt; <span class="hljs-number">0</span>) 
+{
+    <span class="hljs-built_in">double</span> umfang = seitenlaenge * <span class="hljs-number">4</span>;
+    <span class="hljs-built_in">double</span> flaeche = seitenlaenge * seitenlaenge;
 
-main()
+    Turtle.Print(<span class="hljs-string">"Der Umfang ist "</span> + umfang);
+    Turtle.Print(<span class="hljs-string">"Die Fläche ist "</span> + flaeche);
+}
 </code></pre>
-<p><strong>⚠️ Vorsicht:</strong> Im VS Code startest du das Programm mit dem Play-Button
-rechts oben (1). Ausgaben erscheinen im Terminal-Fenster unter dem Code.
-In diesem Fenster (2) müssen auch die Eingaben getätigt werden.
-Siehe dazu die folgende Abbildung:</p>
-<p><img src="images/inputvscode.png" alt="Ein- und Ausgabe in VS Code"></img></p>
 <p>Das Programm gibt die Seitenlänge aus, falls die Fläche größer oder gleich 0 ist.
 Das Programm gibt aber nichts aus, falls die Zahl negativ ist.
 Besser wäre es, wenn das Programm eine Fehlermeldung ausgeben würde,
@@ -437,15 +367,58 @@ falls die Eingabe negativ war. Das können wir mit der if-else Verzweigung errei
 <p>Du kannst die if-Verzweigung um das Schlüsselwort <code>else</code> und einen weiteren
 Programmblock erweitern. Dieser Programmblock wird dann ausgeführt,
 wenn die Bedingung nicht wahr ist.</p>
-<pre><code class="lang-python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">main</span>():
-    flaeche = <span class="hljs-built_in">float</span>(<span class="hljs-built_in">input</span>(<span class="hljs-string">"Geben Sie die Fläche ein"</span>))
-    <span class="hljs-keyword">if</span> (flaeche &gt;= <span class="hljs-number">0</span>):
-        seite = flaeche ** <span class="hljs-number">0.5</span>
-        <span class="hljs-built_in">print</span>(seite)
-    <span class="hljs-keyword">else</span>:
-        <span class="hljs-built_in">print</span>(<span class="hljs-string">"Fehler: Die eingegebene Fläche ist negativ"</span>)
+<pre><code class="lang-c#"><span class="hljs-built_in">double</span> seitenlaenge = Turtle.InputDouble(<span class="hljs-string">"Bitte Seitenlänge eingeben!"</span>);
+<span class="hljs-keyword">if</span> (seitenlaenge &gt; <span class="hljs-number">0</span>) 
+{
+    <span class="hljs-built_in">double</span> umfang = seitenlaenge * <span class="hljs-number">4</span>;
+    <span class="hljs-built_in">double</span> flaeche = seitenlaenge * seitenlaenge;
 
-main()
+    Turtle.Print(<span class="hljs-string">"Der Umfang ist "</span> + umfang);
+    Turtle.Print(<span class="hljs-string">"Die Fläche ist "</span> + flaeche);
+}
+<span class="hljs-keyword">else</span>
+{
+    Turtle.Print(<span class="hljs-string">"Falsche Eingabe: Die Seitenlänge darf nicht negativ sein"</span>);
+}
+</code></pre>
+<h2 id="📜-syntax">📜 Syntax</h2>
+<p>Die Syntax der <code>if</code>-Verzweigung ist wie folgt:</p>
+<pre><code class="lang-cs"><span class="hljs-keyword">if</span> (&lt;Bedingung&gt;)
+{
+    &lt;Anweisungen&gt;
+}
+</code></pre>
+<p><strong>⚠️ Vorsicht:</strong> Beachte, dass nach den runden Klammern kein Semikolon kommt. </p>
+<h3 id="beispiel">Beispiel</h3>
+<pre><code class="lang-cs"><span class="hljs-keyword">if</span> (temperatur &gt; <span class="hljs-number">30</span>)
+{
+    Turtle.print(<span class="hljs-string">"Es ist unglaublich heiss heute :)"</span>);
+    Turtle.print(<span class="hljs-string">"Zeit für eine Eiscreme!"</span>);
+}
+</code></pre>
+<p>Der <code>else</code>-Teil der <code>if</code>-Verzweigung muss nicht zwingend
+mit angegeben werden. Man sagt auch dieser ist <em>optional</em>,
+es besteht also die Option diesen dazuzunehmen,
+man muss aber nicht.</p>
+<p>Die Syntax  der <code>if</code>-Verzweigung mit <code>else</code>-Teil ist:</p>
+<pre><code class="lang-cs"><span class="hljs-keyword">if</span> (&lt;Bedingung&gt;)
+{
+    &lt;Anweisungen&gt;
+}
+<span class="hljs-keyword">else</span>
+{
+   &lt;Anweisungen&gt; 
+}
+</code></pre>
+<h3 id="beispiel">Beispiel</h3>
+<pre><code class="lang-cs"><span class="hljs-keyword">if</span> (temperatur &gt; <span class="hljs-number">25</span>)
+{
+    Turtle.print(<span class="hljs-string">"Es ist warm genug fürs Freibad"</span>);
+}
+<span class="hljs-keyword">else</span>
+{
+    Turtle.print(<span class="hljs-string">"Die Temperatur ist zu niedrig um ins Freibad zu gehen"</span>);
+}
 </code></pre>
 <h2 id="übungen">Übungen</h2>
 <h3 id="📝-übung-23">📝 Übung 23</h3>
@@ -463,12 +436,14 @@ Das Programm soll ausgeben, ob die erste Zahl größer als die zweite Zahl ist.<
 <h3 id="📝-übung-26">📝 Übung 26</h3>
 <p>Schreibe ein Programm bei dem der Benutzer eine Ganzzahl eingeben kann.
 Das Programm soll ausgeben, ob die zahl eine gerade Zahl ist, oder nicht.</p>
-<h3 id="📝-übung-27">📝 Übung 27</h3>
-<p>Schreibe ein Programm bei dem der Benutzer einen String eingeben kann.
+<!-- 
+Schreibe ein Programm bei dem der Benutzer einen String eingeben kann.
 Prüfe ob der eingegebene Wert gleich "Sesam öffne dich" ist.
 Falls ja, soll "Du hast das Passwort erraten" ausgegeben werden.
-Falls nein, soll "Das war falsch" ausgegeben werden.</p>
-<p><strong>Tipp:</strong> Beachte, dass du Strings immer in doppelten Hochkomma schreiben musst!</p>
+Falls nein, soll "Das war falsch" ausgegeben werden.
+
+**Tipp:** Beachte, dass du Strings immer in doppelten Hochkomma schreiben musst!
+-->
 <h2 id="🧭-zusammenfassung">🧭 Zusammenfassung</h2>
 <p>Mit der <code>if</code>-Verzweigung kannst du Codeblöcke nur dann ausführen lassen,
 wenn eine Bestimmte Bedingung erfüllt ist.
@@ -477,14 +452,18 @@ Eine <code>if</code>-Verzweigung kann zusätzlich einen <code>else</code>-Teil e
 Dieser <code>else</code>-Teil wird ausgeführt, falls die Bedingung nicht erfüllt ist.</p>
 <p>Der <code>else</code>-Teil ist <strong>optional</strong>, das heißt, er kann angeführt werden, muss aber nicht.</p>
 <p>Die Syntax einer <code>if</code>-Verzweigung ist:</p>
-<pre><code class="lang-python"><span class="hljs-keyword">if</span> (Bedingung):
+<pre><code class="lang-cs"><span class="hljs-keyword">if</span> (Bedingung)
+{
     Anweisungen, die
     ausgeführt werden
     falls Bedingung erfüllt ist
-<span class="hljs-keyword">else</span>:
+}
+<span class="hljs-keyword">else</span>
+{
     Anweisungen, die
     ausgeführt werden
     falls Bedingung NICHT erfüllt
+}
 </code></pre>
 
                                 
@@ -513,14 +492,10 @@ Dieser <code>else</code>-Teil wird ausgeführt, falls die Bedingung nicht erfül
 
             
                 
-                <a href="100_branch_loops.html" class="navigation navigation-prev " aria-label="Previous page: Verzweigungen 🌱 und Schleifen 🔁">
+                <a href="100_branch_loops.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Verzweigungen 🌱 und Schleifen 🔁">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="140_logische_operatoren.html" class="navigation navigation-next " aria-label="Next page: Logische Operatoren">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -529,7 +504,7 @@ Dieser <code>else</code>-Teil wird ausgeführt, falls die Bedingung nicht erfül
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Verzweigungen","level":"1.3.1","depth":2,"next":{"title":"Logische Operatoren","level":"1.3.2","depth":2,"path":"140_logische_operatoren.md","ref":"140_logische_operatoren.md","articles":[]},"previous":{"title":"Verzweigungen 🌱 und Schleifen 🔁","level":"1.3","depth":1,"path":"100_branch_loops.md","ref":"100_branch_loops.md","articles":[{"title":"Verzweigungen","level":"1.3.1","depth":2,"path":"130_verzweigungen.md","ref":"130_verzweigungen.md","articles":[]},{"title":"Logische Operatoren","level":"1.3.2","depth":2,"path":"140_logische_operatoren.md","ref":"140_logische_operatoren.md","articles":[]},{"title":"Grafische Darstellung von Programmen","level":"1.3.3","depth":2,"path":"150_flowcharts.md","ref":"150_flowcharts.md","articles":[]},{"title":"Wiederholungen mit while-Schleifen","level":"1.3.4","depth":2,"path":"180_whileloops.md","ref":"180_whileloops.md","articles":[]},{"title":"Wiederholungen mit der for-Schleife","level":"1.3.5","depth":2,"path":"190_wiederholungen.md","ref":"190_wiederholungen.md","articles":[]},{"title":"Kapiteltest 2","level":"1.3.6","depth":2,"path":"195_kapiteltest.md","ref":"195_kapiteltest.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["add-js-css","katex","nocache"],"pluginsConfig":{"add-js-css":{"css":["./customStyle/style.css"],"js":["./customScript/app.js"]},"katex":{},"nocache":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"130_verzweigungen.md","mtime":"2024-11-08T06:26:17.342Z","type":"markdown"},"gitbook":{"version":"6.0.2","time":"2024-11-09T16:47:26.986Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Verzweigungen","level":"1.3.1","depth":2,"previous":{"title":"Verzweigungen 🌱 und Schleifen 🔁","level":"1.3","depth":1,"path":"100_branch_loops.md","ref":"100_branch_loops.md","articles":[{"title":"Verzweigungen","level":"1.3.1","depth":2,"path":"130_verzweigungen.md","ref":"130_verzweigungen.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["add-js-css","katex","nocache"],"pluginsConfig":{"add-js-css":{"css":["./customStyle/style.css"],"js":["./customScript/app.js"]},"katex":{},"nocache":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"130_verzweigungen.md","mtime":"2024-11-09T17:48:55.466Z","type":"markdown"},"gitbook":{"version":"6.0.2","time":"2024-11-09T17:49:19.446Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
