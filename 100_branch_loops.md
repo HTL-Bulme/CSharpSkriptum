@@ -17,7 +17,7 @@ Solche **Verzweigungen** ermöglichen es einem Programm, je nach Situation unter
 
 Im Alltag gibt es viele Situationen, in denen wir Dinge mehrmals hintereinander machen müssen.
 Stell dir vor, du möchtest einen Brunnen graben.
-Die Anweisung **graben** musst du ausführen, **während** du noch kein Wasser gefunden hast.
+Die Anweisung **graben** musst du ausführen, **solange** du noch kein Wasser gefunden hast.
 Bei der Schleife, gibt es wie bei der Verzweigung eine **Bedingung**.
 In diesem Beispiel ist die Bedingung "Noch kein Wasser gefunden".
 Während diese Bedingung gilt, führst du die Anweisung aus, also gräbst du weiter.
