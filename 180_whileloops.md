@@ -60,14 +60,14 @@ Hier sind noch weitere Beispiele:
 | Ich spare **bis** ich **1000€ oder mehr** habe | Ich spare **solange** ich **weniger als 1000€** habe | `while (geld < 1000) { sparen(); }` |
 | Ich beschleunige **bis** ich **60 km/h** habe | Ich beschleunige **solange** ich  **weniger als 60 km/h** habe |  `while (speed < 60) { beschleunigen(); }` |
 | Ich besuche die Schule **bis** ich die Matura **habe** | Ich besuche die Schule **solange** ich die Matura **nicht habe** | `while (!matura) { schuleBesuchen(); }` |
-| Ich trainiere bis ich die 100 Meter unter 11 Sekunden laufe | Solange ich für 100 Meter mehr als 11 Sekunden brauche trainiere ich | `while (time >= 11) { trainiere(); }` |
+| Ich trainiere **bis** ich die 100 Meter unter 11 Sekunden laufe | **Solange** ich für 100 Meter mehr als 11 Sekunden brauche trainiere ich | `while (time >= 11) { trainiere(); }` |
 
 
 ## 💡 Beispiel: Mit while-Schleife zählen
 
-Wir wollen nun die while schleife benutzen, um eine
-Variable so lange um 1 zu erhöhen, solange sie kleiner als 100 ist.
-Nehmen wir an die Variable heißt `i`, dann lautet die Schleifenbedingung `i < 100`.
+Wir wollen nun die while-Schleife benutzen, um eine
+Variable solange um 1 zu erhöhen, solange sie kleiner als 100 ist.
+Nehmen wir an die Variable heißt `i`, dann lautet die Schleifenbedingung `(i < 100)`.
 
 ```cs
 int i = 0;
@@ -79,9 +79,12 @@ while (i < 100)
 }
 ```
 
-Diese Schleife wird 100 Mal wiederholt, da zur Zahl `0` solange `1` dazu addiert wird,
-solange die Zahl kleiner 100 ist. In diesem Beispiel haben wir also
-das Verhalten einer `for`-Schleife mit einer `while`-Schleife nach programmiert.
+Diese Schleife wird 100 Mal durchlaufen, indem zur Zahl 0 immer wieder 1 addiert wird,
+solange das Ergebnis kleiner als 100 ist.
+Diese Art von Schleife nennt man auch **Zählschleife**.
+Sie wird so häufig in der Programmierung eingesetzt,
+dass dafür eine eigene Schleifenstruktur entwickelt wurde:
+die for-Schleife, die im nächsten Kapitel vorgestellt wird.
 
 ## Ähnlichkeit zur Verzweigung
 
@@ -94,28 +97,32 @@ Sehen wir uns die beiden folgenden Programme an.
 
 Die beiden Programme sind, bis auf die Schlüsselwörter `if` und `while`, gleich.
 Der erste Programm überprüft mit der `if`-Verzweigung ob die Bedingung 
-`i < 100` gilt, wenn ja werden die zwei Zeilen im Codeblock **einmal** ausgeführt.
+`(i < 100)` gilt, wenn ja werden die zwei Zeilen im Codeblock **einmal** ausgeführt.
 
-```python
-i = 0
+```cs
+int i = 0;
 
-if (i < 100):
-    print(i)
-    i += 1
+if (i < 100)
+{
+    Turtle.Print(i);
+    i = i + 1;
+}
 ```
 
 Das zweite Programm enthält eine `while`-Schleife.
-Diese prüft ebenfalls,  ob die Bedingung `i < 100` gilt.
+Diese prüft ebenfalls, ob die Bedingung `(i < 100)` gilt.
 Der Unterschied ist aber, dass der Codeblock **solange** ausgeführt wird,
 solange die Bedingung gilt. Der Codeblock in der Schleife
 wird also in diesem Fall **100 Mal** ausgeführt.
 
-```python
-i = 0
+```cs
+int i = 0;
 
-while (i < 100):
-    print(i)
-    i += 1
+while (i < 100)
+{
+    Turtle.Print(i);
+    i = i + 1;
+}
 ```
 
 ## Flussdiagramm der while-Schleife
@@ -125,8 +132,9 @@ Die unterschiedlichen Pfeile sind fett hervorgehoben.
 
 ![Flussdiagramm der beiden obigen Programme](./images/ifvswhile.png)
 
+<!-- 
 ## ⚠️ Die Endlosschleife und Abbruch mit break
-
+-->
 
 
 ## Übungen
@@ -157,7 +165,7 @@ Wort **bis** angegeben. Das Wort **bis** ist aber genau das Gegenteil von **sola
 Wenn du eine Schleife wiederholen möchtest, **bis die Zahl größer als 1000** ist,
 so das äquivalent zu: **solange die Zahl kleiner oder gleich 1000** ist.
 
-Du brauchst also eine Schleife in der Form: `while (zahl <= 1000)`
+Du brauchst also eine Schleife in der Form: `while (zahl <= 1000) { ... }`
 
 ### 📝 Übung 37
 Schreibe ein Programm, bei dem der Benutzer solange eine Zahl
@@ -166,9 +174,10 @@ den Wert 1000 übersteigt.
 
 ### 📝 Übung 38
 
-Schreibe ein Programm, beim der Benutzer eine positive Zahl eingeben kann. Falls die Zahl
-negativ ist, soll die Eingabe *solange* wiederholt werden, bis die Zahl positiv ist.
-Das Programm soll dann in einer `for`-Schleife alle Teiler der
+Schreibe ein Programm, beim der Benutzer eine positive Zahl eingeben kann.
+Falls der Benutzer aber eine negative Zahl eingibt, 
+soll die Eingabe *solange* wiederholt werden, bis die Zahl positiv ist.
+Das Programm soll dann in einer Zählschleife alle Teiler der
 eingegeben Zahl ermitteln und ausgeben.
 
 **Beispiel:**
@@ -176,6 +185,7 @@ eingegeben Zahl ermitteln und ausgeben.
 * Eingabe: 24
 * Ausgabe: 1, 2, 3, 4, 6, 8, 12
 
+<!-- 
 ### 📝 Übung 39
 
 Schreibe ein Programm bei der Zuerst eine Zufallszahl zwischen 1 und 100 generiert wird.
@@ -189,10 +199,22 @@ Der Benutzer muss solange eine Zahl eingeben, bis er die Zufallszahl errät.
 Falls der Benutzer eine zu kleine Zahl eingibt, gibst du "zu niedrig" aus.
 Falls die Eingabe zu hoch ist, gibst du "zu hoch" aus.
 So unterstützt du den Benutzer deines Programms.
+-->
 
 ## 🧭 Zusammenfassung
 
+Mit der while-Schleife kannst du Codeblöcke solange wiederholen lassen, solange eine bestimmte Bedingung erfüllt ist. Ist die Bedingung nicht mehr erfüllt so wird die Schleife beendet.
 
+Die Syntax einer while-Schleife ist:
+
+```cs
+while (Bedingung)
+{
+    Anweisungen, die
+    wiederholt werden,
+    solange die Bedingung erfüllt ist
+}
+```
 
 
 
