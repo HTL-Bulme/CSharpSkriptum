@@ -1,54 +1,100 @@
-# Wiederholen von Codeblöcken
+# n-Faches Wiederholen mit for-Schleifen
 
 Häufig haben wir beim Programmieren die Situation,
 dass wir einen gewissen Codeblock, also eine Folge von Anweisungen,
-mehrfach ausführen möchten.
+genau **n-Mal** ausführen möchten.
 
 Das ist beispielsweise beim zeichnen eines Quadrats so:
 
-```python
-from gturtle import *
-makeTurtle()
+```cs
+#r "nuget: BulmeSharp, 0.10.1"
+using BulmeSharp;
 
-fd(50)
-rt(90)
-fd(50)
-rt(90)
-fd(50)
-rt(90)
-fd(50)
-rt(90)
+Turtle.fd(50);
+Turtle.rt(90);
+Turtle.fd(50);
+Turtle.rt(90);
+Turtle.fd(50);
+Turtle.rt(90);
+Turtle.fd(50);
+Turtle.rt(90);
+
+Turtle.showTurtle();
 ```
 
-Die beiden Zeilen `fd(50)` und `rt(90)` werden hier viermal wiederholt.
+Die beiden Zeilen `Turtle.fd(50);` und `Turtle.rt(90);` werden hier viermal wiederholt.
 Das ist umständlich und auch gar nicht nötig, denn wir können
-Python anweisen, die zwei Zeilen einfach viermal auszuführen.
+C# anweisen, die zwei Zeilen einfach viermal auszuführen.
 
-In diesem Kapitel lernst du Schleifen kennen, mit denen kannst du
-Codeblöcke beliebig oft wiederholen lassen.
+Bis jetzt haben wir hierfür die while-Schleife kennengelernt.
+Wie könnten das Quadrat beispielsweise mit folgendem Code zeichnen:
 
-## Die for Schleife
+```cs
+int i = 0;
 
-Möchten wir einen Codeblock öfter ausführen so verwenden wir die 
-for Schleife.
+while (i < 4)
+{
+    Turtle.fd(50);
+    Turtle.rt(90);
+    i++;
+}
+Turtle.showTurtle();
+```
+
+Diese Schleifenart nennt man auch Zählschleife.
+Da sie oft verwendet wird, gibt es dafür ein eigenes Konstrukt:
+die **for**-Schleife. In diesem Kapitel lernst du die for-Schleife kennen,
+mit der du Codeblöcke eine festgelegte Anzahl von Malen wiederholen kannst.
+
+## Die for-Schleife
+
+Möchten wir einen Codeblock n-Mal ausführen so verwenden wir die for-Schleife.
 Möchten wir die beiden Zeilen aus dem vorhergegangen
 Beispiel **vier**mal wiederholen, so schreiben wir:
 
-```python
-for i in range(4):
-    fd(50)
-    rt(90)
-```
+```cs
+#r "nuget: BulmeSharp, 0.10.1"
+using BulmeSharp;
 
-Damit Python weiß, welche Anweisungen den zu wiederholenden Codeblock bilden,
-müssen diese gleich weit eingerückt sein.
-Wir verwenden für Einrückungen grundsätzlich vier Leerschläge.
+for (int i = 0; i < 4; i++)
+{
+    Turtle.fd(50);
+    Turtle.rt(90);
+}
+
+Turtle.showTurtle();
+```
 
 Die Variable `i` ist die Zählvariable, die mitzählt bei welcher Wiederholung wir sind.
 
 **⚠️ Vorsicht:** die Zählvariable beginnt bei `0` zu zählen,
 wie überall in der Informatik üblich.
 Deshalb zählt sie bei vier Wiederholungen von 0 bis 3.
+
+## 📜 Syntax
+
+Die for-Schleife hat von allen bis jetzt bekannten Konstrukten,
+die komplizierteste Syntax:
+
+```cs
+for (<Initialisierung>, <Bedingung>, <operation>)
+{
+    Anweisungen, die
+    solange die bedingung gilt
+}
+```
+
+Die drei mit Beistrich getrennten Teile sind:
+
+* **Initialisierung**: Hier wird die Zählvariable definiert und ein Startwert vergeben. Meistens verwendet man die Kleinbuchstaben `i`, `j` und `k` für die Zählvariable. Der Initialisierungsteil könnte beispielsweise lauten: `int i = 0`
+* **Bedingung**: Die von der While-Schleife bekannte Bedingung. Auch die for-Schleife hat eine solange-Bedingung. Falls eine Schleife bis inkl. `10` zählen soll, so muss die Bedingung `i <= 10` sein.
+* **Operation**: Die Veränderung der Zählvariable. Meistens wird die Zählvariable entweder inkrementiert, dekrementiert oder es wird bei jedem Durchlauf ein fixer Wert hinzuaddiert. Beispiele sind: `i++`, `i--`, `i += 4` oder `i *= 2`
+
+
+Damit definiert ist, welche Anweisungen den zu wiederholenden Codeblock bilden,
+müssen die zu wiederholenden Anweisungen in geschweifte Klammern geschrieben werden.
+
+
 
 ## Beispiel
 Um ein regelmäßiges Neuneck zu zeichnen muss
@@ -58,13 +104,17 @@ Hier verwenden wir in Zeile 4 aber die
 for-Schleife und sagen der Turtle damit, sie soll die zwei eingerückten
 Funktionsaufrufe in Zeilen 5 und 6 neunmal wiederholen.
 
-```python
-from gturtle import *
-makeTurtle()
+```cs
+#r "nuget: BulmeSharp, 0.10.1"
+using BulmeSharp;
 
-for i in range(9):
-    fd(50)
-    rt(40)
+for (int i = 0; i < 9; i++)
+{
+    Turtle.fd(50);
+    Turtle.rt(40);
+}
+
+Turtle.showTurtle();
 ```
 
 
@@ -118,9 +168,9 @@ soll dann in einer for-Schleife alle Teiler der eingegeben Zahl ermitteln und au
 * Ausgabe: 1, 2, 3, 4, 6, 8, 12
 
 ### 📝 Übung 47
-Schreibe ein Programm, welches die Wurzeln aller Zahlen von 1 bis 20 ausgibt.
+Schreibe ein Programm, welches die Quadrate aller Zahlen von 1 bis 20 ausgibt.
 
-**Ausgabe:** 1, 1.4142, 1.7320, 2, ...., 4.3588, 4.4721
+**Ausgabe:** 1, 4, 9, 16, ...., 361, 400
 
 ## 🧭 Zusammenfassung
 Mit `for i in range(anzahl):` gibst du der Turtle
@@ -128,11 +178,12 @@ an, sie soll einen oder mehrere Anweisungen `anzahl`-mal wiederholen,
 bevor sie mit neuen Anweisungen weitermacht.
 Alles, was wiederholt werden soll, muss unter repeat stehen und eingerückt sein.
 
-```python
-for i in range(anzahl):
-    Anweisungen die
-    wiederholt
-    werden sollen 
+```cs
+for (int i = 0; i < n; i++)
+{
+    Anweisungen die n-Mal
+    wiederholt werden sollen
+}
 ```
 
 

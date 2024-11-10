@@ -75,7 +75,7 @@ int i = 0;
 while (i < 100)
 {
     Turtle.Print(i);
-    i = i + 1;
+    i++;
 }
 ```
 
@@ -105,7 +105,7 @@ int i = 0;
 if (i < 100)
 {
     Turtle.Print(i);
-    i = i + 1;
+    i++;
 }
 ```
 
@@ -121,7 +121,7 @@ int i = 0;
 while (i < 100)
 {
     Turtle.Print(i);
-    i = i + 1;
+    i++;
 }
 ```
 
