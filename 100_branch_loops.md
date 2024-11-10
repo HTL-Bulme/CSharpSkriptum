@@ -39,3 +39,4 @@ ohne dass du jeden Schritt einzeln aufschreiben musst.
 Stattdessen gibst du nur an, wie oft oder wie lange der Ablauf wiederholt werden soll.
 Schleifen gehören zu den Grundstrukturen jeder Programmiersprache und helfen dabei, Programme kürzer und einfacher zu gestalten.
 
+

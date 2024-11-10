@@ -85,3 +85,4 @@ Flussdiagramm bestehen aus folgenden Symbolen:
 * **Eingabe/Ausgabe** für Interaktionen mit dem Benutzer,
 * **Verzweigungen** repräsentieren die uns bekannten `if`-Verzweigungen.
 * **Pfeile** verbinden Symbole und zeigen so den Ablauf des Programms 
+

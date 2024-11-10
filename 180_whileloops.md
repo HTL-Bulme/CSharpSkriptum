@@ -37,6 +37,22 @@ Nach Ende der Wiederholungen wird das Programm mit der nächsten Anweisung nach 
 
 **⚠️ Vorsicht:** Achte darauf, dass die Bedingung in **runden Klammern** steht. Die Anweisungen, die wiederholt werden, wenn die Bedingung zutrifft, schreibst du in **geschweifte Klammern**.
 
+
+## 📜 Syntax
+
+Die Syntax der `while`-Schleife ist im folgenden Codestück angegeben:
+
+
+```cs
+while (Bedingung)
+{
+    Anweisungen, die
+    ausgeführt werden
+    solange Bedingung erfüllt ist
+}
+```
+
+
 ## "Bis"-Bedingungen in "While"-Bedingungen umwandeln
 
 Die Angabe einer **while**-Bedingung ist für uns am Anfang etwas unnatürlich.
@@ -61,6 +77,7 @@ Hier sind noch weitere Beispiele:
 | Ich beschleunige **bis** ich **60 km/h** habe | Ich beschleunige **solange** ich  **weniger als 60 km/h** habe |  `while (speed < 60) { beschleunigen(); }` |
 | Ich besuche die Schule **bis** ich die Matura **habe** | Ich besuche die Schule **solange** ich die Matura **nicht habe** | `while (!matura) { schuleBesuchen(); }` |
 | Ich trainiere **bis** ich die 100 Meter unter 11 Sekunden laufe | **Solange** ich für 100 Meter mehr als 11 Sekunden brauche trainiere ich | `while (time >= 11) { trainiere(); }` |
+
 
 
 ## 💡 Beispiel: Mit while-Schleife zählen
@@ -215,6 +232,7 @@ while (Bedingung)
     solange die Bedingung erfüllt ist
 }
 ```
+
 
 
 
