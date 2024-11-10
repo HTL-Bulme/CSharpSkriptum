@@ -48,7 +48,7 @@ aufgerufen werden.
 
 ## Strukturierung von Code
 
-Bei der Strukturierung von Code mittels Funktionen spricht man auch vom Prinzip **Teile und Herrsche**, wo man versucht, eine grössere Komplexität durch Einteilung in wohldefinierte Teilschritte bzw. Einzelaufgaben zu beherrschen. Wenn man die Teilschritte wieder in Teilschritte einteilt, spricht man auch von schrittweiser Verfeinerung oder dem Top-Down-Programmieren.
+Bei der Strukturierung von Code mittels Funktionen spricht man auch vom Prinzip **Teile und Herrsche**, wo man versucht, eine größere Komplexität durch Einteilung in wohldefinierte Teilschritte bzw. Einzelaufgaben zu beherrschen. Wenn man die Teilschritte wieder in Teilschritte einteilt, spricht man auch von schrittweiser Verfeinerung oder dem Top-Down-Programmieren.
 
 Das obere Programm hat bereits eine Funktion, in der professionellen Python Programmierung
 ist es aber üblich, das gesamte Hauptprogramm in einer Funktion zu haben.
@@ -128,6 +128,7 @@ Wir gewöhnen uns daran, die Funktionsdefinitionen
 im Programmkopf anzuordnen, da diese vor ihrem Aufruf definiert sein müssen.
 
 ![Funktionsblöcke](./images/block.png)
+
 
 
 

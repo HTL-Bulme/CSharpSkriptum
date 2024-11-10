@@ -26,3 +26,4 @@ Zum Beispiel, soll aus `"Mein Bild.jpeg"` der String `"Mein Bild"`  werden.
 
 
 
+

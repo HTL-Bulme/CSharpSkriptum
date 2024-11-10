@@ -40,3 +40,4 @@ Stattdessen gibst du nur an, wie oft oder wie lange der Ablauf wiederholt werden
 Schleifen gehören zu den Grundstrukturen jeder Programmiersprache und helfen dabei, Programme kürzer und einfacher zu gestalten.
 
 
+

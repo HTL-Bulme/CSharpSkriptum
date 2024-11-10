@@ -85,7 +85,7 @@ main()
 <img style="float: right; width:33%" src="./images/quadrate.png">
 Schreibe zuerst eine Funktion `square(s)`, welche ein Quadrat mit der 
 Seitenlänge s zeichnet. 
-Die Turtle soll 10 Quadrate zeichnen. Die Seitenlänge des ersten Quadrats ist 8. Bei jedem nächsten Quadrat ist die Seitenlänge um 10 grösser. 
+Die Turtle soll 10 Quadrate zeichnen. Die Seitenlänge des ersten Quadrats ist 8. Bei jedem nächsten Quadrat ist die Seitenlänge um 10 größer. 
 <div style="clear:both;"></div>
 
 
@@ -93,7 +93,7 @@ Die Turtle soll 10 Quadrate zeichnen. Die Seitenlänge des ersten Quadrats ist 8
 <img style="float: right; width:33%" src="./images/quadrate_schief.png">
 Schreibe zuerst eine Funktion `square(s)`, welche ein Quadrat mit der 
 Seitenlänge s zeichnet. 
-Du kannst in einer Dialogbox die Seitenlänge des grössten Quadrats eingeben. Die Turtle zeichnet dann 20 Quadrate. Nach jedem Quadrat wird die Seitenlänge um den Faktor 0.9 kleiner und die Turtle dreht um den Winkel 10° nach links. 
+Du kannst in einer Dialogbox die Seitenlänge des größten Quadrats eingeben. Die Turtle zeichnet dann 20 Quadrate. Nach jedem Quadrat wird die Seitenlänge um den Faktor 0.9 kleiner und die Turtle dreht um den Winkel 10° nach links. 
 <div style="clear:both;"></div>
 
 
@@ -115,6 +115,7 @@ Du definiert eine Funktion circle(s), die einen Kreis zeichnet. Die nebenstehend
 <div style="clear:both;"></div>	
 
 ## 🧭 Zusammenfassung
+
 
 
 
