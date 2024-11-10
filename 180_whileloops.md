@@ -33,7 +33,9 @@ Turtle.Print("Du hast die Geheimzahl erraten")
 
 Die `while`-Schleife wird mit dem Schlüsselwort **while** eingeleitet, gefolgt von einer Schleifenbedingung.
 Die Anweisungen im Codeblock werden wiederholt, **solange** die Bedingung erfüllt ist.
-Nach Ende der Wiederholungen wird das Programm mit der nächsten Anweisung nach dem Schleifenblock fortgesetzt.
+Nach Ende der Wiederholungen wird das Programm mit der nächsten Anweisung nach dem Codeblock fortgesetzt.
+
+**⚠️ Vorsicht:** Achte darauf, dass die Bedingung in **runden Klammern** steht. Die Anweisungen, die wiederholt werden, wenn die Bedingung zutrifft, schreibst du in **geschweifte Klammern**.
 
 ## "Bis"-Bedingungen in "While"-Bedingungen umwandeln
 
@@ -43,22 +45,22 @@ Beim obigen beispiel würde man natürlichsprachlich sagen:
 Wir möchten also die Schleife ausführen, bis `(eingabe == 13)` gilt.
 
 Die `while`-Schleife verlangt aber nach **solange**-Bedingungen.
-Deshalb müssen wir die natürlichsprachliche Bedingung umwandeln.
-Das können wir, indem wir die "Bis"-Bedingung mit einem **logischen Nicht** umdrehen.
+Deshalb müssen wir die natürlichsprachliche **bis**-Bedingung in eine **solange**-Bedingung umwandeln.
+Das können wir, indem wir den Wahrheitswert der "Bis"-Bedingung
+mit einem **logischen Nicht** umdrehen.
 
 Die Aussage:
-* Wiederhole die Schleife bis `(eingabe == 13)` ist dasselbe wie
-* Wiederhole die Schleife solange `(eingabe != 13)`
+* Wiederhole die Schleife **bis** `(eingabe == 13)` ist dasselbe wie
+* Wiederhole die Schleife **solange** `(eingabe != 13)`
 
-Hierzu noch einige Beispiele:
+Hier sind noch weitere Beispiele:
 
-| Bis-Bedingung  | while-Bedingung | C# Code |
+| Bis-Bedingung  | ✅ while-Bedingung | C# Code |
 | ------------- | ------------- | ------------- |
-| Ich spare **bis** ich **1000€ oder mehr** habe | Ich spare **solange** ich **weniger als 1000€** habe | `(geld < 1000)` |
-| Ich beschleunige **bis** ich **60 km/h** habe | Ich beschleunige **solange** ich  **weniger als 60 km/h** habe |  `(speed < 60)` |
-| Ich besuche die Schule **bis** ich die Matura **habe** | Ich besuche die Schule **solange** ich die Matura **nicht habe** | `(!matura)` |
-| Ich trainiere bis ich die 100 Meter unter 11 Sekunden laufe | Solange ich für 100 Meter mehr als 11 Sekunden brauche trainiere ich | `(time >= 11)` |
-
+| Ich spare **bis** ich **1000€ oder mehr** habe | Ich spare **solange** ich **weniger als 1000€** habe | `while (geld < 1000) { sparen(); }` |
+| Ich beschleunige **bis** ich **60 km/h** habe | Ich beschleunige **solange** ich  **weniger als 60 km/h** habe |  `while (speed < 60) { beschleunigen(); }` |
+| Ich besuche die Schule **bis** ich die Matura **habe** | Ich besuche die Schule **solange** ich die Matura **nicht habe** | `while (!matura) { schuleBesuchen(); }` |
+| Ich trainiere bis ich die 100 Meter unter 11 Sekunden laufe | Solange ich für 100 Meter mehr als 11 Sekunden brauche trainiere ich | `while (time >= 11) { trainiere(); }` |
 
 
 ## 💡 Beispiel: Mit while-Schleife zählen
@@ -67,12 +69,14 @@ Wir wollen nun die while schleife benutzen, um eine
 Variable so lange um 1 zu erhöhen, solange sie kleiner als 100 ist.
 Nehmen wir an die Variable heißt `i`, dann lautet die Schleifenbedingung `i < 100`.
 
-```python
-i = 0
+```cs
+int i = 0;
 
-while (i < 100):
-    print(i)
-    i += 1
+while (i < 100)
+{
+    Turtle.Print(i);
+    i = i + 1;
+}
 ```
 
 Diese Schleife wird 100 Mal wiederholt, da zur Zahl `0` solange `1` dazu addiert wird,

@@ -22,7 +22,7 @@ um entscheiden zu können, ob diese Situation wirklich eintrifft.
 Eine **Bedingung** ist ein Ausdruck, der entweder **wahr** oder **falsch** ist.
 
 **⚠️ Vorsicht:** Achte darauf, dass die Bedingung in **runden Klammern** steht. Die Anweisungen, die ausgeführt werden, wenn die Bedingung zutrifft, schreibst du in **geschweifte Klammern**.
-
+Den gesamten Teil der in geschweiften Klammern steht, nennen wir auch einen **Codeblock**.
 
 Üblicherweise entstehen Bedingungen durch die Anwendung von Vergleichsoperatoren.
 Diese sind uns bereits aus der Mathematik bekannt,
@@ -70,7 +70,7 @@ falls die Eingabe negativ war. Das können wir mit der `if`-`else` Verzweigung e
 ## Die if-else Verzweigung
 
 Du kannst die if-Verzweigung um das Schlüsselwort `else` und einen weiteren
-Programmblock erweitern. Dieser Programmblock wird dann ausgeführt,
+Codeblock erweitern. Dieser Codeblock wird dann ausgeführt,
 wenn die Bedingung nicht wahr ist.
 
 

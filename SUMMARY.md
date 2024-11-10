@@ -14,7 +14,7 @@
 	* [Grafische Darstellung von Programmen](150_flowcharts.md)
 #	* [Verschachtelung von Verzweigungen](160_verschachtelung.md)
 #	* [Mehrfachverzweigungen](170_mehrfachverzweigung.md)
-#	* [Wiederholungen mit while-Schleifen](180_whileloops.md)
+	* [Wiederholungen mit while-Schleifen](180_whileloops.md)
 #	* [Wiederholungen mit der for-Schleife](190_wiederholungen.md)
 #	* [Kapiteltest 2](195_kapiteltest.md)
 #* [Funktionen 🧱](210_FunktionenIntro.md)

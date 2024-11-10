@@ -264,6 +264,19 @@
             
         </li>
     
+        <li class="chapter " data-level="1.3.4" data-path="180_whileloops.html">
+            
+                <a href="180_whileloops.html">
+            
+                    
+                    Wiederholungen mit while-Schleifen
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -331,7 +344,8 @@ Wir können sie dann mit einer <code>if</code>-Verzweigung überprüfen:</p>
 Situationen gezielt zu reagieren. Dazu braucht <code>if</code> immer eine Bedingung,
 um entscheiden zu können, ob diese Situation wirklich eintrifft.
 Eine <strong>Bedingung</strong> ist ein Ausdruck, der entweder <strong>wahr</strong> oder <strong>falsch</strong> ist.</p>
-<p><strong>⚠️ Vorsicht:</strong> Achte darauf, dass die Bedingung in <strong>runden Klammern</strong> steht. Die Anweisungen, die ausgeführt werden, wenn die Bedingung zutrifft, schreibst du in <strong>geschweifte Klammern</strong>.</p>
+<p><strong>⚠️ Vorsicht:</strong> Achte darauf, dass die Bedingung in <strong>runden Klammern</strong> steht. Die Anweisungen, die ausgeführt werden, wenn die Bedingung zutrifft, schreibst du in <strong>geschweifte Klammern</strong>.
+Den gesamten Teil der in geschweiften Klammern steht, nennen wir auch einen <strong>Codeblock</strong>.</p>
 <p>Üblicherweise entstehen Bedingungen durch die Anwendung von Vergleichsoperatoren.
 Diese sind uns bereits aus der Mathematik bekannt,
 müssen aber beim Programmieren anders geschrieben werden,
@@ -394,7 +408,7 @@ Besser wäre es, wenn das Programm eine Fehlermeldung ausgeben würde,
 falls die Eingabe negativ war. Das können wir mit der <code>if</code>-<code>else</code> Verzweigung erreichen.</p>
 <h2 id="die-if-else-verzweigung">Die if-else Verzweigung</h2>
 <p>Du kannst die if-Verzweigung um das Schlüsselwort <code>else</code> und einen weiteren
-Programmblock erweitern. Dieser Programmblock wird dann ausgeführt,
+Codeblock erweitern. Dieser Codeblock wird dann ausgeführt,
 wenn die Bedingung nicht wahr ist.</p>
 <pre><code class="lang-c#"><span class="hljs-built_in">double</span> seitenlaenge = Turtle.InputDouble(<span class="hljs-string">"Bitte Seitenlänge eingeben!"</span>);
 <span class="hljs-keyword">if</span> (seitenlaenge &gt; <span class="hljs-number">0</span>) 
@@ -542,7 +556,7 @@ Dieser <code>else</code>-Teil wird ausgeführt, falls die Bedingung nicht erfül
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Verzweigungen","level":"1.3.1","depth":2,"next":{"title":"Logische Operatoren","level":"1.3.2","depth":2,"path":"140_logische_operatoren.md","ref":"140_logische_operatoren.md","articles":[]},"previous":{"title":"Verzweigungen 🌱 und Schleifen 🔁","level":"1.3","depth":1,"path":"100_branch_loops.md","ref":"100_branch_loops.md","articles":[{"title":"Verzweigungen","level":"1.3.1","depth":2,"path":"130_verzweigungen.md","ref":"130_verzweigungen.md","articles":[]},{"title":"Logische Operatoren","level":"1.3.2","depth":2,"path":"140_logische_operatoren.md","ref":"140_logische_operatoren.md","articles":[]},{"title":"Grafische Darstellung von Programmen","level":"1.3.3","depth":2,"path":"150_flowcharts.md","ref":"150_flowcharts.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["add-js-css","katex","nocache"],"pluginsConfig":{"add-js-css":{"css":["./customStyle/style.css"],"js":["./customScript/app.js"]},"katex":{},"nocache":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"130_verzweigungen.md","mtime":"2024-11-09T19:43:06.067Z","type":"markdown"},"gitbook":{"version":"6.0.2","time":"2024-11-10T07:25:57.279Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Verzweigungen","level":"1.3.1","depth":2,"next":{"title":"Logische Operatoren","level":"1.3.2","depth":2,"path":"140_logische_operatoren.md","ref":"140_logische_operatoren.md","articles":[]},"previous":{"title":"Verzweigungen 🌱 und Schleifen 🔁","level":"1.3","depth":1,"path":"100_branch_loops.md","ref":"100_branch_loops.md","articles":[{"title":"Verzweigungen","level":"1.3.1","depth":2,"path":"130_verzweigungen.md","ref":"130_verzweigungen.md","articles":[]},{"title":"Logische Operatoren","level":"1.3.2","depth":2,"path":"140_logische_operatoren.md","ref":"140_logische_operatoren.md","articles":[]},{"title":"Grafische Darstellung von Programmen","level":"1.3.3","depth":2,"path":"150_flowcharts.md","ref":"150_flowcharts.md","articles":[]},{"title":"Wiederholungen mit while-Schleifen","level":"1.3.4","depth":2,"path":"180_whileloops.md","ref":"180_whileloops.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["add-js-css","katex","nocache"],"pluginsConfig":{"add-js-css":{"css":["./customStyle/style.css"],"js":["./customScript/app.js"]},"katex":{},"nocache":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"130_verzweigungen.md","mtime":"2024-11-10T07:37:24.288Z","type":"markdown"},"gitbook":{"version":"6.0.2","time":"2024-11-10T08:49:07.763Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

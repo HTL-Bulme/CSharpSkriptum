@@ -100,11 +100,11 @@ nennen wir auch die **Operanden**.
 
 | Operator |  Beschreibung | Beispiel |
 |-------|-------|-------|
-| + | Addition | x + y |
-| - | Subtraktion | x - y |
-| * | Multiplikation | x * y |
-| / | Division | x / y |
-| % | Modulo, **Rest** der Integer Division, 7 % 3 ergibt 1 | x % y |
+| `+` | Addition | `x + y` |
+| `-` | Subtraktion | `x - y` |
+| `*` | Multiplikation | `x * y` |
+| `/` | Division | `x / y` |
+| `%` | Modulo, **Rest** der Integer Division, 7 % 3 ergibt 1 | `x % y` |
 
 ## ⚠️ Spezialfall: Division
 
@@ -119,16 +119,54 @@ int x = 5;
 int y = 2;
 Turtle.Print(x / y);
 ```
-Ergebnis ist ein `int`-Wert also **2**
+Ergebnis ist ein `int` Wert also **2**
 
-### Division, wenn **zumindest einer der beiden** Werte vom Datentyp `double` ist:
+### Division, wenn **zumindest einer der beiden** Werte vom Datentyp `double` (oder `float`) ist:
 ```cs
 int x = 5;
 double y = 2.0;
 Turtle.Print(x / y);
 ```
-Ergebnis ist ein `double`-Wert also **2.5**
+Ergebnis ist ein `double` Wert also **2.5**
 
+Wäre `y` vom Typ `float` gewesen wäre das Ergebnis auch vom Typ `float`.
+
+## Kombinierte Rechen- und Zuweisungsoperatoren
+
+Sehr häufig kommt es vor, dass man zu einer gegebenen Variable
+einen Wert hinzuaddieren möchte.
+Im folgenden Beispiel wird beispielsweise die Zahl 4 zur Variable x
+hinzuaddiert.
+
+```cs
+x = x + 4;
+```
+
+Da das hinzuaddieren sehr häufig vorkommt und Programmierer schreibfaul sind,
+wurden eigene Operatoren eingeführt um weniger schreiben zu müssen.
+
+Das obige Beispiel kann auch so geschrieben werden:
+
+| Langvariante | Kurzvariante | Beispiel | Ergebnis |
+| ----- | ----- | ----- | ----- |
+| `x = x + y;` | `x += y;` | `x = 8; x += 3;` | `11` |
+| `x = x - y;` | `x -= y;` | `x = 8; x -= 3;` | `5` |
+| `x = x * y;` | `x *= y;` | `x = 8; x *= 3;` | `24` |
+| `x = x / y;` | `x /= y;` | `x = 8; x /= 2;` | `4` |
+| `x = x % y;` | `x %= y;` | `x = 8; x %= 3;` | `2` |
+
+## Inkrement und Dekrement Operatoren
+
+Für Programmierer ist sogar die Anweisung `x += 1` zu viel zu schreiben.
+Deshalb wurden noch zwei Operatoren eingeführt, welche eine 
+Variable um eins erhöhen, bzw. um eins verringern.
+Um eins erhöhen, nennt man auch **inkrementieren**,
+um eins verringern nennt man auch **dekrementieren**.
+
+| Langvariante | Kurzvariante 1 | Kurzvariante 2 | Beispiel | Ergebnis |
+| ----- | ----- | ----- | ----- | ----- |
+| `x = x + 1;` | `x += 1;` | `x++;` | `x = 8; x++;` | `9` |
+| `x = x - 1;` | `x -= 1;` | `x--;` | `x = 8; x--;` | `7` |
 
 ## Übungen
 
