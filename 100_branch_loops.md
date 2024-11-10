@@ -16,13 +16,23 @@ Solche **Verzweigungen** ermöglichen es einem Programm, je nach Situation unter
 ## Schleifen
 
 Im Alltag gibt es viele Situationen, in denen wir Dinge mehrmals hintereinander machen müssen.
-Stell dir vor, du möchtest einen Brunnen graben.
-Die Anweisung **graben** musst du ausführen, **solange** du noch kein Wasser gefunden hast.
-Bei der Schleife, gibt es wie bei der Verzweigung eine **Bedingung**.
-In diesem Beispiel ist die Bedingung "Noch kein Wasser gefunden".
+Stell dir vor, du möchtest einen Brunnen graben und du hast die Funktion `grabe50CmTiefer()`,
+wenn du diese aufrufst, dann gräbst du 50 Zentimeter weiter nach unten.
+Um einen Brunnen zu graben musst du die Anweisung **grabe50CmTiefer** ausführen,
+**solange** du noch kein Wasser gefunden hast.
+Bei der Schleife, gibt es wie bei der Verzweigung, eine **Bedingung**.
+In diesem Beispiel ist die Bedingung **"Noch kein Wasser gefunden"**.
 Während diese Bedingung gilt, führst du die Anweisung aus, also gräbst du weiter.
 
 ![Loop Brunnen](./images/loop.png)
+
+Nehmen wir an der Grundwasserspiegel ist 5 Meter und 70 Zentimeter unterhalb der
+Erdoberfläche. Wenn du die oben bildlich dargestellte Schleife ausführst,
+dann erreichst du das Grundwasser nach **12 Schleifendurchläufen**.
+
+
+![Graben Loop](./images/graben.png)
+
 
 In der Programmierung funktioniert das ähnlich: Mit einer **Schleife** kannst du dafür sorgen, dass bestimmte Anweisungen mehrmals wiederholt werden,
 ohne dass du jeden Schritt einzeln aufschreiben musst.
