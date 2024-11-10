@@ -12,9 +12,9 @@ Programmiere folgende Verzweigungen:
 * Falls das Dreieck rechtwinkelig ist, sollst du mit Print den Text "Rechtwinkelig" ausgeben
 
 **Tipps:**
-* Gleichseitig: a == b und b == c und c == a
-* Gleichschenkelig a == b oder b == c oder c == a
-* Rechtwinkelig a*a + b*b == c*c
+* Gleichseitig: `a == b` und `b == c` und `c == a`
+* Gleichschenkelig `a == b` oder `b == c` oder `c == a`
+* Rechtwinkelig `a*a + b*b == c*c`
 * Jedes gleichseitige Dreieck ist auch gleichschenkelig
 
 ```
@@ -87,8 +87,8 @@ Schreibe ein Programm, bei dem der Benutzer den Radius eines Kreises eingeben ka
 
 * Falls der Radius negativ ist, soll das Programm den Text "Ungültiger Radius" ausgeben.
 * **Sonst** soll das Programm
-    * Die Fläche mit der Formel pi * r * r berechnen und ausgeben.
-    * Den Umfang mit der Formel 2 * pi * r berechnen und ausgeben.
+    * Die Fläche mit der Formel `pi * r * r` berechnen und ausgeben.
+    * Den Umfang mit der Formel `2 * pi * r` berechnen und ausgeben.
 * Falls die berechnete Fläche größer als 50 ist, soll "Großer Kreis" ausgegeben werden.
 
 **Tipp:** Definiere die Variable pi mit: `double pi = 3.141592;`
