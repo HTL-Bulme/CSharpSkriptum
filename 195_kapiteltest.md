@@ -50,7 +50,38 @@ Programmiere folgende Verzweigungen:
 * Falls die Länge kleiner 10 ist und die Breite kleiner 10 ist, so gib den Text: "Ein kleines Rechteck :)" ausgegeben werden
 * Falls die Länge oder die Breite negativ ist, so soll der Text "Fehler in der Eingabe, negative Längen gibt es nicht" ausgegeben werden.
 
-## Aufgabe 3: Aggregatzustand von H<sub>2</sub>O
+## Aufgabe 3: Superman hat Geburtstag
+
+Superman hat Geburtstag und hat dafür seine Freunde,
+die Superheldenfreunde eingeladen.
+Superman hat 6 Stück Kuchen gebacken.
+
+Schreibe ein Programm, bei dem man eingeben kann wie viele
+Freunde zur Geburtstagsparty kommen.
+
+**Denk daran, dass Superman auch ein Stück Kuchen isst!**
+
+Folgende Fälle können auftreten:
+* Falls für jeden Freund genau ein Stück Kuchen vorhanden ist, so gib "Genau die richtige Anzahl" aus.
+* Falls für es zu viel Kuchen gibt, so gib "Superman kann noch x Freunde einladen" aus
+* Falls nicht für jeden ein Stück Kuchen da ist, so gib "Superman muss noch x Kuchen backen" aus
+
+```
+⌨️Input: Gib die Anzahl der Freunde ein: 8
+🖨️Print: Superman muss noch 3 Kuchen backen
+```
+
+```
+⌨️Input: Gib die Anzahl der Freunde ein: 3
+🖨️Print: Superman kann noch 2 Freunde einladen
+```
+
+```
+⌨️Input: Gib die Anzahl der Freunde ein: 5
+🖨️Print: Genau die richtige Anzahl
+```
+
+## Aufgabe 4: Aggregatzustand von H<sub>2</sub>O
 
 Schreibe ein Programm, bei dem der Benutzer eine Temperatur in Grad Celsius eingeben kann.
 
@@ -61,7 +92,7 @@ Programmiere folgende Verzweigungen:
 * Falls die Temperatur zwischen 0 Grad und 100 Grad liegt, sollst du mit Print den Text "Wasser ist flüssig"
 * Falls die Temperatur über 100 Grad liegt, sollst du mit Print den Text "Siedepunkt überschritten" ausgeben.
 
-## Aufgabe 4: Alterskategorisierung
+## Aufgabe 5: Alterskategorisierung
 
 Schreibe ein Programm, bei dem der Benutzer sein Alter in Jahren eingeben kann.
 
@@ -72,7 +103,7 @@ Programmiere folgende Verzweigungen:
 * Falls das Alter 18 Jahre oder älter ist, sollst du mit Print den Text "Erwachsener" ausgeben.
 * Berechne das ungefähre Alter in Tagen, indem du die Jahre mit 365 multiplizierst und ausgibst.
 
-## Aufgabe 5: Quadervolumen und Quaderoberfläche
+## Aufgabe 6: Quadervolumen und Quaderoberfläche
 
 Schreibe ein Programm bei dem der Benutzer die drei Seiten eines Quaders eingeben kann.
 
@@ -82,7 +113,7 @@ Schreibe ein Programm bei dem der Benutzer die drei Seiten eines Quaders eingebe
     * Die Oberfläche mit der Formel `2*a*b+2*a*c+2*b*c` berechnen und ausgeben
 * Falls das Berechnete Volumen größer als 100 ist, soll "Ein großer Quader" ausgegeben werden
 
-## Aufgabe 6: Kreisberechnung
+## Aufgabe 7: Kreisberechnung
 Schreibe ein Programm, bei dem der Benutzer den Radius eines Kreises eingeben kann.
 
 * Falls der Radius negativ ist, soll das Programm den Text "Ungültiger Radius" ausgeben.
@@ -93,19 +124,19 @@ Schreibe ein Programm, bei dem der Benutzer den Radius eines Kreises eingeben ka
 
 **Tipp:** Definiere die Variable pi mit: `double pi = 3.141592;`
 
-## Aufgabe 7: Geschwindigkeit und Verkehrswarnungen
+## Aufgabe 8: Geschwindigkeit und Verkehrswarnungen
 
 Schreibe ein Programm, bei dem der Benutzer eine Geschwindigkeit in km/h eingeben kann.
 
 Programmiere folgende Verzweigungen:
 
 * Falls die Geschwindigkeit unter 0 km/h liegt, soll das Programm den Text "Ungültige Geschwindigkeit" ausgeben.
-* Falls die Geschwindigkeit 0 km/h beträgt, soll das Programm den Text "Fahrzeug steht" ausgeben.
-* Falls die Geschwindigkeit zwischen 1 und 50 km/h liegt, soll das Programm den Text "Langsam unterwegs" ausgeben.
-* Falls die Geschwindigkeit zwischen 51 und 120 km/h liegt, soll das Programm den Text "Normale Geschwindigkeit" ausgeben.
-* Falls die Geschwindigkeit über 120 km/h liegt, soll das Programm den Text "Zu schnell!" ausgeben.
+* Falls die Geschwindigkeit exakt 0 km/h beträgt, soll das Programm den Text "Fahrzeug steht" ausgeben.
+* Falls die Geschwindigkeit zwischen 0 und 50 km/h liegt, soll das Programm den Text "Langsam unterwegs" ausgeben.
+* Falls die Geschwindigkeit zwischen 50 und 120 km/h liegt, soll das Programm den Text "Normale Geschwindigkeit" ausgeben.
+* Falls die Geschwindigkeit über 130 km/h liegt, soll das Programm den Text "Zu schnell!" ausgeben.
 
-## Aufgabe 8: Zinsen auf ein Bankguthaben
+## Aufgabe 9: Zinsen auf ein Bankguthaben
 Schreibe ein Programm, bei dem der Benutzer den Anlagebetrag und den Zinssatz in Prozent eingeben kann.
 
 * Falls der Anlagebetrag oder der Zinssatz negativ ist, soll das Programm den Text "Ungültige Eingabe" ausgeben.
@@ -113,3 +144,11 @@ Schreibe ein Programm, bei dem der Benutzer den Anlagebetrag und den Zinssatz in
     * Die jährlichen Zinsen mit der Formel betrag * (zins / 100) berechnen und ausgeben.
     * Den Endbetrag nach einem Jahr mit der Formel betrag + jahreszinsen berechnen und ausgeben.
 * Falls die jährlichen Zinsen mehr als 500 Euro betragen, soll das Programm den Text "Hohe Zinseinnahmen" ausgeben.
+
+**Tipp:** Beachte dass die Variable für den Zins vom Datentyp `double` sein muss.
+Wäre der Zins ein Integer, also zum Beispiel 4, so wäre das Ergebnis der 
+Division `Zins / 100` der Wert `0`, da die Ganzzahldivision ausgeführt wird
+und die Zahl 100 nicht in die Zahl 4 geht.
+
+Ist der Zins jedoch ein `double`, also beispielsweise `4.0`,
+so ist das Ergebnis: `0.04`.
