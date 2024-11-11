@@ -27,6 +27,9 @@ Benutze dazu die for-Schleife oder die while-Schleife.
 
 **Tipp:** Zwischen den Linien musst du mit penUp() und penDown() den Stift heben, bzw. wieder senken.
 
+**Zusatz:** Schaffst du es, dass der Benutzer sowohl die Länge,
+als auch die Anzahl der Vertikalen Linien eingeben kann?
+
 <div style="clear:both;"></div>
 
 

@@ -1,1 +1,1 @@
-npx honkit pdf ./ ./mybook.pdf
+npx honkit pdf . ./CSharpScript.pdf

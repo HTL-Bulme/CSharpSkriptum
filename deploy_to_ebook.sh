@@ -1,7 +1,11 @@
+mkdir -p ./../ebook/
+mkdir -p ./../ebook/src/
+mkdir -p ./../ebook/images/
 rm ./../ebook/src/*
 cp *.md ./../ebook/src -f -v
 cp tablefilter ./../ebook/src -f
 cp images/* ./../ebook/images -f
+
 
 find ./../ebook/src -type f -exec sed -i 's/📝/![](.\/images\/pencil-svgrepo-com.svg){ width=16px }/gI' {} \;
 find ./../ebook/src -type f -exec sed -i 's/🐢/![](.\/images\/turtle-svgrepo-com.svg){ width=16px }/gI' {} \;
@@ -17,6 +21,3 @@ find ./../ebook/src -type f -exec sed -i 's/📜/![](.\/images\/scroll-svgrepo-c
 find ./../ebook/src -type f -exec sed -i 's/🔤/![](.\/images\/abc-squares-svgrepo-com.svg){ width=16px }/gI' {} \;
 find ./../ebook/src -type f -exec sed -i 's/🖱/![](.\/images\/cursor-svgrepo-com.svg){ width=16px }/gI' {} \;
 
-pushd ./../ebook/
-./compile_pdf.sh
-popd
