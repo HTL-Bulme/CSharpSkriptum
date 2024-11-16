@@ -21,3 +21,6 @@ find ./../ebook/src -type f -exec sed -i 's/📜/![](.\/images\/scroll-svgrepo-c
 find ./../ebook/src -type f -exec sed -i 's/🔤/![](.\/images\/abc-squares-svgrepo-com.svg){ width=16px }/gI' {} \;
 find ./../ebook/src -type f -exec sed -i 's/🖱/![](.\/images\/cursor-svgrepo-com.svg){ width=16px }/gI' {} \;
 
+find ./../ebook/src -type f -exec sed -i 's/📺/![](.\/images\/cursor-svgrepo-com.svg){ width=16px }/gI' {} \;
+
+pandoc -s -o ./../ebook/doc.html ./../ebook/src/README.md

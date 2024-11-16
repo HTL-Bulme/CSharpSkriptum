@@ -25,7 +25,7 @@ Zeichne die dargestellten vertikalen Linien in der Strichstärke 10 mit der Farb
 
 Benutze dazu die for-Schleife oder die while-Schleife.
 
-**Tipp:** Zwischen den Linien musst du mit penUp() und penDown() den Stift heben, bzw. wieder senken.
+**Tipp:** Zwischen den Linien musst du mit `penUp()` und `penDown()` den Stift heben, bzw. wieder senken.
 
 **Zusatz:** Schaffst du es, dass der Benutzer sowohl die Länge,
 als auch die Anzahl der Vertikalen Linien eingeben kann?
@@ -36,7 +36,7 @@ als auch die Anzahl der Vertikalen Linien eingeben kann?
 ## Aufgabe 4: Treppen
 
 <img style="float: right; width:33%" src="./images/doppelstiege.png">
-Zeichne die dargestellte braune Treppe mit 15 Stufen.
+Zeichne die dargestellte braune Treppe mit **15** Stufen.
 
 Benutze dazu die for-Schleife oder die while-Schleife.
 
@@ -72,7 +72,7 @@ Der Benutzer soll angeben wie weit die Stäbe auseinander sind.
 
 
 **Tipp:** Die Länge der Stäbe kannst du mit der Formel:
-(Abstand der Stäbe) * 7 berechnen.
+`(Abstand der Stäbe) * 7` berechnen.
 
 **Zusatz:** Schaffst du es, dass der Benutzer auch die Anzahl der Stäbe angeben kann?
 
@@ -86,7 +86,7 @@ viele gleichseitige Dreiecke er haben möchte.
 Zusätzlich kann der Benutzer noch die Größe der Dreiecke angeben.
 
 Berechne den Gesamtumfang der Dreiecke und gib ihn aus.
-Die Formel lautet: Anzahl der Dreiecke * Seitenlänge * 3
+Die Formel lautet: Anzahl der `Dreiecke * Seitenlänge * 3`
 
 **Zusatz:** Schaffst du es, dass zwischen den Dreiecken ein kleiner Abstand ist?
 

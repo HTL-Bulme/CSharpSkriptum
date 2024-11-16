@@ -77,7 +77,7 @@ Die for-Schleife hat von allen bis jetzt bekannten Konstrukten,
 die komplizierteste Syntax:
 
 ```cs
-for (<Initialisierung>, <Bedingung>, <operation>)
+for (<Initialisierung>; <Bedingung>; <operation>)
 {
     Anweisungen, die
     solange die bedingung gilt
@@ -173,13 +173,12 @@ Schreibe ein Programm, welches die Quadrate aller Zahlen von 1 bis 20 ausgibt.
 **Ausgabe:** 1, 4, 9, 16, ...., 361, 400
 
 ## 🧭 Zusammenfassung
-Mit `for i in range(anzahl):` gibst du der Turtle
-an, sie soll einen oder mehrere Anweisungen `anzahl`-mal wiederholen,
-bevor sie mit neuen Anweisungen weitermacht.
-Alles, was wiederholt werden soll, muss unter repeat stehen und eingerückt sein.
+Mit der `for`-Schleife gibst du der Turtle an,
+dass sie soll eine oder mehrere Anweisungen `anzahl`-mal wiederholen soll.
+Alles, was wiederholt werden soll, muss im Codeblock nach der Schleife stehen stehen.
 
 ```cs
-for (int i = 0; i < n; i++)
+for (int i = 0; i < anzahl; i++)
 {
     Anweisungen die n-Mal
     wiederholt werden sollen
