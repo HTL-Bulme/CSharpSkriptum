@@ -45,7 +45,7 @@ Zur Installation benötigst du einen aktuellen Computer mit dem Betriebssystem W
 
 Führe folgende Schritte der Reihe nach aus, um Roslynpad zu installieren:
 
-1. Download und Installation der .Net SDK [Download](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/sdk-8.0.401-windows-x64-installer)
+1. Download und Installation der .Net SDK [Download](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/sdk-9.0.304-windows-x64-installer)
 1. Download und Installation des .Net Frameworks [Download](https://dotnet.microsoft.com/en-us/download/dotnet-framework/thank-you/net481-developer-pack-offline-installer)
 1. Download von Roslynpad [Download](https://github.com/roslynpad/roslynpad/releases/download/19.1/RoslynPad-windows-x64.zip)
 1. Entpacken von RoslynPad
@@ -59,17 +59,17 @@ Führe folgende Schritte der Reihe nach aus, um Roslynpad zu installieren:
     - Minimalprogramm testen
 
 ```cs
-#r "nuget: BulmeSharp, 0.10.1"
-using BulmeSharp;
+#r "nuget: TurtleGraphics, 1.0.2"
+using TurtleGraphics;
 
-Turtle.fd(50);
-Turtle.rt(120);
-Turtle.fd(50);
-Turtle.rt(120);
-Turtle.fd(50);
-Turtle.rt(120);
+Turtle.Forward(50);
+Turtle.TurnRight(120);
+Turtle.Forward(50);
+Turtle.TurnRight(120);
+Turtle.Forward(50);
+Turtle.TurnRight(120);
 
-Turtle.showTurtle();
+Turtle.ShowTurtle();
 ```
 
 **Tipp:**
@@ -92,7 +92,7 @@ Mit Doppelklick auf eine Datei öffnest du die entsprechende Datei
 1. Ausführen ▶: Mit diesem Button startest du dein Programm
 1. Beenden ■: Mit diesem Button beendest du dein Programm vorzeitig
 1. Framework: Hier muss das .Net Framework ausgewählt werden.
-Wir nehmen stets x64 und setzen es mit dem Button daneben gleich als Standard (Default).
+Wir nehmen stets ".Net 9.0" und setzen es mit dem Button daneben gleich als Standard (Default).
 1. NuGet Bibliotheken: Hier binden wir zusätzliche Bibliotheken ein.
 Bibliotheken enthalten vorgefertigte Programmteile,
 normalerweise nicht im Standardumfang einer Programmiersprache enthalten sind.
