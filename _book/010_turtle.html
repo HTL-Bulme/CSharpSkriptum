@@ -380,11 +380,11 @@ Um die Turtle zu verwenden, benötigen wir die Bibliothek <em>BulmeSharp</em>.</
 <p>Das machst du in RoslynPad indem du in der Eingabezeile der "NuGet Bibliotheken"
 den Text <em>BulmeSharp</em> eingibst und die entsprechende Bibliothek anklickst.
 Daraufhin wird folgende Zeile automatisch im Code eingefügt.</p>
-<pre><code class="lang-cs"><span class="hljs-meta">#r "nuget: BulmeSharp, 0.10.1"</span>
+<pre><code class="lang-cs"><span class="hljs-meta">#r "nuget: TurtleGraphics, 1.0.2"</span>
 </code></pre>
 <p>Um die Bibliothek tatsächlich zu benutzen müssen wir unterhalb noch eine Zeile hinzufügen.</p>
-<pre><code class="lang-cs"><span class="hljs-meta">#r "nuget: BulmeSharp, 0.10.1"</span>
-<span class="hljs-keyword">using</span> BulmeSharp;
+<pre><code class="lang-cs"><span class="hljs-meta">#r "nuget: TurtleGraphics, 1.0.2"</span>
+<span class="hljs-keyword">using</span> TurtleGraphics;
 </code></pre>
 <h2 id="bewegen-der-turtle">Bewegen der Turtle</h2>
 <p>Die Turtle selbst wird in der Programmierung als ein <strong>Objekt</strong> bezeichnet.
@@ -410,29 +410,29 @@ und anschließend den Funktionsaufruf.</p>
 </thead>
 <tbody>
 <tr>
-<td>fd</td>
-<td>Abkürzung für <strong>f</strong>orwar<strong>d</strong>, Anzahl Pixel nach vorne gehen</td>
-<td><code>Turtle.fd(50);</code></td>
+<td>Forward</td>
+<td>Anzahl Pixel nach vorne gehen</td>
+<td><code>Turtle.Forward(50);</code></td>
 </tr>
 <tr>
-<td>bk</td>
-<td>Abkürzung für <strong>b</strong>ac<strong>k</strong>, Anzahl Pixel nach hinten gehen</td>
-<td><code>Turtle.bk(18);</code></td>
+<td>Back</td>
+<td>Anzahl Pixel nach hinten gehen</td>
+<td><code>Turtle.Back(18);</code></td>
 </tr>
 <tr>
-<td>rt</td>
-<td>Abkürzung für <strong>r</strong>igh<strong>t</strong>, Angegebenen Winkel (in Grad) nach <strong>rechts</strong> drehen</td>
-<td><code>Turtle.rt(39.5);</code></td>
+<td>TurnRight</td>
+<td>Angegebenen Winkel (in Grad) nach <strong>rechts</strong> drehen</td>
+<td><code>Turtle.TurnRight(39.5);</code></td>
 </tr>
 <tr>
-<td>lt</td>
-<td>Abkürzung für <strong>l</strong>ef<strong>t</strong>, Angegebenen Winkel (in Grad) nach <strong>links</strong> drehen</td>
-<td><code>Turtle.lt(45);</code></td>
+<td>TurnLeft</td>
+<td>Angegebenen Winkel (in Grad) nach <strong>links</strong> drehen</td>
+<td><code>Turtle.TurnLeft(45);</code></td>
 </tr>
 <tr>
-<td>showTurtle</td>
+<td>ShowTurtle</td>
 <td>Die Turtle wird am Bildschirm sichtbar gemacht und das Ausgabefenster geöffnet</td>
-<td><code>Turtle.showTurtle();</code></td>
+<td><code>Turtle.ShowTurtle();</code></td>
 </tr>
 </tbody>
 </table>
@@ -453,29 +453,29 @@ aus Nordamerika stammen, und dort der Punkt das gängige Dezimaltrennzeichen ist
 </thead>
 <tbody>
 <tr>
-<td>penUp</td>
+<td>PenUp</td>
 <td>Stift wird aufgehoben, Turtle zeichnet nicht mehr</td>
-<td><code>Turtle.penUp();</code></td>
+<td><code>Turtle.PenUp();</code></td>
 </tr>
 <tr>
-<td>penDown</td>
+<td>PenDown</td>
 <td>Stift wird wieder abgesenkt, Turtle zeichnet wieder</td>
-<td><code>Turtle.penDown();</code></td>
+<td><code>Turtle.PenDown();</code></td>
 </tr>
 <tr>
-<td>dot</td>
-<td>Turtle zeichnet einen gefüllten Punkt (<em>engl.</em> dot) mit angegebenen Durchmesser</td>
-<td><code>Turtle.dot(10);</code></td>
+<td>Dot</td>
+<td>Turtle zeichnet einen gefüllten Punkt (<em>engl.</em> dot) mit angegebenen Radius</td>
+<td><code>Turtle.Dot(10);</code></td>
 </tr>
 <tr>
-<td>setColor</td>
+<td>SetColor</td>
 <td>Bestimmt die Farbe mit der die Turtle zeichnet</td>
-<td><code>Turtle.setColor("red");</code></td>
+<td><code>Turtle.SetColor("red");</code></td>
 </tr>
 <tr>
-<td>setPenWidth</td>
+<td>SetPenWidth</td>
 <td>Bestimmt die Liniendicke der Zeichnung</td>
-<td><code>Turtle.setPenWidth(3);</code></td>
+<td><code>Turtle.SetPenWidth(3);</code></td>
 </tr>
 </tbody>
 </table>
@@ -497,7 +497,7 @@ Programm in Form zu bringen und leichter lesbar zu machen.</p>
 <p>In Zeile <strong>4</strong> wird die Linienfarbe auf blau gesetzt
 und in Zeile <strong>5</strong> die Liniendicke auf 3 Pixel.</p>
 <p>In Zeile <strong>7</strong> bis inkl. <strong>9</strong> fährt die Turtle 60 Pixel nach vorne,
-macht dann einen 8 Pixel großen Punkt und dreht sich dann 90° nach links.</p>
+macht dann einen Punkt mit einem Radius von 8 Pixel und dreht sich dann 90° nach links.</p>
 <p>In Zeile <strong>11</strong> bis inkl. <strong>13</strong> hebt die Turtle den Stift auf und zeichnet ab hier nichts mehr.
 Dann fährt sie 30 Pixel nach vorne und setzt den Stift wieder ab, damit sie wieder
 etwas zeichnet.
@@ -507,7 +507,7 @@ da keine durchgezogene Linie zwischen den beiden Punkten zu sehen ist.</p>
 dreht sich in der folgenden Zeile 90° nach links und sieht damit nach unten.
 In Zeile <strong>17</strong> bis inkl. <strong>19</strong> geht sie 30 Pixel nach vorne, dreht sich 90° nach rechts
 und geht dann wieder 30 Pixel nach vorne.</p>
-<p>In Zeile <strong>21</strong> wird <code>Turtle.showTurtle()</code> aufgerufen, damit das Fenster sichtbar wird.</p>
+<p>In Zeile <strong>21</strong> wird <code>Turtle.ShowTurtle()</code> aufgerufen, damit das Fenster sichtbar wird.</p>
 <h2 id="ein-neuer-begriff-syntax">Ein neuer Begriff: "Syntax"</h2>
 <p>Syntax in der Programmierung bedeutet die Regeln, nach denen Code geschrieben werden muss, damit der Computer ihn versteht.
 Ähnlich wie Grammatik in einer Sprache festlegt, wie Sätze aufgebaut sind, bestimmt die Syntax, wie Befehle und Strukturen in einer Programmiersprache aussehen müssen.
@@ -529,29 +529,29 @@ in welches wir zwei Syntaxfehler eingebaut haben.</p>
 <p><img src="images/syntax_error.png" alt="Syntaxfehler"></img></p>
 <p>Sehen wir uns die beiden Fehler genauer an.</p>
 <p>Die <strong>erste</strong> Fehlermeldung lautet: "There is no argument given that corresponds to the
-required parameter 'distance' of Turtle.fd".
+required parameter 'distance' of Turtle.Forward".
 Auf deutsch übersetzt könnte man sagen: Es wurde kein Argument für die Distanz
-bei <code>Turtle.fd</code> angegeben.
+bei <code>Turtle.Forward</code> angegeben.
 RoslynPad zeigt uns hinter der Fehlermeldung noch die Position des
 Fehlers an. In diesem Fall steht "8,8". 
 Das bedeutet, dass der Fehler in <strong>Zeile 8</strong> bei Zeichen <strong>Nummer 8</strong> auftritt.
 Dieser Fehler kann behoben werden, indem man ein Argument zwischen die 
-beiden runden Klammern bei schreibt, also zum Beispiel <code>Turtle.fd(23);</code></p>
+beiden runden Klammern bei schreibt, also zum Beispiel <code>Turtle.Forward(23);</code></p>
 <p>Die <strong>zweite</strong> Fehlermeldung lautet: "The name 'test' does not exist
 in the current context". Auf deutsch also etwa: Der Begriff <strong>test</strong> ist
 existiert nicht. Die Fehlerposition ist "9,11". 
 Der Fehler ist also in <strong>Zeile 9</strong> beim Zeichen <strong>Nummer 11</strong> zu suchen.
-Tatsächlich sieht man in Zeile 9, dass bei <code>Turtle.rt</code> statt einem 
+Tatsächlich sieht man in Zeile 9, dass bei <code>Turtle.TurnRight</code> statt einem 
 Winkel der Begriff "test" geschrieben wurde.
 Der Fehler kann behoben werden, indem man test durch einen gültigen Winkel
-ersetzt, also zum Beispiel <code>Turtle.rt(90);</code></p>
+ersetzt, also zum Beispiel <code>Turtle.TurnRight(90);</code></p>
 <h2 id="🧭-zusammenfassung">🧭 Zusammenfassung</h2>
 <p>Wir haben uns die wichtigsten Funktionen der Turtle in C# angesehen. </p>
 <p>Funktionen haben am Ende zwei runde Klammern.
 Zwischen den runden Klammern können Argumente stehen,
-das sind weitere Angaben zum Funktionsaufruf, beispielsweise die Anzahl der Pixel bei der Funktion <code>fd(100)</code>.</p>
-<p>Damit klar ist, dass die Funktion <code>fd</code> des Objekts <code>Turtle</code> gemeint ist,
-schreibt man zuerst den Namen des Objekts, gefolgt von einem Punkt und anschließend den Funktionsaufruf: <code>Turtle.fd(100);</code>.</p>
+das sind weitere Angaben zum Funktionsaufruf, beispielsweise die Anzahl der Pixel bei der Funktion <code>Forward(100)</code>.</p>
+<p>Damit klar ist, dass die Funktion <code>Forward</code> des Objekts <code>Turtle</code> gemeint ist,
+schreibt man zuerst den Namen des Objekts, gefolgt von einem Punkt und anschließend den Funktionsaufruf: <code>Turtle.Forward(100);</code>.</p>
 <p>In C# müssen Funktionsaufrufe mit einem Semikolon (<code>;</code>) abgeschlossen werden, um das Ende der Anweisung zu markieren.</p>
 <p>Im nächsten Abschnitt sollst du selbst Programme schreiben, um vorgegebene Grafiken zu erzeugen.</p>
 
@@ -597,7 +597,7 @@ schreibt man zuerst den Namen des Objekts, gefolgt von einem Punkt und anschlie�
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Grafik mit der Turtle 🐢","level":"1.2","depth":1,"next":{"title":"Übungen mit der Turtle","level":"1.2.1","depth":2,"path":"015_turtle_lines.md","ref":"015_turtle_lines.md","articles":[]},"previous":{"title":"Einführung ✨","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"articles":[{"title":"Übungen mit der Turtle","level":"1.2.1","depth":2,"path":"015_turtle_lines.md","ref":"015_turtle_lines.md","articles":[]},{"title":"Farben verwenden","level":"1.2.2","depth":2,"path":"017_turtle_colors.md","ref":"017_turtle_colors.md","articles":[]},{"title":"Variablen","level":"1.2.3","depth":2,"path":"020_variablen.md","ref":"020_variablen.md","articles":[]},{"title":"Eingabe von Werten","level":"1.2.4","depth":2,"path":"030_input.md","ref":"030_input.md","articles":[]},{"title":"Rechnen mit Variablen","level":"1.2.5","depth":2,"path":"035_variablen_rechnen.md","ref":"035_variablen_rechnen.md","articles":[]},{"title":"Kapiteltest 1","level":"1.2.6","depth":2,"path":"070_kapiteltest.md","ref":"070_kapiteltest.md","articles":[]}],"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["add-js-css","katex","nocache"],"pluginsConfig":{"add-js-css":{"css":["./customStyle/style.css"],"js":["./customScript/app.js"]},"katex":{},"nocache":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"010_turtle.md","mtime":"2025-08-08T08:35:15.634Z","type":"markdown"},"gitbook":{"version":"6.0.3","time":"2025-08-08T09:23:55.822Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Grafik mit der Turtle 🐢","level":"1.2","depth":1,"next":{"title":"Übungen mit der Turtle","level":"1.2.1","depth":2,"path":"015_turtle_lines.md","ref":"015_turtle_lines.md","articles":[]},"previous":{"title":"Einführung ✨","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"articles":[{"title":"Übungen mit der Turtle","level":"1.2.1","depth":2,"path":"015_turtle_lines.md","ref":"015_turtle_lines.md","articles":[]},{"title":"Farben verwenden","level":"1.2.2","depth":2,"path":"017_turtle_colors.md","ref":"017_turtle_colors.md","articles":[]},{"title":"Variablen","level":"1.2.3","depth":2,"path":"020_variablen.md","ref":"020_variablen.md","articles":[]},{"title":"Eingabe von Werten","level":"1.2.4","depth":2,"path":"030_input.md","ref":"030_input.md","articles":[]},{"title":"Rechnen mit Variablen","level":"1.2.5","depth":2,"path":"035_variablen_rechnen.md","ref":"035_variablen_rechnen.md","articles":[]},{"title":"Kapiteltest 1","level":"1.2.6","depth":2,"path":"070_kapiteltest.md","ref":"070_kapiteltest.md","articles":[]}],"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["add-js-css","katex","nocache"],"pluginsConfig":{"add-js-css":{"css":["./customStyle/style.css"],"js":["./customScript/app.js"]},"katex":{},"nocache":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"010_turtle.md","mtime":"2025-08-08T10:28:17.521Z","type":"markdown"},"gitbook":{"version":"6.0.3","time":"2025-08-08T10:29:02.235Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

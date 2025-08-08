@@ -18,14 +18,14 @@ den Text *BulmeSharp* eingibst und die entsprechende Bibliothek anklickst.
 Daraufhin wird folgende Zeile automatisch im Code eingefügt.
 
 ```cs
-#r "nuget: BulmeSharp, 0.10.1"
+#r "nuget: TurtleGraphics, 1.0.2"
 ```
 
 Um die Bibliothek tatsächlich zu benutzen müssen wir unterhalb noch eine Zeile hinzufügen.
 
 ```cs
-#r "nuget: BulmeSharp, 0.10.1"
-using BulmeSharp;
+#r "nuget: TurtleGraphics, 1.0.2"
+using TurtleGraphics;
 ```
 
 
@@ -50,11 +50,11 @@ In der folgenden Grafik siehst du die wichtigsten Funktionen:
 
 | Funktion  | Beschreibung | Beispiel |
 | ------------- | ------------- | ------------- |
-| fd  | Abkürzung für **f**orwar**d**, Anzahl Pixel nach vorne gehen  | `Turtle.fd(50);`  |
-| bk  | Abkürzung für **b**ac**k**, Anzahl Pixel nach hinten gehen  | `Turtle.bk(18);`  |
-| rt  | Abkürzung für **r**igh**t**, Angegebenen Winkel (in Grad) nach **rechts** drehen  | `Turtle.rt(39.5);`  |
-| lt  | Abkürzung für **l**ef**t**, Angegebenen Winkel (in Grad) nach **links** drehen  | `Turtle.lt(45);`  |
-| showTurtle  | Die Turtle wird am Bildschirm sichtbar gemacht und das Ausgabefenster geöffnet  | `Turtle.showTurtle();`  |
+| Forward  | Anzahl Pixel nach vorne gehen  | `Turtle.Forward(50);`  |
+| Back  |  Anzahl Pixel nach hinten gehen  | `Turtle.Back(18);`  |
+| TurnRight  | Angegebenen Winkel (in Grad) nach **rechts** drehen  | `Turtle.TurnRight(39.5);`  |
+| TurnLeft  | Angegebenen Winkel (in Grad) nach **links** drehen  | `Turtle.TurnLeft(45);`  |
+| ShowTurtle  | Die Turtle wird am Bildschirm sichtbar gemacht und das Ausgabefenster geöffnet  | `Turtle.ShowTurtle();`  |
 
 **Zusatz:** Die Einheit für Distanzen ist hier Pixel.
 Ein Pixel entspricht einem einzelnen Bildpunkt auf deinem Bildschirm.
@@ -68,11 +68,11 @@ Weitere Funktionen, welche die Turtle ausführen kann sind:
 
 | Funktion  | Beschreibung | Beispiel |
 | ------------- | ------------- | ------------- |
-| penUp  | Stift wird aufgehoben, Turtle zeichnet nicht mehr  | `Turtle.penUp();`  |
-| penDown  | Stift wird wieder abgesenkt, Turtle zeichnet wieder  | `Turtle.penDown();`  |
-| dot  | Turtle zeichnet einen gefüllten Punkt (*engl.* dot) mit angegebenen Durchmesser  | `Turtle.dot(10);`  |
-| setColor  | Bestimmt die Farbe mit der die Turtle zeichnet  | `Turtle.setColor("red");`  |
-| setPenWidth  | Bestimmt die Liniendicke der Zeichnung  | `Turtle.setPenWidth(3);`  |
+| PenUp  | Stift wird aufgehoben, Turtle zeichnet nicht mehr  | `Turtle.PenUp();`  |
+| PenDown  | Stift wird wieder abgesenkt, Turtle zeichnet wieder  | `Turtle.PenDown();`  |
+| Dot  | Turtle zeichnet einen gefüllten Punkt (*engl.* dot) mit angegebenen Radius  | `Turtle.Dot(10);`  |
+| SetColor  | Bestimmt die Farbe mit der die Turtle zeichnet  | `Turtle.SetColor("red");`  |
+| SetPenWidth  | Bestimmt die Liniendicke der Zeichnung  | `Turtle.SetPenWidth(3);`  |
 
 
 ## Ein größeres Programm
@@ -100,7 +100,7 @@ In Zeile **4** wird die Linienfarbe auf blau gesetzt
 und in Zeile **5** die Liniendicke auf 3 Pixel.
 
 In Zeile **7** bis inkl. **9** fährt die Turtle 60 Pixel nach vorne,
-macht dann einen 8 Pixel großen Punkt und dreht sich dann 90° nach links.
+macht dann einen Punkt mit einem Radius von 8 Pixel und dreht sich dann 90° nach links.
 
 In Zeile **11** bis inkl. **13** hebt die Turtle den Stift auf und zeichnet ab hier nichts mehr.
 Dann fährt sie 30 Pixel nach vorne und setzt den Stift wieder ab, damit sie wieder
@@ -113,7 +113,7 @@ dreht sich in der folgenden Zeile 90° nach links und sieht damit nach unten.
 In Zeile **17** bis inkl. **19** geht sie 30 Pixel nach vorne, dreht sich 90° nach rechts
 und geht dann wieder 30 Pixel nach vorne.
 
-In Zeile **21** wird `Turtle.showTurtle()` aufgerufen, damit das Fenster sichtbar wird.
+In Zeile **21** wird `Turtle.ShowTurtle()` aufgerufen, damit das Fenster sichtbar wird.
 
 ## Ein neuer Begriff: "Syntax"
 
@@ -143,34 +143,34 @@ in welches wir zwei Syntaxfehler eingebaut haben.
 Sehen wir uns die beiden Fehler genauer an.
 
 Die **erste** Fehlermeldung lautet: "There is no argument given that corresponds to the
-required parameter 'distance' of Turtle.fd".
+required parameter 'distance' of Turtle.Forward".
 Auf deutsch übersetzt könnte man sagen: Es wurde kein Argument für die Distanz
-bei `Turtle.fd` angegeben.
+bei `Turtle.Forward` angegeben.
 RoslynPad zeigt uns hinter der Fehlermeldung noch die Position des
 Fehlers an. In diesem Fall steht "8,8". 
 Das bedeutet, dass der Fehler in **Zeile 8** bei Zeichen **Nummer 8** auftritt.
 Dieser Fehler kann behoben werden, indem man ein Argument zwischen die 
-beiden runden Klammern bei schreibt, also zum Beispiel `Turtle.fd(23);`
+beiden runden Klammern bei schreibt, also zum Beispiel `Turtle.Forward(23);`
 
 
 Die **zweite** Fehlermeldung lautet: "The name 'test' does not exist
 in the current context". Auf deutsch also etwa: Der Begriff **test** ist
 existiert nicht. Die Fehlerposition ist "9,11". 
 Der Fehler ist also in **Zeile 9** beim Zeichen **Nummer 11** zu suchen.
-Tatsächlich sieht man in Zeile 9, dass bei `Turtle.rt` statt einem 
+Tatsächlich sieht man in Zeile 9, dass bei `Turtle.TurnRight` statt einem 
 Winkel der Begriff "test" geschrieben wurde.
 Der Fehler kann behoben werden, indem man test durch einen gültigen Winkel
-ersetzt, also zum Beispiel `Turtle.rt(90);`
+ersetzt, also zum Beispiel `Turtle.TurnRight(90);`
 
 ## 🧭 Zusammenfassung
 Wir haben uns die wichtigsten Funktionen der Turtle in C# angesehen. 
 
 Funktionen haben am Ende zwei runde Klammern.
 Zwischen den runden Klammern können Argumente stehen,
-das sind weitere Angaben zum Funktionsaufruf, beispielsweise die Anzahl der Pixel bei der Funktion `fd(100)`.
+das sind weitere Angaben zum Funktionsaufruf, beispielsweise die Anzahl der Pixel bei der Funktion `Forward(100)`.
 
-Damit klar ist, dass die Funktion `fd` des Objekts `Turtle` gemeint ist,
-schreibt man zuerst den Namen des Objekts, gefolgt von einem Punkt und anschließend den Funktionsaufruf: `Turtle.fd(100);`.
+Damit klar ist, dass die Funktion `Forward` des Objekts `Turtle` gemeint ist,
+schreibt man zuerst den Namen des Objekts, gefolgt von einem Punkt und anschließend den Funktionsaufruf: `Turtle.Forward(100);`.
 
 In C# müssen Funktionsaufrufe mit einem Semikolon (`;`) abgeschlossen werden, um das Ende der Anweisung zu markieren.
 
